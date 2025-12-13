@@ -2,95 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* EMERGES TES - Design System for Emergency Medical Technicians */
+/* Dark theme optimized for ambulance night use */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark theme by default - optimized for night use */
+    --background: 220 20% 12%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 18% 16%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 18% 14%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Emergency Red - Primary action color */
+    --primary: 0 84% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Medical Blue - Secondary elements */
+    --secondary: 217 91% 52%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 16% 22%;
+    --muted-foreground: 220 10% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 220 16% 24%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 16% 26%;
+    --input: 220 16% 20%;
+    --ring: 0 84% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Custom emergency colors */
+    --emergency-critical: 0 84% 50%;
+    --emergency-high: 25 95% 53%;
+    --emergency-medium: 45 93% 47%;
+    --emergency-low: 142 71% 45%;
+    
+    /* Functional colors */
+    --success: 142 71% 45%;
+    --warning: 45 93% 47%;
+    --info: 217 91% 52%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 0 84% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 16% 18%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 220 16% 22%;
+    --sidebar-ring: 0 84% 50%;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 220 20% 12%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 12%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 12%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 0 84% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 217 91% 52%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 40%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 220 14% 96%;
+    --accent-foreground: 220 20% 12%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 0 84% 50%;
   }
 }
 
@@ -99,7 +99,134 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Touch-friendly for gloved hands */
+  button, a, input, select, textarea {
+    min-height: 48px;
+  }
+
+  /* High contrast focus states */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+}
+
+@layer components {
+  /* Emergency button variants */
+  .btn-emergency {
+    @apply min-h-[60px] font-semibold text-lg rounded-lg transition-all active:scale-95;
+  }
+
+  .btn-emergency-critical {
+    @apply bg-[hsl(var(--emergency-critical))] text-white hover:bg-[hsl(var(--emergency-critical))]/90;
+  }
+
+  .btn-emergency-high {
+    @apply bg-[hsl(var(--emergency-high))] text-white hover:bg-[hsl(var(--emergency-high))]/90;
+  }
+
+  .btn-emergency-medium {
+    @apply bg-[hsl(var(--emergency-medium))] text-black hover:bg-[hsl(var(--emergency-medium))]/90;
+  }
+
+  /* Badge priorities */
+  .badge-critical {
+    @apply bg-[hsl(var(--emergency-critical))]/20 text-[hsl(var(--emergency-critical))] border border-[hsl(var(--emergency-critical))]/30;
+  }
+
+  .badge-high {
+    @apply bg-[hsl(var(--emergency-high))]/20 text-[hsl(var(--emergency-high))] border border-[hsl(var(--emergency-high))]/30;
+  }
+
+  .badge-medium {
+    @apply bg-[hsl(var(--emergency-medium))]/20 text-[hsl(var(--emergency-medium))] border border-[hsl(var(--emergency-medium))]/30;
+  }
+
+  .badge-info {
+    @apply bg-[hsl(var(--info))]/20 text-[hsl(var(--info))] border border-[hsl(var(--info))]/30;
+  }
+
+  /* Card styles */
+  .card-procedure {
+    @apply bg-card border border-border rounded-lg p-4 transition-colors hover:border-primary/50;
+  }
+
+  /* Step numbers */
+  .step-number {
+    @apply w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm flex-shrink-0;
+  }
+
+  /* Warning box */
+  .warning-box {
+    @apply bg-[hsl(var(--emergency-medium))]/10 border-l-4 border-[hsl(var(--emergency-medium))] p-3 rounded-r-lg;
+  }
+
+  /* Bottom navigation */
+  .bottom-nav {
+    @apply fixed bottom-0 left-0 right-0 bg-card border-t border-border z-50;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .bottom-nav-item {
+    @apply flex flex-col items-center justify-center py-2 px-1 min-h-[64px] text-muted-foreground transition-colors;
+  }
+
+  .bottom-nav-item.active {
+    @apply text-primary;
+  }
+
+  .bottom-nav-item:hover {
+    @apply text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Safe area padding for mobile */
+  .pb-safe {
+    padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  }
+
+  /* Touch-friendly scrolling */
+  .scroll-touch {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Print styles for protocols */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .bottom-nav,
+  header,
+  .no-print {
+    display: none !important;
+  }
+
+  .card-procedure {
+    break-inside: avoid;
+    border: 1px solid #ccc;
   }
 }
