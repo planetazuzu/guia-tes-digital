@@ -1,27 +1,72 @@
+import { useState } from 'react';
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
+import Header from "@/components/layout/Header";
+import BottomNav from "@/components/layout/BottomNav";
+import SearchModal from "@/components/layout/SearchModal";
+import MenuSheet from "@/components/layout/MenuSheet";
+import Home from "./pages/Index";
+import SoporteVital from "./pages/SoporteVital";
+import Patologias from "./pages/Patologias";
+import Escena from "./pages/Escena";
+import Farmacos from "./pages/Farmacos";
+import Herramientas from "./pages/Herramientas";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <div className="min-h-screen bg-background">
+            <Header
+              onSearchClick={() => setIsSearchOpen(true)}
+              onMenuClick={() => setIsMenuOpen(true)}
+            />
+
+            <main className="pt-14 pb-safe">
+              <div className="container max-w-2xl py-4">
+                <Routes>
+                  <Route
+                    path="/"
+                    element={<Home onSearchClick={() => setIsSearchOpen(true)} />}
+                  />
+                  <Route path="/soporte-vital" element={<SoporteVital />} />
+                  <Route path="/patologias" element={<Patologias />} />
+                  <Route path="/escena" element={<Escena />} />
+                  <Route path="/farmacos" element={<Farmacos />} />
+                  <Route path="/herramientas" element={<Herramientas />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </div>
+            </main>
+
+            <BottomNav />
+
+            <SearchModal
+              isOpen={isSearchOpen}
+              onClose={() => setIsSearchOpen(false)}
+            />
+
+            <MenuSheet
+              isOpen={isMenuOpen}
+              onClose={() => setIsMenuOpen(false)}
+            />
+          </div>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
