@@ -1,0 +1,786 @@
+{
+  "chapters": [
+    {
+      "id": "1.1",
+      "title": "Constantes Vitales: Toma y Registro Operativo",
+      "file": "manual/bloque_01/1.1_constantes_vitales.md",
+      "assets": [
+        "assets/images/bloque_01/B01_1.1_colocación_manguito_ta_y_pulsioxímetro.jpg",
+        "assets/videos/bloque_01/B01_1.1_vídeo_toma_ta_manual_y_errores_típicos.mp4"
+      ]
+    },
+    {
+      "id": "1.2",
+      "title": "Evaluación Primaria del Paciente: ABCDE Operativo",
+      "file": "manual/bloque_01/1.2_abcde_operativo.md",
+      "assets": [
+        "assets/images/bloque_01/B01_1.2_diagrama_abcde_operativo.png"
+      ]
+    },
+    {
+      "id": "1.4",
+      "title": "Triage Básico: START y Categorización Operativa",
+      "file": "manual/bloque_01/1.4_triage_start.md",
+      "assets": [
+        "assets/images/bloque_01/B01_1.4_diagrama_start_flujo_simple.png"
+      ]
+    },
+    {
+      "id": "2.0",
+      "title": "Anatomía Operativa para Inmovilización y Movilización (Referencias TES)",
+      "file": "manual/bloque_02/2.0_anatomia_operativa_inmovilizacion.md",
+      "assets": [
+        "assets/images/bloque_02/B02_2.0_foto_del_equipo_dispositivo_principal_relacionado_con_2_0.jpg",
+        "assets/images/bloque_02/B02_2.0_correcto_vs_incorrecto_para_2_0.jpg",
+        "assets/images/bloque_02/B02_2.0_landmarks_óseos_y_pulsos_fotos.jpg",
+        "assets/images/bloque_02/B02_2.0_mapa_nv_pre_post_secuencia.png"
+      ]
+    },
+    {
+      "id": "2.1",
+      "title": "Collarín Cervical: Procedimiento Operativo (resumen)",
+      "file": "manual/bloque_02/2.1_collarin_cervical_resumen.md",
+      "assets": [
+        "assets/images/bloque_02/B02_2.1_foto_del_equipo_dispositivo_principal_relacionado_con_2_1.jpg",
+        "assets/images/bloque_02/B02_2.1_correcto_vs_incorrecto_para_2_1.jpg"
+      ]
+    },
+    {
+      "id": "2.2",
+      "title": "Inmovilización Manual y Control Inicial del Paciente",
+      "file": "manual/bloque_02/2.2_inmovilizacion_manual_control_inicial.md",
+      "assets": [
+        "assets/images/bloque_02/B02_2.2_foto_del_equipo_dispositivo_principal_relacionado_con_2_2.jpg",
+        "assets/images/bloque_02/B02_2.2_correcto_vs_incorrecto_para_2_2.jpg"
+      ]
+    },
+    {
+      "id": "2.3",
+      "title": "Collarín Cervical: Selección, Colocación y Errores (detalle)",
+      "file": "manual/bloque_02/2.3_collarin_cervical_detalle_errores.md",
+      "assets": [
+        "assets/images/bloque_02/B02_2.3_foto_del_equipo_dispositivo_principal_relacionado_con_2_3.jpg",
+        "assets/images/bloque_02/B02_2.3_correcto_vs_incorrecto_para_2_3.jpg"
+      ]
+    },
+    {
+      "id": "2.4",
+      "title": "Camilla Cuchara: Uso Operativo",
+      "file": "manual/bloque_02/2.4_camilla_cuchara.md",
+      "assets": [
+        "assets/images/bloque_02/B02_2.4_foto_del_equipo_dispositivo_principal_relacionado_con_2_4.jpg",
+        "assets/images/bloque_02/B02_2.4_correcto_vs_incorrecto_para_2_4.jpg",
+        "assets/videos/bloque_02/B02_2.4_vídeo_montaje_uso_del_dispositivo.mp4"
+      ]
+    },
+    {
+      "id": "2.5",
+      "title": "Tablero Espinal Largo: Inmovilización Rígida",
+      "file": "manual/bloque_02/2.5_tablero_espinal_largo.md",
+      "assets": [
+        "assets/images/bloque_02/B02_2.5_foto_del_equipo_dispositivo_principal_relacionado_con_2_5.jpg",
+        "assets/images/bloque_02/B02_2.5_correcto_vs_incorrecto_para_2_5.jpg",
+        "assets/videos/bloque_02/B02_2.5_vídeo_montaje_uso_del_dispositivo.mp4"
+      ]
+    },
+    {
+      "id": "2.6",
+      "title": "Colchón de Vacío: Inmovilización Definitiva",
+      "file": "manual/bloque_02/2.6_colchon_vacio.md",
+      "assets": [
+        "assets/images/bloque_02/B02_2.6_foto_del_equipo_dispositivo_principal_relacionado_con_2_6.jpg",
+        "assets/images/bloque_02/B02_2.6_correcto_vs_incorrecto_para_2_6.jpg",
+        "assets/videos/bloque_02/B02_2.6_vídeo_montaje_uso_del_dispositivo.mp4"
+      ]
+    },
+    {
+      "id": "2.7",
+      "title": "Extricación y Movimientos en Bloque",
+      "file": "manual/bloque_02/2.7_extricacion_movimientos_bloque.md",
+      "assets": [
+        "assets/images/bloque_02/B02_2.7_foto_del_equipo_dispositivo_principal_relacionado_con_2_7.jpg",
+        "assets/images/bloque_02/B02_2.7_correcto_vs_incorrecto_para_2_7.jpg",
+        "assets/videos/bloque_02/B02_2.7_vídeo_movimientos_en_bloque_transferencias.mp4"
+      ]
+    },
+    {
+      "id": "2.8",
+      "title": "Transferencias y Movilización del Paciente",
+      "file": "manual/bloque_02/2.8_transferencias_movilizacion.md",
+      "assets": [
+        "assets/images/bloque_02/B02_2.8_foto_del_equipo_dispositivo_principal_relacionado_con_2_8.jpg",
+        "assets/images/bloque_02/B02_2.8_correcto_vs_incorrecto_para_2_8.jpg",
+        "assets/videos/bloque_02/B02_2.8_vídeo_movimientos_en_bloque_transferencias.mp4"
+      ]
+    },
+    {
+      "id": "2.9",
+      "title": "Errores Críticos en Inmovilización y Movilización",
+      "file": "manual/bloque_02/2.9_errores_criticos_inmovilizacion.md",
+      "assets": [
+        "assets/images/bloque_02/B02_2.9_foto_del_equipo_dispositivo_principal_relacionado_con_2_9.jpg",
+        "assets/images/bloque_02/B02_2.9_correcto_vs_incorrecto_para_2_9.jpg",
+        "assets/slides/bloque_02/B02_2.9_presentación_de_errores_críticos_fotos_bullets.pptx"
+      ]
+    },
+    {
+      "id": "2.10",
+      "title": "Férulas: Familias, Selección y Uso Operativo (Manual Global)",
+      "file": "manual/bloque_02/2.10_ferulas_familias_uso_operativo.md",
+      "assets": [
+        "assets/images/bloque_02/B02_2.10_foto_del_equipo_dispositivo_principal_relacionado_con_2_10.jpg",
+        "assets/images/bloque_02/B02_2.10_correcto_vs_incorrecto_para_2_10.jpg"
+      ]
+    },
+    {
+      "id": "2.11",
+      "title": "Cinturón Pélvico (Pelvic Binder)",
+      "file": "manual/bloque_02/2.11_cinturon_pelvico.md",
+      "assets": [
+        "assets/images/bloque_02/B02_2.11_foto_del_equipo_dispositivo_principal_relacionado_con_2_11.jpg",
+        "assets/images/bloque_02/B02_2.11_correcto_vs_incorrecto_para_2_11.jpg",
+        "assets/images/bloque_02/B02_2.11_binder_colocación_en_trocánteres.jpg",
+        "assets/videos/bloque_02/B02_2.11_vídeo_binder_colocación_y_verificación.mp4"
+      ]
+    },
+    {
+      "id": "2.12",
+      "title": "Férula de Tracción: Selección y Uso Operativo",
+      "file": "manual/bloque_02/2.12_ferula_traccion.md",
+      "assets": [
+        "assets/images/bloque_02/B02_2.12_foto_del_equipo_dispositivo_principal_relacionado_con_2_12.jpg",
+        "assets/images/bloque_02/B02_2.12_correcto_vs_incorrecto_para_2_12.jpg"
+      ]
+    },
+    {
+      "id": "2.13",
+      "title": "Camillas y Sillas de Evacuación: Selección y Uso Operativo",
+      "file": "manual/bloque_02/2.13_camillas_sillas_evacuacion.md",
+      "assets": [
+        "assets/images/bloque_02/B02_2.13_foto_del_equipo_dispositivo_principal_relacionado_con_2_13.jpg",
+        "assets/images/bloque_02/B02_2.13_correcto_vs_incorrecto_para_2_13.jpg"
+      ]
+    },
+    {
+      "id": "2.X",
+      "title": "Inventario Material Inmovilización y Movilización",
+      "file": "manual/bloque_02/2.x_inventario_inmovilizacion_movilizacion.md",
+      "assets": [
+        "assets/images/bloque_02/B02_2.X_foto_del_equipo_dispositivo_principal_relacionado_con_2_x.jpg",
+        "assets/images/bloque_02/B02_2.X_correcto_vs_incorrecto_para_2_x.jpg"
+      ]
+    },
+    {
+      "id": "3.0",
+      "title": "Oxigenoterapia: Fundamentos Operativos y Seguridad TES",
+      "file": "manual/bloque_03/3.0_oxigenoterapia_fundamentos_seguridad.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.0_foto_del_equipo_dispositivo_principal_relacionado_con_3_0.jpg",
+        "assets/images/bloque_03/B03_3.0_correcto_vs_incorrecto_para_3_0.jpg",
+        "assets/images/bloque_03/B03_3.0_ejemplos_de_cálculo_de_o2_tabla_simple.png",
+        "assets/videos/bloque_03/B03_3.0_vídeo_verificación_o2_fuga.mp4"
+      ]
+    },
+    {
+      "id": "3.1",
+      "title": "Dispositivos de Oxigenoterapia: Uso Operativo por Dispositivo",
+      "file": "manual/bloque_03/3.1_dispositivos_oxigenoterapia.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.1_foto_del_equipo_dispositivo_principal_relacionado_con_3_1.jpg",
+        "assets/images/bloque_03/B03_3.1_correcto_vs_incorrecto_para_3_1.jpg"
+      ]
+    },
+    {
+      "id": "3.2",
+      "title": "Aspiración: Material y Uso Seguro",
+      "file": "manual/bloque_03/3.2_aspiracion_uso_seguro.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.2_foto_del_equipo_dispositivo_principal_relacionado_con_3_2.jpg",
+        "assets/images/bloque_03/B03_3.2_correcto_vs_incorrecto_para_3_2.jpg",
+        "assets/videos/bloque_03/B03_3.2_aspiración_preparación_uso_post_uso.mp4"
+      ]
+    },
+    {
+      "id": "3.3",
+      "title": "BVM: Material y Uso Seguro",
+      "file": "manual/bloque_03/3.3_bvm_uso_seguro.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.3_foto_del_equipo_dispositivo_principal_relacionado_con_3_3.jpg",
+        "assets/images/bloque_03/B03_3.3_correcto_vs_incorrecto_para_3_3.jpg",
+        "assets/videos/bloque_03/B03_3.3_bvm_a_dos_tes_sello_ventilación.mp4"
+      ]
+    },
+    {
+      "id": "3.4",
+      "title": "Cánulas OPA/NPA: Uso Seguro Operativo",
+      "file": "manual/bloque_03/3.4_canulas_opa_npa.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.4_foto_del_equipo_dispositivo_principal_relacionado_con_3_4.jpg",
+        "assets/images/bloque_03/B03_3.4_correcto_vs_incorrecto_para_3_4.jpg"
+      ]
+    },
+    {
+      "id": "3.5",
+      "title": "Maletín Vía Aérea y Oxigenoterapia: Organización y Chequeo",
+      "file": "manual/bloque_03/3.5_maletin_via_aerea_oxigeno.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.5_foto_del_equipo_dispositivo_principal_relacionado_con_3_5.jpg",
+        "assets/images/bloque_03/B03_3.5_correcto_vs_incorrecto_para_3_5.jpg",
+        "assets/slides/bloque_03/B03_3.5_deck_de_chequeo_del_maletín.pptx",
+        "assets/templates/bloque_03/B03_3.5_checklist_app_json_vía_aérea.json"
+      ]
+    },
+    {
+      "id": "3.6",
+      "title": "Control de Hemorragias y Material de Curas",
+      "file": "manual/bloque_03/3.6_control_hemorragias_curas.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.6_foto_del_equipo_dispositivo_principal_relacionado_con_3_6.jpg",
+        "assets/images/bloque_03/B03_3.6_correcto_vs_incorrecto_para_3_6.jpg"
+      ]
+    },
+    {
+      "id": "3.7",
+      "title": "Quemaduras: Manejo Operativo",
+      "file": "manual/bloque_03/3.7_quemaduras_manejo_operativo.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.7_foto_del_equipo_dispositivo_principal_relacionado_con_3_7.jpg",
+        "assets/images/bloque_03/B03_3.7_correcto_vs_incorrecto_para_3_7.jpg"
+      ]
+    },
+    {
+      "id": "3.8",
+      "title": "Heridas y Vendajes: Lesiones Abiertas",
+      "file": "manual/bloque_03/3.8_heridas_vendajes_lesiones_abiertas.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.8_foto_del_equipo_dispositivo_principal_relacionado_con_3_8.jpg",
+        "assets/images/bloque_03/B03_3.8_correcto_vs_incorrecto_para_3_8.jpg"
+      ]
+    },
+    {
+      "id": "3.9",
+      "title": "Exposición/Aislamiento Térmico/Hipotermia",
+      "file": "manual/bloque_03/3.9_exposicion_aislamiento_hipotermia.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.9_foto_del_equipo_dispositivo_principal_relacionado_con_3_9.jpg",
+        "assets/images/bloque_03/B03_3.9_correcto_vs_incorrecto_para_3_9.jpg"
+      ]
+    },
+    {
+      "id": "3.10",
+      "title": "Monitorización Básica",
+      "file": "manual/bloque_03/3.10_monitorizacion_basica.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.10_foto_del_equipo_dispositivo_principal_relacionado_con_3_10.jpg",
+        "assets/images/bloque_03/B03_3.10_correcto_vs_incorrecto_para_3_10.jpg"
+      ]
+    },
+    {
+      "id": "3.11",
+      "title": "Glucómetro y Glucemia",
+      "file": "manual/bloque_03/3.11_glucometro_glucemia.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.11_foto_del_equipo_dispositivo_principal_relacionado_con_3_11.jpg",
+        "assets/images/bloque_03/B03_3.11_correcto_vs_incorrecto_para_3_11.jpg"
+      ]
+    },
+    {
+      "id": "3.12",
+      "title": "Termometría Clínica",
+      "file": "manual/bloque_03/3.12_termometria_clinica.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.12_foto_del_equipo_dispositivo_principal_relacionado_con_3_12.jpg",
+        "assets/images/bloque_03/B03_3.12_correcto_vs_incorrecto_para_3_12.jpg"
+      ]
+    },
+    {
+      "id": "3.13",
+      "title": "Confort y Dolor sin Fármacos",
+      "file": "manual/bloque_03/3.13_confort_dolor_sin_farmacos.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.13_foto_del_equipo_dispositivo_principal_relacionado_con_3_13.jpg",
+        "assets/images/bloque_03/B03_3.13_correcto_vs_incorrecto_para_3_13.jpg"
+      ]
+    },
+    {
+      "id": "3.14",
+      "title": "Bioseguridad y Descontaminación",
+      "file": "manual/bloque_03/3.14_bioseguridad_descontaminacion.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.14_foto_del_equipo_dispositivo_principal_relacionado_con_3_14.jpg",
+        "assets/images/bloque_03/B03_3.14_correcto_vs_incorrecto_para_3_14.jpg"
+      ]
+    },
+    {
+      "id": "3.15",
+      "title": "Gestión del Material en Escena/Ambulancia",
+      "file": "manual/bloque_03/3.15_gestion_material_escena_ambulancia.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.15_foto_del_equipo_dispositivo_principal_relacionado_con_3_15.jpg",
+        "assets/images/bloque_03/B03_3.15_correcto_vs_incorrecto_para_3_15.jpg"
+      ]
+    },
+    {
+      "id": "3.16",
+      "title": "Comunicación Operativa con el Paciente",
+      "file": "manual/bloque_03/3.16_comunicacion_operativa_paciente.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.16_foto_del_equipo_dispositivo_principal_relacionado_con_3_16.jpg",
+        "assets/images/bloque_03/B03_3.16_correcto_vs_incorrecto_para_3_16.jpg"
+      ]
+    },
+    {
+      "id": "3.17",
+      "title": "Señalización/Iluminación/Seguridad de Escena",
+      "file": "manual/bloque_03/3.17_senalizacion_iluminacion_seguridad.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.17_foto_del_equipo_dispositivo_principal_relacionado_con_3_17.jpg",
+        "assets/images/bloque_03/B03_3.17_correcto_vs_incorrecto_para_3_17.jpg"
+      ]
+    },
+    {
+      "id": "3.18",
+      "title": "Documentación de Material e Incidencias",
+      "file": "manual/bloque_03/3.18_documentacion_material_incidencias.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.18_foto_del_equipo_dispositivo_principal_relacionado_con_3_18.jpg",
+        "assets/images/bloque_03/B03_3.18_correcto_vs_incorrecto_para_3_18.jpg"
+      ]
+    },
+    {
+      "id": "3.X",
+      "title": "Inventario Material Sanitario y Oxigenoterapia",
+      "file": "manual/bloque_03/3.x_inventario_material_sanitario_oxigenoterapia.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.X_foto_del_equipo_dispositivo_principal_relacionado_con_3_x.jpg",
+        "assets/images/bloque_03/B03_3.X_correcto_vs_incorrecto_para_3_x.jpg"
+      ]
+    },
+    {
+      "id": "3.X2",
+      "title": "Maletín Curas: Organización y Chequeo",
+      "file": "manual/bloque_03/3.x2_maletin_curas_organizacion_chequeo.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.X2_foto_del_equipo_dispositivo_principal_relacionado_con_3_x2.jpg",
+        "assets/images/bloque_03/B03_3.X2_correcto_vs_incorrecto_para_3_x2.jpg",
+        "assets/templates/bloque_03/B03_3.X2_checklists_app_json_csv.json"
+      ]
+    },
+    {
+      "id": "3.X3",
+      "title": "Bolsa Monitorización: Organización y Chequeo",
+      "file": "manual/bloque_03/3.x3_bolsa_monitorizacion_organizacion_chequeo.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.X3_foto_del_equipo_dispositivo_principal_relacionado_con_3_x3.jpg",
+        "assets/images/bloque_03/B03_3.X3_correcto_vs_incorrecto_para_3_x3.jpg",
+        "assets/templates/bloque_03/B03_3.X3_checklists_app_json_csv.json"
+      ]
+    },
+    {
+      "id": "3.X4",
+      "title": "Inventario Global Bloque 3",
+      "file": "manual/bloque_03/3.x4_inventario_global_bloque3.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.X4_foto_del_equipo_dispositivo_principal_relacionado_con_3_x4.jpg",
+        "assets/images/bloque_03/B03_3.X4_correcto_vs_incorrecto_para_3_x4.jpg"
+      ]
+    },
+    {
+      "id": "3.X5",
+      "title": "Checklist Maestro Bloque 3",
+      "file": "manual/bloque_03/3.x5_checklist_maestro_bloque3.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.X5_foto_del_equipo_dispositivo_principal_relacionado_con_3_x5.jpg",
+        "assets/images/bloque_03/B03_3.X5_correcto_vs_incorrecto_para_3_x5.jpg",
+        "assets/templates/bloque_03/B03_3.X5_checklists_app_json_csv.json"
+      ]
+    },
+    {
+      "id": "3.99",
+      "title": "Cierre Bloque 3: Flujos Operativos",
+      "file": "manual/bloque_03/3.99_cierre_bloque3_flujos_operativos.md",
+      "assets": [
+        "assets/images/bloque_03/B03_3.99_foto_del_equipo_dispositivo_principal_relacionado_con_3_99.jpg",
+        "assets/images/bloque_03/B03_3.99_correcto_vs_incorrecto_para_3_99.jpg",
+        "assets/slides/bloque_03/B03_3.99_deck_de_flujos_operativos_bloque_3.pptx"
+      ]
+    },
+    {
+      "id": "4.0",
+      "title": "Reconocimiento de la Parada Cardiorrespiratoria (PCR)",
+      "file": "manual/bloque_04/4.0_reconocimiento_pcr.md",
+      "assets": [
+        "assets/images/bloque_04/B04_4.0_foto_del_equipo_dispositivo_principal_relacionado_con_4_0.jpg",
+        "assets/images/bloque_04/B04_4.0_correcto_vs_incorrecto_para_4_0.jpg",
+        "assets/slides/bloque_04/B04_4.0_deck_de_svb_rcp_formación.pptx"
+      ]
+    },
+    {
+      "id": "4.1",
+      "title": "RCP Básica en Adultos: Secuencia C-A-B Operativa",
+      "file": "manual/bloque_04/4.1_rcp_basica_adulto.md",
+      "assets": [
+        "assets/images/bloque_04/B04_4.1_foto_del_equipo_dispositivo_principal_relacionado_con_4_1.jpg",
+        "assets/images/bloque_04/B04_4.1_correcto_vs_incorrecto_para_4_1.jpg",
+        "assets/images/bloque_04/B04_4.1_secuencia_visual_4_1.jpg",
+        "assets/videos/bloque_04/B04_4.1_vídeo_demo_4_1.mp4",
+        "assets/slides/bloque_04/B04_4.1_deck_de_svb_rcp_formación.pptx"
+      ]
+    },
+    {
+      "id": "4.2",
+      "title": "RCP Básica en Pediatría: Secuencia Adaptada",
+      "file": "manual/bloque_04/4.2_rcp_basica_pediatria.md",
+      "assets": [
+        "assets/images/bloque_04/B04_4.2_foto_del_equipo_dispositivo_principal_relacionado_con_4_2.jpg",
+        "assets/images/bloque_04/B04_4.2_correcto_vs_incorrecto_para_4_2.jpg",
+        "assets/slides/bloque_04/B04_4.2_deck_de_svb_rcp_formación.pptx"
+      ]
+    },
+    {
+      "id": "4.3",
+      "title": "RCP Básica en Lactantes: Técnicas Específicas",
+      "file": "manual/bloque_04/4.3_rcp_basica_lactantes.md",
+      "assets": [
+        "assets/images/bloque_04/B04_4.3_foto_del_equipo_dispositivo_principal_relacionado_con_4_3.jpg",
+        "assets/images/bloque_04/B04_4.3_correcto_vs_incorrecto_para_4_3.jpg",
+        "assets/slides/bloque_04/B04_4.3_deck_de_svb_rcp_formación.pptx"
+      ]
+    },
+    {
+      "id": "4.4",
+      "title": "Uso del DESA: Procedimiento Paso a Paso",
+      "file": "manual/bloque_04/4.4_uso_desa.md",
+      "assets": [
+        "assets/images/bloque_04/B04_4.4_foto_del_equipo_dispositivo_principal_relacionado_con_4_4.jpg",
+        "assets/images/bloque_04/B04_4.4_correcto_vs_incorrecto_para_4_4.jpg",
+        "assets/images/bloque_04/B04_4.4_secuencia_visual_4_4.jpg",
+        "assets/videos/bloque_04/B04_4.4_vídeo_demo_4_4.mp4",
+        "assets/images/bloque_04/B04_4.4_desa_colocación_electrodos_correcta_vs_incorrecta.jpg",
+        "assets/slides/bloque_04/B04_4.4_deck_de_svb_rcp_formación.pptx"
+      ]
+    },
+    {
+      "id": "4.5",
+      "title": "RCP con Dos Intervinientes: Coordinación",
+      "file": "manual/bloque_04/4.5_rcp_dos_intervinientes.md",
+      "assets": [
+        "assets/images/bloque_04/B04_4.5_foto_del_equipo_dispositivo_principal_relacionado_con_4_5.jpg",
+        "assets/images/bloque_04/B04_4.5_correcto_vs_incorrecto_para_4_5.jpg",
+        "assets/slides/bloque_04/B04_4.5_deck_de_svb_rcp_formación.pptx"
+      ]
+    },
+    {
+      "id": "4.6",
+      "title": "OVACE: Adultos",
+      "file": "manual/bloque_04/4.6_ovace_adultos.md",
+      "assets": [
+        "assets/images/bloque_04/B04_4.6_foto_del_equipo_dispositivo_principal_relacionado_con_4_6.jpg",
+        "assets/images/bloque_04/B04_4.6_correcto_vs_incorrecto_para_4_6.jpg",
+        "assets/images/bloque_04/B04_4.6_secuencia_visual_4_6.jpg",
+        "assets/videos/bloque_04/B04_4.6_vídeo_demo_4_6.mp4",
+        "assets/slides/bloque_04/B04_4.6_deck_de_svb_rcp_formación.pptx"
+      ]
+    },
+    {
+      "id": "4.7",
+      "title": "OVACE: Pediatría",
+      "file": "manual/bloque_04/4.7_ovace_pediatria.md",
+      "assets": [
+        "assets/images/bloque_04/B04_4.7_foto_del_equipo_dispositivo_principal_relacionado_con_4_7.jpg",
+        "assets/images/bloque_04/B04_4.7_correcto_vs_incorrecto_para_4_7.jpg",
+        "assets/images/bloque_04/B04_4.7_secuencia_visual_4_7.jpg",
+        "assets/videos/bloque_04/B04_4.7_vídeo_demo_4_7.mp4",
+        "assets/slides/bloque_04/B04_4.7_deck_de_svb_rcp_formación.pptx"
+      ]
+    },
+    {
+      "id": "4.8",
+      "title": "OVACE: Lactantes",
+      "file": "manual/bloque_04/4.8_ovace_lactantes.md",
+      "assets": [
+        "assets/images/bloque_04/B04_4.8_foto_del_equipo_dispositivo_principal_relacionado_con_4_8.jpg",
+        "assets/images/bloque_04/B04_4.8_correcto_vs_incorrecto_para_4_8.jpg",
+        "assets/images/bloque_04/B04_4.8_secuencia_visual_4_8.jpg",
+        "assets/videos/bloque_04/B04_4.8_vídeo_demo_4_8.mp4",
+        "assets/slides/bloque_04/B04_4.8_deck_de_svb_rcp_formación.pptx"
+      ]
+    },
+    {
+      "id": "4.9",
+      "title": "Posición Lateral de Seguridad (PLS)",
+      "file": "manual/bloque_04/4.9_pls_posicion_lateral_seguridad.md",
+      "assets": [
+        "assets/images/bloque_04/B04_4.9_foto_del_equipo_dispositivo_principal_relacionado_con_4_9.jpg",
+        "assets/images/bloque_04/B04_4.9_correcto_vs_incorrecto_para_4_9.jpg",
+        "assets/images/bloque_04/B04_4.9_secuencia_visual_4_9.jpg",
+        "assets/videos/bloque_04/B04_4.9_vídeo_demo_4_9.mp4",
+        "assets/slides/bloque_04/B04_4.9_deck_de_svb_rcp_formación.pptx"
+      ]
+    },
+    {
+      "id": "5.0",
+      "title": "Comunicación Transtelefónica: Principios Operativos",
+      "file": "manual/bloque_05/5.0_comunicacion_transtelefonica_principios.md",
+      "assets": [
+        "assets/slides/bloque_05/B05_5.0_deck_de_scripts_transtelefónicos.pptx",
+        "assets/videos/bloque_05/B05_5.0_roleplay_llamada_guiada.mp4"
+      ]
+    },
+    {
+      "id": "5.1",
+      "title": "RCP Transtelefónica: Adultos",
+      "file": "manual/bloque_05/5.1_rcp_transtelefonica_adultos.md",
+      "assets": [
+        "assets/slides/bloque_05/B05_5.1_deck_de_scripts_transtelefónicos.pptx",
+        "assets/videos/bloque_05/B05_5.1_roleplay_llamada_guiada.mp4"
+      ]
+    },
+    {
+      "id": "5.2",
+      "title": "RCP Transtelefónica: Niños",
+      "file": "manual/bloque_05/5.2_rcp_transtelefonica_ninos.md",
+      "assets": [
+        "assets/slides/bloque_05/B05_5.2_deck_de_scripts_transtelefónicos.pptx",
+        "assets/videos/bloque_05/B05_5.2_roleplay_llamada_guiada.mp4"
+      ]
+    },
+    {
+      "id": "5.3",
+      "title": "RCP Transtelefónica: Lactantes",
+      "file": "manual/bloque_05/5.3_rcp_transtelefonica_lactantes.md",
+      "assets": [
+        "assets/slides/bloque_05/B05_5.3_deck_de_scripts_transtelefónicos.pptx",
+        "assets/videos/bloque_05/B05_5.3_roleplay_llamada_guiada.mp4"
+      ]
+    },
+    {
+      "id": "5.4",
+      "title": "DESA guiado por teléfono",
+      "file": "manual/bloque_05/5.4_desa_transtelefonico.md",
+      "assets": [
+        "assets/slides/bloque_05/B05_5.4_deck_de_scripts_transtelefónicos.pptx",
+        "assets/videos/bloque_05/B05_5.4_roleplay_llamada_guiada.mp4"
+      ]
+    },
+    {
+      "id": "5.5",
+      "title": "OVACE Transtelefónica",
+      "file": "manual/bloque_05/5.5_ovace_transtelefonico.md",
+      "assets": [
+        "assets/slides/bloque_05/B05_5.5_deck_de_scripts_transtelefónicos.pptx",
+        "assets/videos/bloque_05/B05_5.5_roleplay_llamada_guiada.mp4"
+      ]
+    },
+    {
+      "id": "5.6",
+      "title": "SCA Transtelefónico",
+      "file": "manual/bloque_05/5.6_sca_transtelefonico.md",
+      "assets": [
+        "assets/slides/bloque_05/B05_5.6_deck_de_scripts_transtelefónicos.pptx",
+        "assets/videos/bloque_05/B05_5.6_roleplay_llamada_guiada.mp4"
+      ]
+    },
+    {
+      "id": "5.7",
+      "title": "Ictus Transtelefónico",
+      "file": "manual/bloque_05/5.7_ictus_transtelefonico.md",
+      "assets": [
+        "assets/slides/bloque_05/B05_5.7_deck_de_scripts_transtelefónicos.pptx",
+        "assets/videos/bloque_05/B05_5.7_roleplay_llamada_guiada.mp4"
+      ]
+    },
+    {
+      "id": "5.8",
+      "title": "Comunicación con Centros Coordinadores",
+      "file": "manual/bloque_05/5.8_comunicacion_centro_coordinador.md",
+      "assets": [
+        "assets/slides/bloque_05/B05_5.8_deck_de_scripts_transtelefónicos.pptx",
+        "assets/videos/bloque_05/B05_5.8_roleplay_llamada_guiada.mp4"
+      ]
+    },
+    {
+      "id": "6.0",
+      "title": "Principios de Administración de Fármacos",
+      "file": "manual/bloque_06/6.0_principios_administracion_farmacos.md",
+      "assets": [
+        "assets/images/bloque_06/B06_6.0_tabla_plantilla_vademécum_estructura.png",
+        "assets/templates/bloque_06/B06_6.0_dataset_vademécum_csv_json.json"
+      ]
+    },
+    {
+      "id": "6.1",
+      "title": "Vademécum Operativo",
+      "file": "manual/bloque_06/6.1_vademecum_operativo.md",
+      "assets": [
+        "assets/images/bloque_06/B06_6.1_tabla_plantilla_vademécum_estructura.png",
+        "assets/templates/bloque_06/B06_6.1_dataset_vademécum_csv_json.json"
+      ]
+    },
+    {
+      "id": "6.2",
+      "title": "Oxígeno como fármaco: administración y seguridad",
+      "file": "manual/bloque_06/6.2_oxigeno_como_farmaco.md",
+      "assets": [
+        "assets/images/bloque_06/B06_6.2_tabla_plantilla_vademécum_estructura.png",
+        "assets/templates/bloque_06/B06_6.2_dataset_vademécum_csv_json.json"
+      ]
+    },
+    {
+      "id": "6.3",
+      "title": "Adrenalina: anafilaxia y RCP",
+      "file": "manual/bloque_06/6.3_adrenalina_anafilaxia_rcp.md",
+      "assets": [
+        "assets/images/bloque_06/B06_6.3_tabla_plantilla_vademécum_estructura.png",
+        "assets/templates/bloque_06/B06_6.3_dataset_vademécum_csv_json.json"
+      ]
+    },
+    {
+      "id": "6.4",
+      "title": "Aspirina: SCA",
+      "file": "manual/bloque_06/6.4_aspirina_sca.md",
+      "assets": [
+        "assets/images/bloque_06/B06_6.4_tabla_plantilla_vademécum_estructura.png",
+        "assets/templates/bloque_06/B06_6.4_dataset_vademécum_csv_json.json"
+      ]
+    },
+    {
+      "id": "6.5",
+      "title": "Glucagón: Hipoglucemia",
+      "file": "manual/bloque_06/6.5_glucagon_hipoglucemia.md",
+      "assets": [
+        "assets/images/bloque_06/B06_6.5_tabla_plantilla_vademécum_estructura.png",
+        "assets/templates/bloque_06/B06_6.5_dataset_vademécum_csv_json.json"
+      ]
+    },
+    {
+      "id": "6.6",
+      "title": "Salbutamol: Crisis asmática",
+      "file": "manual/bloque_06/6.6_salbutamol_crisis_asmatica.md",
+      "assets": [
+        "assets/images/bloque_06/B06_6.6_tabla_plantilla_vademécum_estructura.png",
+        "assets/templates/bloque_06/B06_6.6_dataset_vademécum_csv_json.json"
+      ]
+    },
+    {
+      "id": "6.7",
+      "title": "Abreviaturas farmacológicas operativas",
+      "file": "manual/bloque_06/6.7_abreviaturas_farmacologicas.md",
+      "assets": [
+        "assets/images/bloque_06/B06_6.7_tabla_plantilla_vademécum_estructura.png",
+        "assets/templates/bloque_06/B06_6.7_dataset_vademécum_csv_json.json"
+      ]
+    },
+    {
+      "id": "7.0",
+      "title": "Principios de Conducción en Urgencias",
+      "file": "manual/bloque_07/7.0_principios_conduccion_urgencias.md",
+      "assets": [
+        "assets/images/bloque_07/B07_7.0_foto_del_equipo_dispositivo_principal_relacionado_con_7_0.jpg",
+        "assets/images/bloque_07/B07_7.0_correcto_vs_incorrecto_para_7_0.jpg",
+        "assets/images/bloque_07/B07_7.0_posicionamiento_ambulancia_en_escena_fotos.jpg",
+        "assets/videos/bloque_07/B07_7.0_vídeo_posicionamiento_y_balizamiento.mp4"
+      ]
+    },
+    {
+      "id": "7.1",
+      "title": "Señales luminosas y acústicas",
+      "file": "manual/bloque_07/7.1_senales_luminosas_acusticas.md",
+      "assets": [
+        "assets/images/bloque_07/B07_7.1_foto_del_equipo_dispositivo_principal_relacionado_con_7_1.jpg",
+        "assets/images/bloque_07/B07_7.1_correcto_vs_incorrecto_para_7_1.jpg",
+        "assets/images/bloque_07/B07_7.1_posicionamiento_ambulancia_en_escena_fotos.jpg",
+        "assets/videos/bloque_07/B07_7.1_vídeo_posicionamiento_y_balizamiento.mp4"
+      ]
+    },
+    {
+      "id": "7.2",
+      "title": "Prioridad de paso y preferencia",
+      "file": "manual/bloque_07/7.2_prioridad_paso_normativa.md",
+      "assets": [
+        "assets/images/bloque_07/B07_7.2_foto_del_equipo_dispositivo_principal_relacionado_con_7_2.jpg",
+        "assets/images/bloque_07/B07_7.2_correcto_vs_incorrecto_para_7_2.jpg",
+        "assets/images/bloque_07/B07_7.2_posicionamiento_ambulancia_en_escena_fotos.jpg",
+        "assets/videos/bloque_07/B07_7.2_vídeo_posicionamiento_y_balizamiento.mp4"
+      ]
+    },
+    {
+      "id": "7.3",
+      "title": "Conducción en condiciones adversas",
+      "file": "manual/bloque_07/7.3_conduccion_condiciones_adversas.md",
+      "assets": [
+        "assets/images/bloque_07/B07_7.3_foto_del_equipo_dispositivo_principal_relacionado_con_7_3.jpg",
+        "assets/images/bloque_07/B07_7.3_correcto_vs_incorrecto_para_7_3.jpg",
+        "assets/images/bloque_07/B07_7.3_posicionamiento_ambulancia_en_escena_fotos.jpg",
+        "assets/videos/bloque_07/B07_7.3_vídeo_posicionamiento_y_balizamiento.mp4"
+      ]
+    },
+    {
+      "id": "7.4",
+      "title": "Posicionamiento del vehículo y seguridad de escena",
+      "file": "manual/bloque_07/7.4_posicionamiento_seguridad_escena.md",
+      "assets": [
+        "assets/images/bloque_07/B07_7.4_foto_del_equipo_dispositivo_principal_relacionado_con_7_4.jpg",
+        "assets/images/bloque_07/B07_7.4_correcto_vs_incorrecto_para_7_4.jpg",
+        "assets/images/bloque_07/B07_7.4_posicionamiento_ambulancia_en_escena_fotos.jpg",
+        "assets/videos/bloque_07/B07_7.4_vídeo_posicionamiento_y_balizamiento.mp4"
+      ]
+    },
+    {
+      "id": "7.5",
+      "title": "Mantenimiento preventivo: chequeos operativos",
+      "file": "manual/bloque_07/7.5_mantenimiento_preventivo_checklist.md",
+      "assets": [
+        "assets/images/bloque_07/B07_7.5_foto_del_equipo_dispositivo_principal_relacionado_con_7_5.jpg",
+        "assets/images/bloque_07/B07_7.5_correcto_vs_incorrecto_para_7_5.jpg",
+        "assets/images/bloque_07/B07_7.5_posicionamiento_ambulancia_en_escena_fotos.jpg",
+        "assets/videos/bloque_07/B07_7.5_vídeo_posicionamiento_y_balizamiento.mp4"
+      ]
+    },
+    {
+      "id": "8.0",
+      "title": "Documentación clínica: principios operativos",
+      "file": "manual/bloque_08/8.0_documentacion_clinica_principios.md",
+      "assets": [
+        "assets/templates/bloque_08/B08_8.0_plantilla_informe_registro_csv_json.json",
+        "assets/images/bloque_08/B08_8.0_ejemplo_anonimizado_de_registro.png"
+      ]
+    },
+    {
+      "id": "8.1",
+      "title": "Hoja de registro de intervención",
+      "file": "manual/bloque_08/8.1_hoja_registro_intervencion.md",
+      "assets": [
+        "assets/templates/bloque_08/B08_8.1_plantilla_informe_registro_csv_json.json",
+        "assets/images/bloque_08/B08_8.1_ejemplo_anonimizado_de_registro.png"
+      ]
+    },
+    {
+      "id": "8.2",
+      "title": "Coordinación con otros recursos",
+      "file": "manual/bloque_08/8.2_coordinacion_otros_recursos.md",
+      "assets": [
+        "assets/templates/bloque_08/B08_8.2_plantilla_informe_registro_csv_json.json",
+        "assets/images/bloque_08/B08_8.2_ejemplo_anonimizado_de_registro.png"
+      ]
+    },
+    {
+      "id": "8.3",
+      "title": "Incidencias y eventos adversos",
+      "file": "manual/bloque_08/8.3_eventos_adversos_incidencias.md",
+      "assets": [
+        "assets/templates/bloque_08/B08_8.3_plantilla_informe_registro_csv_json.json",
+        "assets/images/bloque_08/B08_8.3_ejemplo_anonimizado_de_registro.png"
+      ]
+    },
+    {
+      "id": "8.4",
+      "title": "Glosario abreviaturas y terminología",
+      "file": "manual/bloque_08/8.4_glosario_abreviaturas_manual.md",
+      "assets": [
+        "assets/templates/bloque_08/B08_8.4_plantilla_informe_registro_csv_json.json",
+        "assets/images/bloque_08/B08_8.4_ejemplo_anonimizado_de_registro.png"
+      ]
+    }
+  ]
+}

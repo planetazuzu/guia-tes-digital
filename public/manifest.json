@@ -1,0 +1,19 @@
+{
+  "name": "EMERGES TES - Protocolo Rápido",
+  "short_name": "EMERGES TES",
+  "description": "Guía rápida de protocolos médicos de emergencias para Técnicos de Emergencias Sanitarias",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1f2e",
+  "theme_color": "#1a1f2e",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "256x256",
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    }
+  ]
+}
+
