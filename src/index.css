@@ -127,7 +127,7 @@
   }
 
   .btn-emergency-critical {
-    @apply bg-black text-white hover:bg-black/90;
+    @apply bg-[hsl(var(--emergency-critical))] text-white hover:bg-[hsl(var(--emergency-critical))]/90;
   }
 
   .btn-emergency-high {
