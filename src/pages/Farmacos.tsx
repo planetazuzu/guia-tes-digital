@@ -31,7 +31,8 @@ const Farmacos = () => {
   const highlightId = searchParams.get('id');
 
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState<DrugCategory | 'todos'>('todos');
+  const [activeCategory, setActiveCategory] = useState<DrugCategory | 'todos' | 'tes'>('tes');
+  const [activeTESCategory, setActiveTESCategory] = useState<TESMedication['category'] | 'todos'>('todos');
   const [showAdministrationGuide, setShowAdministrationGuide] = useState(true);
   const [showTerminologyGuide, setShowTerminologyGuide] = useState(false);
 
