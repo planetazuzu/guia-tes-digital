@@ -65,7 +65,7 @@ environment:
 ✅ Creado archivo `404.html` que redirige todas las rutas al `index.html` para que React Router maneje las rutas SPA.
 
 ### 4. `package.json`
-✅ Agregado script `generate:404` y actualizado `build` para generarlo automáticamente.
+✅ El archivo `404.html` es estático en `public/` y se copia automáticamente durante el build. No se requiere script `generate:404`.
 
 ---
 
@@ -75,7 +75,7 @@ environment:
    - Detecta que es GitHub Pages (`GITHUB_PAGES=true`)
    - Extrae el nombre del repositorio (`guia-tes-digital`)
    - Configura `base: '/guia-tes-digital/'` en Vite
-   - Genera `404.html` automáticamente
+   - Copia `404.html` desde `public/` a `dist/` automáticamente
 
 2. **Despliegue:**
    - GitHub Pages sirve los archivos desde `dist/`

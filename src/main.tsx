@@ -5,8 +5,10 @@ import "./index.css";
 // Registrar Service Worker para PWA
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
+    // Detectar base path dinámicamente (para GitHub Pages)
+    const base = import.meta.env.BASE_URL || '/';
     navigator.serviceWorker
-      .register('/sw.js')
+      .register(`${base}sw.js`)
       .then((registration) => {
         console.log('SW registered:', registration);
         

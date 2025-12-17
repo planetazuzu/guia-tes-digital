@@ -4,12 +4,21 @@
 const CACHE_NAME = 'emerges-tes-v1';
 const RUNTIME_CACHE = 'emerges-tes-runtime-v1';
 
+// Detectar base path dinámicamente (para GitHub Pages)
+const BASE_PATH = self.location.pathname.split('/').slice(0, -1).join('/') || '/';
+const normalizePath = (path) => {
+  if (path.startsWith('/')) {
+    return BASE_PATH === '/' ? path : `${BASE_PATH}${path}`;
+  }
+  return `${BASE_PATH}/${path}`;
+};
+
 // Archivos estáticos a cachear en la instalación
 const STATIC_ASSETS = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/favicon.ico',
+  normalizePath('/'),
+  normalizePath('/index.html'),
+  normalizePath('/manifest.json'),
+  normalizePath('/favicon.ico'),
 ];
 
 // Instalación del Service Worker
@@ -122,7 +131,7 @@ async function networkFirst(request) {
     // Si no hay cache y estamos offline, retornar index.html para SPA
     if (request.mode === 'navigate') {
       const indexCache = await caches.open(CACHE_NAME);
-      const indexHtml = await indexCache.match('/index.html');
+      const indexHtml = await indexCache.match(normalizePath('/index.html'));
       if (indexHtml) {
         return indexHtml;
       }

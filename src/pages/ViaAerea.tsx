@@ -129,7 +129,7 @@ const ViaAerea = () => {
           <div className="bg-muted/50 rounded-lg p-4">
             <div className="font-semibold text-foreground mb-2 flex items-center gap-2">
               <Users className="w-4 h-4" />
-              Adultos y Niños (>1 año)
+              Adultos y Niños (&gt;1 año)
             </div>
             <ul className="text-sm text-muted-foreground space-y-1">
               <li>• 5 golpes interescapulares</li>
