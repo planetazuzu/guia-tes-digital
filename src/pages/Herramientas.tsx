@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Calculator, Table, AlertCircle, BookOpen } from 'lucide-react';
 import GlasgowCalculator from '@/components/tools/GlasgowCalculator';
+import ParklandCalculator from '@/components/tools/ParklandCalculator';
 import InfusionTableView from '@/components/tools/InfusionTableView';
 import { infusionTables } from '@/data/calculators';
 import { Link } from 'react-router-dom';
@@ -17,25 +18,25 @@ const codigosProtocolo = [
   {
     name: 'Código Ictus',
     description: 'Activación ante sospecha de ictus agudo',
-    path: '/patologias?tab=neurologicas',
+    path: '/ictus',
     color: 'bg-secondary',
   },
   {
     name: 'Código IAM',
     description: 'SCACEST - Infarto con elevación ST',
-    path: '/patologias?tab=circulatorias',
+    path: '/patologias',
     color: 'bg-primary',
   },
   {
     name: 'Código Sepsis',
     description: 'Sospecha de sepsis severa / shock séptico',
-    path: '/soporte-vital',
+    path: '/shock',
     color: 'bg-emergency-high',
   },
   {
     name: 'Código Parada',
     description: 'PCR - Parada cardiorrespiratoria',
-    path: '/soporte-vital?id=rcp-adulto-svb',
+    path: '/rcp',
     color: 'bg-primary',
   },
 ];
@@ -77,25 +78,11 @@ const Herramientas = () => {
       {activeTab === 'calculadoras' && (
         <div className="space-y-4">
           <GlasgowCalculator />
-
-          {/* Placeholder for more calculators */}
-          <div className="card-procedure opacity-60">
-            <h3 className="font-bold text-foreground text-lg mb-2">
-              🔥 Fórmula de Parkland (Quemados)
-            </h3>
-            <p className="text-muted-foreground text-sm">
-              Próximamente disponible
-            </p>
-          </div>
-
-          <div className="card-procedure opacity-60">
-            <h3 className="font-bold text-foreground text-lg mb-2">
-              ⚖️ Dosis Pediátricas por Peso
-            </h3>
-            <p className="text-muted-foreground text-sm">
-              Próximamente disponible
-            </p>
-          </div>
+          <ParklandCalculator />
+          <PediatricDoseCalculator />
+          <RCPTimer />
+          <OxygenDurationCalculator />
+          <DripRateCalculator />
         </div>
       )}
 

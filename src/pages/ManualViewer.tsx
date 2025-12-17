@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, BookOpen } from 'lucide-react';
 import MarkdownViewer from '@/components/content/MarkdownViewer';
+import BackButton from '@/components/ui/BackButton';
 import { manualIndex, getCapituloById, Capitulo } from '@/data/manual-index';
 
 const ManualViewer = () => {
@@ -53,6 +54,11 @@ const ManualViewer = () => {
 
   return (
     <div className="space-y-6">
+      {/* Botón de retroceso */}
+      <div className="flex items-center justify-between">
+        <BackButton to="/manual" label="Volver al índice" />
+      </div>
+
       {/* Header del capítulo */}
       <div className="space-y-2">
         <div className="flex items-center gap-2 text-sm text-muted-foreground">

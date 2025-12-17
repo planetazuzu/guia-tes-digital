@@ -5,13 +5,22 @@ on:
     branches: [ main, master ]
   workflow_dispatch:
 
+# Configurar permisos para GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Permitir solo un despliegue concurrente
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -26,7 +35,16 @@ jobs:
       - name: Install dependencies
         run: npm install
       
+      - name: Extract repository name
+        id: repo
+        run: |
+          REPO_NAME=$(echo "${{ github.repository }}" | cut -d'/' -f2)
+          echo "repository_name=$REPO_NAME" >> $GITHUB_OUTPUT
+      
       - name: Build
+        env:
+          GITHUB_PAGES: 'true'
+          GITHUB_REPOSITORY_NAME: ${{ steps.repo.outputs.repository_name }}
         run: npm run build
       
       - name: Setup Pages

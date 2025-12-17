@@ -98,4 +98,85 @@ export const infusionTables: InfusionTable[] = [
       { weight: 100, doses: { '0.1 mcg/kg/min': '7.5', '0.2 mcg/kg/min': '15', '0.3 mcg/kg/min': '22.5', '0.5 mcg/kg/min': '37.5' } },
     ],
   },
+  {
+    id: 'adrenalina',
+    name: 'Perfusión Adrenalina',
+    drugName: 'Adrenalina',
+    preparation: '1mg en 100ml SG5% = 10 mcg/ml',
+    unit: 'ml/h',
+    doseRange: '0.05-0.5 mcg/kg/min',
+    columns: ['0.1 mcg/kg/min', '0.2 mcg/kg/min', '0.3 mcg/kg/min', '0.5 mcg/kg/min'],
+    rows: [
+      { weight: 50, doses: { '0.1 mcg/kg/min': '30', '0.2 mcg/kg/min': '60', '0.3 mcg/kg/min': '90', '0.5 mcg/kg/min': '150' } },
+      { weight: 60, doses: { '0.1 mcg/kg/min': '36', '0.2 mcg/kg/min': '72', '0.3 mcg/kg/min': '108', '0.5 mcg/kg/min': '180' } },
+      { weight: 70, doses: { '0.1 mcg/kg/min': '42', '0.2 mcg/kg/min': '84', '0.3 mcg/kg/min': '126', '0.5 mcg/kg/min': '210' } },
+      { weight: 80, doses: { '0.1 mcg/kg/min': '48', '0.2 mcg/kg/min': '96', '0.3 mcg/kg/min': '144', '0.5 mcg/kg/min': '240' } },
+      { weight: 90, doses: { '0.1 mcg/kg/min': '54', '0.2 mcg/kg/min': '108', '0.3 mcg/kg/min': '162', '0.5 mcg/kg/min': '270' } },
+      { weight: 100, doses: { '0.1 mcg/kg/min': '60', '0.2 mcg/kg/min': '120', '0.3 mcg/kg/min': '180', '0.5 mcg/kg/min': '300' } },
+    ],
+  },
 ];
+
+/**
+ * Calcula la reposición de líquidos según la Fórmula de Parkland para quemaduras
+ * @param weight Peso del paciente en kg
+ * @param burnPercentage Porcentaje de superficie corporal quemada (0-100)
+ * @param hoursSinceBurn Horas transcurridas desde la quemadura
+ * @returns Objeto con los cálculos de líquidos
+ */
+export const calculateParkland = (
+  weight: number,
+  burnPercentage: number,
+  hoursSinceBurn: number = 0
+): {
+  total24h: number;
+  total24hLiters: number;
+  first8h: number;
+  next16h: number;
+  rateFirst8h: number;
+  rateNext16h: number;
+  remaining24h: number;
+  maintenance: number;
+} => {
+  // Fórmula de Parkland: 4 ml × peso (kg) × % SCQ
+  const total24h = 4 * weight * burnPercentage;
+  const total24hLiters = total24h / 1000;
+
+  // Distribución: 50% en primeras 8h, 50% en siguientes 16h
+  const first8h = total24h * 0.5;
+  const next16h = total24h * 0.5;
+
+  // Velocidades de infusión
+  const rateFirst8h = first8h / 8; // ml/h
+  const rateNext16h = next16h / 16; // ml/h
+
+  // Calcular líquidos restantes si ya pasaron horas
+  let remaining24h = total24h;
+  if (hoursSinceBurn < 8) {
+    // Aún en primeras 8h
+    const alreadyGiven = (hoursSinceBurn / 8) * first8h;
+    remaining24h = total24h - alreadyGiven;
+  } else if (hoursSinceBurn < 24) {
+    // Pasadas primeras 8h, calcular restante
+    const remainingHours = 24 - hoursSinceBurn;
+    remaining24h = (remainingHours / 16) * next16h;
+  } else {
+    // Pasadas 24h, solo mantenimiento
+    remaining24h = 0;
+  }
+
+  // Mantenimiento después de 24h: ~2000-2500 ml/día + pérdidas por evaporación
+  // Estimación conservadora: 30-50 ml/kg/día para quemaduras extensas
+  const maintenance = weight * 40; // ml/día
+
+  return {
+    total24h: Math.round(total24h),
+    total24hLiters: total24hLiters,
+    first8h: Math.round(first8h),
+    next16h: Math.round(next16h),
+    rateFirst8h,
+    rateNext16h,
+    remaining24h: Math.round(remaining24h),
+    maintenance: Math.round(maintenance),
+  };
+};

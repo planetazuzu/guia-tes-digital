@@ -19,10 +19,10 @@ const recentSearches = [
 ];
 
 const quickAccess = [
-  { label: 'OVACE', path: '/soporte-vital?id=obstruccion-via-aerea' },
+  { label: 'OVACE', path: '/via-aerea' },
   { label: 'Glasgow', path: '/herramientas' },
   { label: 'Triage', path: '/escena' },
-  { label: 'Código Ictus', path: '/patologias' },
+  { label: 'Código Ictus', path: '/ictus' },
   { label: 'Dopamina', path: '/herramientas' },
   { label: 'Politrauma', path: '/soporte-vital' },
 ];
@@ -52,27 +52,27 @@ const Home = ({ onSearchClick }: HomeProps) => {
         </h2>
         <div className="grid grid-cols-2 gap-3">
           <EmergencyButton
-            to="/soporte-vital?id=rcp-adulto-svb"
+            to="/rcp"
             icon={Heart}
             title="RCP / Parada"
             subtitle="Adulto y Pediátrico"
             variant="critical"
           />
           <EmergencyButton
-            to="/patologias?tab=neurologicas"
+            to="/ictus"
             icon={Brain}
             title="Código Ictus"
             variant="high"
           />
           <EmergencyButton
-            to="/soporte-vital?id=shock-hemorragico"
+            to="/shock"
             icon={Zap}
             title="Shock"
             subtitle="Hemorrágico"
             variant="medium"
           />
           <EmergencyButton
-            to="/soporte-vital?id=obstruccion-via-aerea"
+            to="/via-aerea"
             icon={Wind}
             title="Vía Aérea"
             subtitle="OVACE / IOT"
@@ -127,7 +127,7 @@ const Home = ({ onSearchClick }: HomeProps) => {
 
       {/* Floating Emergency Button */}
       <Link
-        to="/soporte-vital?id=rcp-adulto-svb"
+        to="/rcp"
         className="fixed bottom-24 right-4 z-40 w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-lg animate-pulse-ring"
         aria-label="Emergencia - RCP"
       >

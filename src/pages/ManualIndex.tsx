@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, ChevronDown, BookOpen, Search } from 'lucide-react';
+import BackButton from '@/components/ui/BackButton';
 import { manualIndex, Parte, Bloque, Capitulo } from '@/data/manual-index';
 
 const ManualIndex = () => {
@@ -70,6 +71,9 @@ const ManualIndex = () => {
 
   return (
     <div className="space-y-6">
+      {/* Botón de retroceso */}
+      <BackButton to="/" label="Volver al inicio" />
+
       {/* Header */}
       <div className="space-y-4">
         <div className="flex items-center gap-3">

@@ -2,8 +2,16 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
+// Detectar si estamos en GitHub Pages
+// GitHub Pages usa el formato: https://username.github.io/repository-name/
+const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+const repositoryName = process.env.GITHUB_REPOSITORY_NAME || 'guia-tes-digital';
+const base = isGitHubPages ? `/${repositoryName}/` : '/';
+
 // https://vitejs.dev/config/
 export default defineConfig({
+  // Base path para GitHub Pages (necesario para rutas SPA)
+  base: base,
   server: {
     host: "::",
     port: 8096,
@@ -42,7 +50,11 @@ export default defineConfig({
     },
     // Incluir archivos .md en el build
     assetsInclude: ['**/*.md'],
+    // Copiar 404.html y sw.js de public/ a dist/ para GitHub Pages
+    copyPublicDir: true,
   },
+  // Configuración para PWA
+  // El service worker se copia automáticamente desde public/ con copyPublicDir
   
   // Configuración para importar archivos .md como texto usando ?raw
   // Ejemplo de uso:

@@ -20,6 +20,10 @@ import Comunicacion from "./pages/Comunicacion";
 import ManualIndex from "./pages/ManualIndex";
 import ManualViewer from "./pages/ManualViewer";
 import NotFound from "./pages/NotFound";
+import RCP from "./pages/RCP";
+import Ictus from "./pages/Ictus";
+import Shock from "./pages/Shock";
+import ViaAerea from "./pages/ViaAerea";
 
 const queryClient = new QueryClient();
 
@@ -56,6 +60,10 @@ const App = () => {
                   <Route path="/comunicacion" element={<Comunicacion />} />
                   <Route path="/manual" element={<ManualIndex />} />
                   <Route path="/manual/:parte/:bloque/:capitulo" element={<ManualViewer />} />
+                  <Route path="/rcp" element={<RCP />} />
+                  <Route path="/ictus" element={<Ictus />} />
+                  <Route path="/shock" element={<Shock />} />
+                  <Route path="/via-aerea" element={<ViaAerea />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </div>

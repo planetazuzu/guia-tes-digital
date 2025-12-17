@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirigiendo...</title>
+  <script>
+    // Redirigir todas las rutas al index.html para que React Router las maneje
+    // GitHub Pages servirá este archivo para cualquier ruta 404
+    var path = window.location.pathname;
+    var search = window.location.search;
+    var hash = window.location.hash;
+    
+    // Detectar base path dinámicamente
+    var base = '/';
+    var repoMatch = path.match(/^\/([^\/]+)\//);
+    if (repoMatch && repoMatch[1] !== 'index.html') {
+      base = '/' + repoMatch[1] + '/';
+    }
+    
+    // Si el path no termina en extensión de archivo estático, redirigir al index
+    if (!path.match(/\.(html|css|js|json|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|md)$/i)) {
+      window.location.replace(base + 'index.html' + search + hash);
+    }
+  </script>
+</head>
+<body>
+  <p>Redirigiendo...</p>
+  <script>
+    // Fallback: redirigir después de 100ms si JavaScript no funcionó
+    setTimeout(function() {
+      var base = '/';
+      var repoMatch = window.location.pathname.match(/^\/([^\/]+)\//);
+      if (repoMatch && repoMatch[1] !== 'index.html') {
+        base = '/' + repoMatch[1] + '/';
+      }
+      window.location.replace(base + 'index.html');
+    }, 100);
+  </script>
+</body>
+</html>

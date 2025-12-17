@@ -1,5 +1,7 @@
-import { Search, Menu, Wifi, WifiOff, Star } from 'lucide-react';
+import { Search, Menu, Wifi, WifiOff, Star, ArrowLeft } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 interface HeaderProps {
   onSearchClick: () => void;
@@ -7,6 +9,11 @@ interface HeaderProps {
 }
 
 const Header = ({ onSearchClick, onMenuClick }: HeaderProps) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  
+  // Mostrar botón de retroceso si no estamos en la página principal
+  const showBackButton = location.pathname !== '/';
   const [isOnline, setIsOnline] = useState(navigator.onLine);
 
   useEffect(() => {
@@ -22,10 +29,29 @@ const Header = ({ onSearchClick, onMenuClick }: HeaderProps) => {
     };
   }, []);
 
+  const handleBack = () => {
+    if (window.history.length > 1) {
+      navigate(-1);
+    } else {
+      navigate('/');
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card border-b border-border">
       <div className="flex items-center justify-between h-14 px-4">
         <div className="flex items-center gap-3">
+          {showBackButton && (
+            <Button
+              onClick={handleBack}
+              variant="ghost"
+              size="icon"
+              className="w-9 h-9"
+              aria-label="Volver"
+            >
+              <ArrowLeft className="w-5 h-5" />
+            </Button>
+          )}
           <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
             <span className="text-primary-foreground font-bold text-sm">TES</span>
           </div>
