@@ -169,7 +169,7 @@ const Shock = () => {
           hasta control quirúrgico de la hemorragia. Esto reduce la pérdida de sangre y mejora la supervivencia.
         </p>
         <p className="text-sm text-muted-foreground font-semibold">
-          ⚠️ EXCEPCIÓN: En TCE, mantener TAS >90 mmHg para preservar perfusión cerebral.
+          ⚠️ EXCEPCIÓN: En TCE, mantener TAS &gt;90 mmHg para preservar perfusión cerebral.
         </p>
       </div>
 
