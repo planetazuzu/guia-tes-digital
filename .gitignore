@@ -37,3 +37,4 @@ __pycache__/
 # Archivos de copia de seguridad
 *.bak
 *.backup
+backup_manual_pre_limpieza/

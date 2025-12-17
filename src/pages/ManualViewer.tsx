@@ -22,15 +22,9 @@ const ManualViewer = () => {
     if (cap) {
       setCapituloData(cap);
       
-      // Construir ruta del archivo desde public/
-      // La ruta en manual-index.ts es: manual-tes/TES_Manual_Digital/BLOQUE_X/archivo.md
-      // Convertir a: /manual/BLOQUE_X/archivo.md
-      const rutaArchivo = cap.rutaArchivo;
-      const nombreArchivo = rutaArchivo.split('/').pop();
-      const carpetaBloque = rutaArchivo.split('/').slice(-2, -1)[0];
-      const rutaPublic = `/manual/${carpetaBloque}/${nombreArchivo}`;
-      
-      setFilePath(rutaPublic);
+      // La ruta en manual-index.ts ya está en formato: /manual/BLOQUE_X/archivo.md
+      // Usar directamente la ruta del índice
+      setFilePath(cap.rutaArchivo);
     }
   }, [capitulo]);
 
