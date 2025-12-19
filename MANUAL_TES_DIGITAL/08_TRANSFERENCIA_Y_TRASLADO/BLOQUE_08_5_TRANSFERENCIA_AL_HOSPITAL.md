@@ -367,7 +367,15 @@ Verificar que los datos críticos introducidos en los sistemas móviles (monitor
 
 ---
 
+
+---
+
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+### Capítulos relacionados
 
+- [08 0 FUNDAMENTOS TRANSFERENCIA](./BLOQUE_08_0_FUNDAMENTOS_TRANSFERENCIA.md)
+- [08 1 PREPARACION TRASLADO](./BLOQUE_08_1_PREPARACION_TRASLADO.md)
+- [08 2 GESTION DURANTE TRASLADO](./BLOQUE_08_2_GESTION_DURANTE_TRASLADO.md)
+- [08 3 COMUNICACION PRE HOSPITALARIA](./BLOQUE_08_3_COMUNICACION_PRE_HOSPITALARIA.md)
+- [08 4 DOCUMENTACION TRASLADO](./BLOQUE_08_4_DOCUMENTACION_TRASLADO.md)

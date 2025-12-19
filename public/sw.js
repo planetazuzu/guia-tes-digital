@@ -1,8 +1,10 @@
 // Service Worker para PWA
 // Cache First Strategy para funcionamiento offline
 
-const CACHE_NAME = 'emerges-tes-v1';
-const RUNTIME_CACHE = 'emerges-tes-runtime-v1';
+// Versión del cache - Incrementar cuando hay cambios importantes
+const CACHE_VERSION = 'v1.0.1';
+const CACHE_NAME = `emerges-tes-${CACHE_VERSION}`;
+const RUNTIME_CACHE = `emerges-tes-runtime-${CACHE_VERSION}`;
 
 // Detectar base path dinámicamente (para GitHub Pages)
 const BASE_PATH = self.location.pathname.split('/').slice(0, -1).join('/') || '/';

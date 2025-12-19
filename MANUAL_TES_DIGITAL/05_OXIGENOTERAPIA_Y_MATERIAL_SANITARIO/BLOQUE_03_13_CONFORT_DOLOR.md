@@ -472,7 +472,15 @@ Este procedimiento es de **uso exclusivo como apoyo** y **NO sustituye**:
 
 ---
 
+
+---
+
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+### Capítulos relacionados
 
+- [03 0 OXIGENOTERAPIA FUNDAMENTOS](./BLOQUE_03_0_OXIGENOTERAPIA_FUNDAMENTOS.md)
+- [03 10 MONITORIZACION BASICA](./BLOQUE_03_10_MONITORIZACION_BASICA.md)
+- [03 11 GLUCOMETRO](./BLOQUE_03_11_GLUCOMETRO.md)
+- [03 12 TERMOMETRIA](./BLOQUE_03_12_TERMOMETRIA.md)
+- [03 14 BIOSEGURIDAD DESCONTAMINACION](./BLOQUE_03_14_BIOSEGURIDAD_DESCONTAMINACION.md)

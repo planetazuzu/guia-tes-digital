@@ -524,5 +524,15 @@ Este procedimiento es de **uso exclusivo como apoyo** y **NO sustituye**:
 
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+### Prerrequisitos
+- [Inmovilización Manual](./BLOQUE_02_2_INMOVILIZACION_MANUAL.md) - Técnica previa
+- [Collarín Cervical](./BLOQUE_02_3_COLLARIN_CERVICAL.md) - Parte del sistema completo
+
+### Capítulos relacionados (Sistema de Inmovilización)
+- [Tablero Espinal](./BLOQUE_02_5_TABLERO_ESPINAL.md) - Alternativa inicial
+- [Camilla Cuchara](./BLOQUE_02_4_CAMILLA_CUCHARA.md) - Dispositivo de transferencia
+- [Transferencia y Movilización](./BLOQUE_02_8_TRANSFERENCIAS_MOVILIZACION.md) - Continuación del proceso
+
+### Aplicación práctica
+- [Gestión durante Traslado](../08_TRANSFERENCIA_Y_TRASLADO/BLOQUE_08_2_GESTION_DURANTE_TRASLADO.md) - Uso durante traslado
 

@@ -687,7 +687,15 @@ Este procedimiento es de **uso exclusivo como apoyo** y **NO sustituye**:
 
 ---
 
+
+---
+
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+### Capítulos relacionados
 
+- [02 0 ANATOMIA OPERATIVA](./BLOQUE_02_0_ANATOMIA_OPERATIVA.md)
+- [02 10 FERULAS](./BLOQUE_02_10_FERULAS.md)
+- [02 11 CINTURON PELVICO](./BLOQUE_02_11_CINTURON_PELVICO.md)
+- [02 13 CAMILLAS SILLAS EVACUACION](./BLOQUE_02_13_CAMILLAS_SILLAS_EVACUACION.md)
+- [02 2 INMOVILIZACION MANUAL](./BLOQUE_02_2_INMOVILIZACION_MANUAL.md)

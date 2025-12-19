@@ -580,5 +580,13 @@ Este procedimiento es de **uso exclusivo como apoyo** y **NO sustituye**:
 
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+### Prerrequisitos
+- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md) - Valoración primaria
+
+### Continuación (Secuencia RCP)
+- [RCP Adultos](./BLOQUE_04_1_RCP_ADULTOS.md) - Siguiente paso: iniciar RCP
+- [Uso de DESA](./BLOQUE_04_4_USO_DESA.md) - Desfibrilación precoz
+
+### Protocolos transtelefónicos
+- [RCP Transtelefónica Adultos](../06_PROTOCOLOS_TRANSTELEFONICOS/BLOQUE_05_1_RCP_TRANSTELEFONICA_ADULTOS.md) - Guía telefónica
 

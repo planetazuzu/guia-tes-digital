@@ -269,5 +269,16 @@ Mejoría de la SpO₂ y, si se usa, de la capnografía (la presencia de CO₂ es
 
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+### Prerrequisitos
+- [RCP Adultos](./BLOQUE_04_1_RCP_ADULTOS.md) - Contexto de uso
+- [Oxigenoterapia Fundamentos](../05_OXIGENOTERAPIA_Y_MATERIAL_SANITARIO/BLOQUE_03_0_OXIGENOTERAPIA_FUNDAMENTOS.md) - Fundamentos de oxigenoterapia
+
+### Capítulos relacionados
+- [Uso Correcto BVM/AMBU](../05_OXIGENOTERAPIA_Y_MATERIAL_SANITARIO/BLOQUE_03_24_USO_CORRECTO_BVM_AMBU.md) - Técnica detallada
+- [Uso de Canulas OPA/NPA](./BLOQUE_04_6_USO_CANULAS_OPA_NPA.md) - Dispositivos de vía aérea
+- [Aspiración de Secreciones](./BLOQUE_04_7_ASPIRACION_SECRECIONES.md) - Limpieza de vía aérea
+
+### Aplicación práctica
+- [RCP Pediátrica](./BLOQUE_04_2_RCP_PEDIATRIA.md) - Uso en pediatría
+- [RCP Lactantes](./BLOQUE_04_3_RCP_LACTANTES.md) - Uso en lactantes
 

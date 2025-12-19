@@ -251,5 +251,17 @@ El TES actúa como **PREPARADOR Y FACILITADOR** bajo indicación expresa y super
 
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+### Prerrequisitos
+- [Fundamentos de Emergencias](../01_FUNDAMENTOS_Y_CONCEPTOS/BLOQUE_00_FUNDAMENTOS_EMERGENCIAS.md) - Marco conceptual
+- [Constantes Vitales](../02_PROCEDIMIENTOS_BASICOS/1.1_constantes_vitales.md) - Monitorización durante administración
+
+### Capítulos relacionados (Farmacología)
+- [Del Vial a la Vena](./BLOQUE_06_1_DEL_VIAL_A_LA_VENA.md) - Técnicas de preparación
+- [Analgésicos y Sedantes](./BLOQUE_06_2_ANALGESICOS_SEDANTES.md) - Aplicación práctica
+- [Vasoactivos y Aminas](./BLOQUE_06_3_VASOACTIVOS_AMINAS.md) - Aplicación práctica
+- [Fármacos Cardiológicos](./BLOQUE_06_5_FARMACOS_CARDIOLOGICOS.md) - Aplicación práctica
+
+### Aplicación práctica
+- [RCP Adultos](../03_SOPORTE_VITAL_BASICO/BLOQUE_04_1_RCP_ADULTOS.md) - Contexto de uso
+- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md) - Valoración durante administración
 

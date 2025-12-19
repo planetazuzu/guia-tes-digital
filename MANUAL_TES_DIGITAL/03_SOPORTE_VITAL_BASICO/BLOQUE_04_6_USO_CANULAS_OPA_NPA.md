@@ -229,5 +229,15 @@ Mantener permeable la vía aérea en pacientes con disminución del nivel de con
 
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+### Prerrequisitos
+- [Ventilación BVM](./BLOQUE_04_5_VENTILACION_BVM.md) - Técnica previa
+- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md) - Valoración inicial
+
+### Capítulos relacionados
+- [Canulas Oro/Nasofaríngeas](../05_OXIGENOTERAPIA_Y_MATERIAL_SANITARIO/BLOQUE_03_23_CANULAS_ORO_NASOFARINGEAS.md) - Guía detallada
+- [Aspiración de Secreciones](./BLOQUE_04_7_ASPIRACION_SECRECIONES.md) - Limpieza de vía aérea
+- [Ventilación BVM](./BLOQUE_04_5_VENTILACION_BVM.md) - Integración con ventilación
+
+### Aplicación práctica
+- [RCP Adultos](./BLOQUE_04_1_RCP_ADULTOS.md) - Contexto de uso
 

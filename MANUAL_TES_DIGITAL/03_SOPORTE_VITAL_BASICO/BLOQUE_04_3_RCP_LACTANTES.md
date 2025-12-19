@@ -369,5 +369,16 @@ Este procedimiento es de **uso exclusivo como apoyo** y **NO sustituye**:
 
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+### Prerrequisitos
+- [Reconocimiento de PCR](./BLOQUE_04_0_RECONOCIMIENTO_PCR.md) - Identificación de PCR
+- [RCP Adultos](./BLOQUE_04_1_RCP_ADULTOS.md) - Fundamentos de RCP
+- [RCP Pediátrica](./BLOQUE_04_2_RCP_PEDIATRIA.md) - RCP en niños
+- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md) - Valoración inicial
+
+### Capítulos relacionados (RCP)
+- [Uso de DESA](./BLOQUE_04_4_USO_DESA.md) - Desfibrilación precoz
+- [Ventilación BVM](./BLOQUE_04_5_VENTILACION_BVM.md) - Ventilación con bolsa-mascarilla
+
+### Protocolos transtelefónicos
+- [RCP Transtelefónica Lactantes](../06_PROTOCOLOS_TRANSTELEFONICOS/BLOQUE_05_3_RCP_TRANSTELEFONICA_LACTANTES.md) - Guía telefónica
 

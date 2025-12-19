@@ -9,6 +9,8 @@ import BottomNav from "@/components/layout/BottomNav";
 import Footer from "@/components/layout/Footer";
 import SearchModal from "@/components/layout/SearchModal";
 import MenuSheet from "@/components/layout/MenuSheet";
+import UpdateNotification from "@/components/layout/UpdateNotification";
+import UpdateNotification from "@/components/layout/UpdateNotification";
 import Home from "./pages/Index";
 import SoporteVital from "./pages/SoporteVital";
 import Patologias from "./pages/Patologias";
@@ -73,6 +75,8 @@ const App = () => {
             <BottomNav />
 
             <Footer />
+
+            <UpdateNotification />
 
             <SearchModal
               isOpen={isSearchOpen}

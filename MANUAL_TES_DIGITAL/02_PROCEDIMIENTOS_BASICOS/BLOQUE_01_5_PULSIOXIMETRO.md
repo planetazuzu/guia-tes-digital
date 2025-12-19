@@ -246,7 +246,15 @@ Anotar en la hoja de registro: **SpO₂: [valor]% / FC Px: [valor] lpm / [Buena/
 
 ---
 
+
+---
+
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](1.2_abcde_operativo.md)
+### Capítulos relacionados
 
+- [1.1 constantes vitales](./1.1_constantes_vitales.md)
+- [1.2 abcde operativo](./1.2_abcde_operativo.md)
+- [1.3 glasgow operativo](./1.3_glasgow_operativo.md)
+- [1.4 triage start](./1.4_triage_start.md)
+- [01 6 TENSIOMETRO](./BLOQUE_01_6_TENSIOMETRO.md)

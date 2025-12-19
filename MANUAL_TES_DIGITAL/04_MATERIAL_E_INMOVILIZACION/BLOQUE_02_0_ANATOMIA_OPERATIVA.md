@@ -597,7 +597,15 @@ Este capítulo es de **uso exclusivo como referencia operativa** y **NO sustituy
 
 ---
 
+
+---
+
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+### Capítulos relacionados
 
+- [02 10 FERULAS](./BLOQUE_02_10_FERULAS.md)
+- [02 11 CINTURON PELVICO](./BLOQUE_02_11_CINTURON_PELVICO.md)
+- [02 12 FERULA TRACCION](./BLOQUE_02_12_FERULA_TRACCION.md)
+- [02 13 CAMILLAS SILLAS EVACUACION](./BLOQUE_02_13_CAMILLAS_SILLAS_EVACUACION.md)
+- [02 2 INMOVILIZACION MANUAL](./BLOQUE_02_2_INMOVILIZACION_MANUAL.md)

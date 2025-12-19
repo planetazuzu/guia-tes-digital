@@ -276,7 +276,15 @@ Interacción: Potencia el efecto de anticoagulantes.
 
 ---
 
+
+---
+
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+### Capítulos relacionados
 
+- [06 0 PRINCIPIOS ADMINISTRACION](./BLOQUE_06_0_PRINCIPIOS_ADMINISTRACION.md)
+- [06 1 DEL VIAL A LA VENA](./BLOQUE_06_1_DEL_VIAL_A_LA_VENA.md)
+- [06 2 ANALGESICOS SEDANTES](./BLOQUE_06_2_ANALGESICOS_SEDANTES.md)
+- [06 3 VASOACTIVOS AMINAS](./BLOQUE_06_3_VASOACTIVOS_AMINAS.md)
+- [06 4 ANTIARRITMICOS](./BLOQUE_06_4_ANTIARRITMICOS.md)

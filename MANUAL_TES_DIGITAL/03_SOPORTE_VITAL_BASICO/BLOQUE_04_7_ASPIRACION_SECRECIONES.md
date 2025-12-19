@@ -262,5 +262,15 @@ Mantener la permeabilidad de la vía aérea mediante la eliminación de secrecio
 
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+### Prerrequisitos
+- [Ventilación BVM](./BLOQUE_04_5_VENTILACION_BVM.md) - Técnica previa
+- [Uso de Canulas OPA/NPA](./BLOQUE_04_6_USO_CANULAS_OPA_NPA.md) - Dispositivos de vía aérea
+
+### Capítulos relacionados
+- [Aspiración](../05_OXIGENOTERAPIA_Y_MATERIAL_SANITARIO/BLOQUE_03_2_ASPIRACION.md) - Técnicas de aspiración
+- [Ventilación BVM](./BLOQUE_04_5_VENTILACION_BVM.md) - Integración con ventilación
+
+### Aplicación práctica
+- [RCP Adultos](./BLOQUE_04_1_RCP_ADULTOS.md) - Contexto de uso
+- [RCP Pediátrica](./BLOQUE_04_2_RCP_PEDIATRIA.md) - Uso en pediatría
 

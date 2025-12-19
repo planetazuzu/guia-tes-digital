@@ -235,5 +235,14 @@ Mejorar la ventilación en pacientes con dificultad respiratoria (asma, EPOC, ed
 
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+### Prerrequisitos
+- [Reconocimiento de PCR](./BLOQUE_04_0_RECONOCIMIENTO_PCR.md) - Identificación de PCR
+- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md) - Valoración inicial
+
+### Capítulos relacionados
+- [RCP Adultos](./BLOQUE_04_1_RCP_ADULTOS.md) - Contexto de uso
+- [Inmovilización Manual](../04_MATERIAL_E_INMOVILIZACION/BLOQUE_02_2_INMOVILIZACION_MANUAL.md) - Técnicas de inmovilización
+
+### Protocolos transtelefónicos
+- [OVACE Transtelefónica](../06_PROTOCOLOS_TRANSTELEFONICOS/BLOQUE_05_9_OVACE_TRANSTELEFONICA.md) - Guía telefónica
 

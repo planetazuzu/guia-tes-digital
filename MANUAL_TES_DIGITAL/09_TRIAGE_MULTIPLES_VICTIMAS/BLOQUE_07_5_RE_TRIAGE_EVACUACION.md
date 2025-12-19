@@ -198,7 +198,15 @@ Una tarjeta de evacuación mínima que viaja con el paciente:
 
 ---
 
+
+---
+
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+### Capítulos relacionados
 
+- [07 1 FUNDAMENTOS TRIAGE](./BLOQUE_07_1_FUNDAMENTOS_TRIAGE.md)
+- [07 2 METODO START](./BLOQUE_07_2_METODO_START.md)
+- [07 3 ETIQUETADO ZONIFICACION](./BLOQUE_07_3_ETIQUETADO_ZONIFICACION.md)
+- [07 4 ROLES FUNCIONES TES TMV](./BLOQUE_07_4_ROLES_FUNCIONES_TES_TMV.md)
+- [07 6 CONSIDERACIONES ESPECIALES TMV](./BLOQUE_07_6_CONSIDERACIONES_ESPECIALES_TMV.md)

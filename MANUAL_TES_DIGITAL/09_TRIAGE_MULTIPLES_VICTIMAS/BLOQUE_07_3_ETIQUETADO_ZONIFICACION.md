@@ -232,7 +232,15 @@ Punto de carga de ambulancias. Organizada por prioridades.
 
 ---
 
+
+---
+
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+### Capítulos relacionados
 
+- [07 1 FUNDAMENTOS TRIAGE](./BLOQUE_07_1_FUNDAMENTOS_TRIAGE.md)
+- [07 2 METODO START](./BLOQUE_07_2_METODO_START.md)
+- [07 4 ROLES FUNCIONES TES TMV](./BLOQUE_07_4_ROLES_FUNCIONES_TES_TMV.md)
+- [07 5 RE TRIAGE EVACUACION](./BLOQUE_07_5_RE_TRIAGE_EVACUACION.md)
+- [07 6 CONSIDERACIONES ESPECIALES TMV](./BLOQUE_07_6_CONSIDERACIONES_ESPECIALES_TMV.md)
