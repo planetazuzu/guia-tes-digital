@@ -8,8 +8,10 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "build:github": "GITHUB_PAGES=true GITHUB_REPOSITORY_NAME=guia-tes-digital npm run build",
-    "lint": "eslint .",
+    "build:production": "NODE_ENV=production vite build",
     "preview": "vite preview",
+    "start:production": "npx serve -s dist -l 3000",
+    "lint": "eslint .",
     "verify:manual": "tsx scripts/verificar-manual.ts"
   },
   "dependencies": {

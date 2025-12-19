@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="520" viewBox="0 0 1400 520" role="img" aria-label="Rangos Aproximados de FiO2 por Dispositivo de Oxigenoterapia">
+  <defs>
+    <style>
+      .title { font: 700 34px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:#1f2a37; }
+      .subtitle { font: 500 14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:#4b5563; }
+      .th { font: 700 16px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:#111827; }
+      .td { font: 600 15px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:#111827; }
+      .muted { font: 500 13px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:#374151; }
+      .small { font: 500 12px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:#6b7280; }
+      .cell { fill:#ffffff; stroke:#e5e7eb; stroke-width:1; }
+      .headerCell { fill:#f9fafb; stroke:#e5e7eb; stroke-width:1; }
+      .rowAlt { fill:#fcfcfd; }
+      .barBg { fill:#f3f4f6; stroke:#e5e7eb; stroke-width:1; }
+      .iconStroke { stroke:#111827; stroke-width:2.2; fill:none; stroke-linecap:round; stroke-linejoin:round; opacity:0.9; }
+      .iconFill { fill:#111827; opacity:0.9; }
+    </style>
+
+    <!-- FiO2 gradient (low -> high) -->
+    <linearGradient id="fio2Grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#34d399"></stop>
+      <stop offset="45%" stop-color="#fbbf24"></stop>
+      <stop offset="70%" stop-color="#fb7185"></stop>
+      <stop offset="100%" stop-color="#ef4444"></stop>
+    </linearGradient>
+
+    <!-- Subtle shadow -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#111827" flood-opacity="0.10"></feDropShadow>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1400" height="520" fill="#ffffff"></rect>
+
+  <!-- Title -->
+  <text class="title" x="60" y="62">Rangos Aproximados de FiO₂ por Dispositivo de Oxigenoterapia</text>
+  <text class="subtitle" x="60" y="88">Infografía orientativa (valores aproximados; varían por técnica, ajuste, patrón respiratorio y fugas).</text>
+
+  <!-- Legend -->
+  <g transform="translate(60,110)">
+    <rect x="0" y="0" width="520" height="18" rx="9" fill="url(#fio2Grad)" filter="url(#shadow)"></rect>
+    <text class="small" x="0" y="38">FiO₂ baja</text>
+    <text class="small" x="240" y="38" text-anchor="middle">Aumento de FiO₂</text>
+    <text class="small" x="520" y="38" text-anchor="end">FiO₂ alta</text>
+  </g>
+
+  <!-- Table layout -->
+  <!-- Columns: Icon+Dispositivo | Flujo | FiO2 (bar) | Indicaciones -->
+  <!-- Table frame -->
+  <g transform="translate(60,160)">
+    <!-- Header -->
+    <rect class="headerCell" x="0" y="0" width="1280" height="52" rx="10"></rect>
+    <line x1="0" y1="52" x2="1280" y2="52" stroke="#e5e7eb"></line>
+
+    <!-- Column separators -->
+    <line x1="360" y1="0" x2="360" y2="52" stroke="#e5e7eb"></line>
+    <line x1="560" y1="0" x2="560" y2="52" stroke="#e5e7eb"></line>
+    <line x1="860" y1="0" x2="860" y2="52" stroke="#e5e7eb"></line>
+
+    <!-- Header text -->
+    <text class="th" x="22" y="32">Dispositivo</text>
+    <text class="th" x="380" y="32">Flujo recomendado (L/min)</text>
+    <text class="th" x="580" y="32">FiO₂ aproximada</text>
+    <text class="th" x="880" y="32">Indicaciones principales</text>
+
+    <!-- Rows (5) -->
+    <!-- Row heights -->
+    <!-- y positions: 52, 120, 188, 256, 324, 392 -->
+    <!-- Row 1: Aire ambiente -->
+    <rect class="cell rowAlt" x="0" y="52" width="1280" height="68"></rect>
+    <line x1="360" y1="52" x2="360" y2="120" stroke="#e5e7eb"></line>
+    <line x1="560" y1="52" x2="560" y2="120" stroke="#e5e7eb"></line>
+    <line x1="860" y1="52" x2="860" y2="120" stroke="#e5e7eb"></line>
+
+    <!-- Icon: leaf/air -->
+    <g transform="translate(22,74)">
+      <path class="iconStroke" d="M18 28c10-2 18-10 20-20C28 10 20 18 18 28Z"></path>
+      <path class="iconStroke" d="M6 26c5 1 10-1 14-5"></path>
+    </g>
+    <text class="td" x="70" y="94">Aire ambiente</text>
+    <text class="muted" x="380" y="94">0</text>
+
+    <!-- FiO2 bar (21%) -->
+    <g transform="translate(580,74)">
+      <rect class="barBg" x="0" y="8" width="260" height="26" rx="13"></rect>
+      <!-- width = 260 * 0.21 ≈ 55 -->
+      <rect x="0" y="8" width="55" height="26" rx="13" fill="url(#fio2Grad)"></rect>
+      <text class="muted" x="270" y="27" text-anchor="end">≈ 21%</text>
+    </g>
+
+    <text class="muted" x="880" y="82">Referencia basal / sin aporte de O₂</text>
+    <text class="small" x="880" y="104">Útil para valorar necesidad real de oxigenoterapia</text>
+
+    <!-- Row 2: Gafas nasales -->
+    <rect class="cell" x="0" y="120" width="1280" height="68"></rect>
+    <line x1="360" y1="120" x2="360" y2="188" stroke="#e5e7eb"></line>
+    <line x1="560" y1="120" x2="560" y2="188" stroke="#e5e7eb"></line>
+    <line x1="860" y1="120" x2="860" y2="188" stroke="#e5e7eb"></line>
+
+    <!-- Icon: nasal cannula -->
+    <g transform="translate(22,142)">
+      <path class="iconStroke" d="M10 8c0 10 0 16 8 20"></path>
+      <path class="iconStroke" d="M34 8c0 10 0 16-8 20"></path>
+      <path class="iconStroke" d="M18 28c2 2 6 2 8 0"></path>
+      <circle class="iconFill" cx="18" cy="29" r="1.8"></circle>
+      <circle class="iconFill" cx="26" cy="29" r="1.8"></circle>
+    </g>
+    <text class="td" x="70" y="162">Gafas nasales</text>
+    <text class="muted" x="380" y="162">1–6</text>
+
+    <!-- FiO2 bar (24–44%, midpoint ~34%) -->
+    <g transform="translate(580,142)">
+      <rect class="barBg" x="0" y="8" width="260" height="26" rx="13"></rect>
+      <!-- width = 260 * 0.34 ≈ 88 -->
+      <rect x="0" y="8" width="88" height="26" rx="13" fill="url(#fio2Grad)"></rect>
+      <text class="muted" x="270" y="27" text-anchor="end">≈ 24–44%</text>
+    </g>
+
+    <text class="muted" x="880" y="150">Hipoxemia leve, disnea leve, confort</text>
+    <text class="small" x="880" y="172">Pacientes que toleran bien y requieren ajuste gradual</text>
+
+    <!-- Row 3: Mascarilla simple -->
+    <rect class="cell rowAlt" x="0" y="188" width="1280" height="68"></rect>
+    <line x1="360" y1="188" x2="360" y2="256" stroke="#e5e7eb"></line>
+    <line x1="560" y1="188" x2="560" y2="256" stroke="#e5e7eb"></line>
+    <line x1="860" y1="188" x2="860" y2="256" stroke="#e5e7eb"></line>
+
+    <!-- Icon: simple mask -->
+    <g transform="translate(22,210)">
+      <path class="iconStroke" d="M14 10c-4 10-4 18 0 28h16c4-10 4-18 0-28Z"></path>
+      <path class="iconStroke" d="M14 14H6"></path>
+      <path class="iconStroke" d="M30 14h8"></path>
+      <path class="iconStroke" d="M18 24h8"></path>
+    </g>
+    <text class="td" x="70" y="230">Mascarilla simple</text>
+    <text class="muted" x="380" y="230">5–10</text>
+
+    <!-- FiO2 bar (40–60%, midpoint 50%) -->
+    <g transform="translate(580,210)">
+      <rect class="barBg" x="0" y="8" width="260" height="26" rx="13"></rect>
+      <!-- width = 260 * 0.50 = 130 -->
+      <rect x="0" y="8" width="130" height="26" rx="13" fill="url(#fio2Grad)"></rect>
+      <text class="muted" x="270" y="27" text-anchor="end">≈ 40–60%</text>
+    </g>
+
+    <text class="muted" x="880" y="218">Hipoxemia moderada</text>
+    <text class="small" x="880" y="240">Asegurar ≥5 L/min para reducir reinhalación de CO₂</text>
+
+    <!-- Row 4: Mascarilla con reservorio -->
+    <rect class="cell" x="0" y="256" width="1280" height="68"></rect>
+    <line x1="360" y1="256" x2="360" y2="324" stroke="#e5e7eb"></line>
+    <line x1="560" y1="256" x2="560" y2="324" stroke="#e5e7eb"></line>
+    <line x1="860" y1="256" x2="860" y2="324" stroke="#e5e7eb"></line>
+
+    <!-- Icon: non-rebreather + bag -->
+    <g transform="translate(22,278)">
+      <path class="iconStroke" d="M14 10c-4 10-4 18 0 28h16c4-10 4-18 0-28Z"></path>
+      <rect x="34" y="22" width="12" height="14" rx="3" class="iconStroke"></rect>
+      <path class="iconStroke" d="M30 30h4"></path>
+    </g>
+    <text class="td" x="70" y="298">Mascarilla con reservorio</text>
+    <text class="muted" x="380" y="298">10–15</text>
+
+    <!-- FiO2 bar (60–90%, midpoint 75%) -->
+    <g transform="translate(580,278)">
+      <rect class="barBg" x="0" y="8" width="260" height="26" rx="13"></rect>
+      <!-- width = 260 * 0.75 = 195 -->
+      <rect x="0" y="8" width="195" height="26" rx="13" fill="url(#fio2Grad)"></rect>
+      <text class="muted" x="270" y="27" text-anchor="end">≈ 60–90%</text>
+    </g>
+
+    <text class="muted" x="880" y="286">Hipoxemia grave / preoxigenación</text>
+    <text class="small" x="880" y="308">Reservorio inflado; evitar colapso durante inspiración</text>
+
+    <!-- Row 5: Bolsa-válvula-mascarilla -->
+    <rect class="cell rowAlt" x="0" y="324" width="1280" height="68" rx="0"></rect>
+    <line x1="360" y1="324" x2="360" y2="392" stroke="#e5e7eb"></line>
+    <line x1="560" y1="324" x2="560" y2="392" stroke="#e5e7eb"></line>
+    <line x1="860" y1="324" x2="860" y2="392" stroke="#e5e7eb"></line>
+
+    <!-- Icon: BVM -->
+    <g transform="translate(22,346)">
+      <rect x="10" y="10" width="18" height="26" rx="9" class="iconStroke"></rect>
+      <path class="iconStroke" d="M28 23h12"></path>
+      <path class="iconStroke" d="M40 18c4 6 4 14 0 20"></path>
+      <path class="iconStroke" d="M40 18h10"></path>
+    </g>
+    <text class="td" x="70" y="366">Bolsa-válvula-mascarilla</text>
+    <text class="muted" x="380" y="366">10–15 (O₂)</text>
+
+    <!-- FiO2 bar (90–100%, midpoint 95%) -->
+    <g transform="translate(580,346)">
+      <rect class="barBg" x="0" y="8" width="260" height="26" rx="13"></rect>
+      <!-- width = 260 * 0.95 = 247 -->
+      <rect x="0" y="8" width="247" height="26" rx="13" fill="url(#fio2Grad)"></rect>
+      <text class="muted" x="270" y="27" text-anchor="end">≈ 90–100%</text>
+    </g>
+
+    <text class="muted" x="880" y="354">Ventilación asistida / apnea / PCR</text>
+    <text class="small" x="880" y="376">Mejor con reservorio + buen sellado (técnica a 2 manos si es posible)</text>
+
+    <!-- Footer note -->
+    <text class="small" x="0" y="430">Nota TES: estos rangos son orientativos. Ajustar a objetivos clínicos y monitorización (SpO₂/ETCO₂) según protocolo local.</text>
+  </g>
+</svg>

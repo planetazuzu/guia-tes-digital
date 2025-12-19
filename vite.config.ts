@@ -30,31 +30,46 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // Configuración para procesar archivos .md
-  assetsInclude: ["**/*.md"],
+  // Configuración para procesar archivos .md e imágenes
+  assetsInclude: ["**/*.md", "**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.svg", "**/*.gif"],
   
-  // Configuración de build para incluir archivos .md
+  // Configuración de build para incluir archivos .md e imágenes
   build: {
     rollupOptions: {
-      // Asegurar que los archivos .md se copien al build
+      // Asegurar que los archivos .md e imágenes se copien al build
       output: {
         assetFileNames: (assetInfo) => {
+          const name = assetInfo.name || '';
+          
           // Mantener estructura de carpetas para archivos .md en public/
-          if (assetInfo.name?.endsWith('.md')) {
-            // Si está en public/manual/, mantener esa estructura
-            const name = assetInfo.name || '';
+          if (name.endsWith('.md')) {
             if (name.includes('manual')) {
               return 'manual/[name][extname]';
             }
             return 'assets/[name]-[hash][extname]';
           }
+          
+          // Mantener estructura de carpetas para imágenes en public/assets/
+          if (name.match(/\.(png|jpg|jpeg|svg|gif)$/i)) {
+            // Si está en public/assets/infografias/, mantener estructura
+            if (assetInfo.source && typeof assetInfo.source === 'string') {
+              // Mantener estructura de carpetas para assets
+              if (assetInfo.source.includes('assets/infografias')) {
+                // Extraer ruta relativa desde public/
+                const relativePath = assetInfo.source.split('public/')[1] || name;
+                return relativePath;
+              }
+            }
+            return 'assets/[name]-[hash][extname]';
+          }
+          
           return 'assets/[name]-[hash][extname]';
         },
       },
     },
-    // Incluir archivos .md en el build
-    assetsInclude: ['**/*.md'],
-    // Copiar 404.html y sw.js de public/ a dist/ para GitHub Pages
+    // Incluir archivos .md e imágenes en el build
+    assetsInclude: ['**/*.md', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.svg', '**/*.gif'],
+    // Copiar todo el directorio public/ a dist/ (incluye imágenes)
     copyPublicDir: true,
   },
   // Configuración para PWA

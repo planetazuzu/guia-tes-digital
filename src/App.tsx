@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import BottomNav from "@/components/layout/BottomNav";
+import Footer from "@/components/layout/Footer";
 import SearchModal from "@/components/layout/SearchModal";
 import MenuSheet from "@/components/layout/MenuSheet";
 import Home from "./pages/Index";
@@ -37,13 +38,13 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <div className="min-h-screen bg-background">
+          <div className="min-h-screen bg-background flex flex-col">
             <Header
               onSearchClick={() => setIsSearchOpen(true)}
               onMenuClick={() => setIsMenuOpen(true)}
             />
 
-            <main className="pt-14 pb-safe">
+            <main className="pt-14 pb-safe flex-1">
               <div className="container max-w-2xl py-4">
                 <Routes>
                   <Route
@@ -70,6 +71,8 @@ const App = () => {
             </main>
 
             <BottomNav />
+
+            <Footer />
 
             <SearchModal
               isOpen={isSearchOpen}

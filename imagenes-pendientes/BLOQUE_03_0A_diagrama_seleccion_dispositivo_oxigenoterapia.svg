@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1650" viewBox="0 0 1000 1650" role="img" aria-label="Selección del Dispositivo de Oxigenoterapia">
+  <defs>
+    <style>
+      .bg { fill:#ffffff; }
+      .title { font: 700 30px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:#1f3b55; }
+      .sub { font: 500 15px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:#3a5873; }
+      .txt { font: 600 16px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:#163246; }
+      .small { font: 500 14px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:#2f516a; }
+      .note { font: 500 13px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:#2f516a; }
+      .box { fill:#f5fbff; stroke:#5aa7d6; stroke-width:2.2; }
+      .box2 { fill:#eef7ff; stroke:#5aa7d6; stroke-width:2.2; }
+      .decision { fill:#f2f8ff; stroke:#5aa7d6; stroke-width:2.2; }
+      .device { fill:#f7fbff; stroke:#3f90c1; stroke-width:2.4; }
+      .arrow { stroke:#3f90c1; stroke-width:3; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+      .label { font: 700 14px/1 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:#1f5f86; }
+      .hand { stroke:#3f90c1; stroke-width:2.2; fill:none; stroke-linecap:round; stroke-linejoin:round; opacity:.95;}
+      .shadow { filter:url(#shadow); }
+    </style>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0b3756" flood-opacity="0.12"></feDropShadow>
+    </filter>
+
+    <marker id="arrowHead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1,1 L11,6 L1,11" fill="none" stroke="#3f90c1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" x="0" y="0" width="1000" height="1650"></rect>
+
+  <!-- Header -->
+  <text class="title" x="500" y="70" text-anchor="middle">Selección del Dispositivo de Oxigenoterapia</text>
+  <text class="sub" x="500" y="102" text-anchor="middle">Flujograma clínico orientativo (TES) • Colores suaves • Iconografía médica simple</text>
+
+  <!-- Top icon (lungs + O2) -->
+  <g transform="translate(430,125)">
+    <!-- lungs -->
+    <path class="hand" d="M60 40 C45 35,35 45,32 62 C28 85,40 102,56 108 C66 111,76 108,82 100 C88 92,88 78,84 68 C80 54,72 44,60 40Z"></path>
+    <path class="hand" d="M100 40 C115 35,125 45,128 62 C132 85,120 102,104 108 C94 111,84 108,78 100 C72 92,72 78,76 68 C80 54,88 44,100 40Z"></path>
+    <path class="hand" d="M80 38 L80 78"></path>
+    <!-- O2 bubble -->
+    <circle cx="155" cy="55" r="18" fill="#e8f5ff" stroke="#3f90c1" stroke-width="2"></circle>
+    <text x="155" y="60" text-anchor="middle" class="label">O₂</text>
+  </g>
+
+  <!-- Start -->
+  <g class="shadow">
+    <rect class="box" x="170" y="180" rx="18" ry="18" width="660" height="90"></rect>
+  </g>
+  <text class="txt" x="500" y="218" text-anchor="middle">Inicio</text>
+  <text class="small" x="500" y="245" text-anchor="middle">Paciente con dificultad respiratoria / hipoxemia</text>
+
+  <!-- Arrow to Decision 1 -->
+  <path class="arrow" d="M500 270 L500 320" marker-end="url(#arrowHead)"></path>
+
+  <!-- Decision 1: Respira espontáneamente? -->
+  <g class="shadow">
+    <polygon class="decision" points="500,330 640,395 500,460 360,395"></polygon>
+  </g>
+  <text class="txt" x="500" y="390" text-anchor="middle">¿Respira espontáneamente?</text>
+
+  <!-- No branch to BVM -->
+  <path class="arrow" d="M360 395 L210 395 L210 560" marker-end="url(#arrowHead)"></path>
+  <text class="label" x="300" y="378" text-anchor="middle">NO</text>
+
+  <!-- Yes branch to Decision 2 -->
+  <path class="arrow" d="M500 460 L500 520" marker-end="url(#arrowHead)"></path>
+  <text class="label" x="520" y="500">SÍ</text>
+
+  <!-- Device: BVM -->
+  <g class="shadow">
+    <rect class="device" x="90" y="570" rx="18" ry="18" width="360" height="130"></rect>
+  </g>
+  <!-- simple icon: bag-valve-mask -->
+  <g transform="translate(115,595)">
+    <path class="hand" d="M40 60 C30 55,22 45,22 34 C22 18,35 8,50 10 C64 12,74 26,70 41 C67 53,54 63,40 60Z"></path>
+    <path class="hand" d="M70 42 L105 52 C118 56,126 70,120 83 C114 96,97 100,85 91 L62 75"></path>
+    <path class="hand" d="M110 50 L140 35 C148 31,158 34,162 42 C166 50,163 60,155 64 L128 78"></path>
+    <path class="hand" d="M28 32 L10 22"></path>
+  </g>
+  <text class="txt" x="270" y="615" text-anchor="middle">Bolsa-válvula-mascarilla con O₂</text>
+  <text class="small" x="270" y="645" text-anchor="middle">Flujo: 15 L/min</text>
+  <text class="small" x="270" y="670" text-anchor="middle">FiO₂ aprox.: 0,90–1,00 (con buen sellado)</text>
+  <text class="note" x="270" y="695" text-anchor="middle">→ Priorizar ventilación + reevaluación continua</text>
+
+  <!-- Decision 2: SatO2 >=94? -->
+  <g class="shadow">
+    <polygon class="decision" points="500,530 640,595 500,660 360,595"></polygon>
+  </g>
+  <text class="txt" x="500" y="590" text-anchor="middle">¿SatO₂ ≥ 94%?</text>
+
+  <!-- NO branch to higher O2 path -->
+  <path class="arrow" d="M360 595 L300 595 L300 740" marker-end="url(#arrowHead)"></path>
+  <text class="label" x="330" y="578" text-anchor="middle">NO</text>
+
+  <!-- YES branch to Decision 3 -->
+  <path class="arrow" d="M500 660 L500 720" marker-end="url(#arrowHead)"></path>
+  <text class="label" x="520" y="705">SÍ</text>
+
+  <!-- Device: Nasal cannula (for stable sats) -->
+  <g class="shadow">
+    <rect class="device" x="560" y="720" rx="18" ry="18" width="360" height="130"></rect>
+  </g>
+  <!-- icon: nasal cannula -->
+  <g transform="translate(585,745)">
+    <path class="hand" d="M50 25 C55 15,70 15,75 25"></path>
+    <path class="hand" d="M50 25 C40 45,40 70,55 85"></path>
+    <path class="hand" d="M75 25 C85 45,85 70,70 85"></path>
+    <path class="hand" d="M55 85 C60 92,65 96,72 98"></path>
+    <path class="hand" d="M55 35 L55 45"></path>
+    <path class="hand" d="M70 35 L70 45"></path>
+  </g>
+  <text class="txt" x="740" y="765" text-anchor="middle">Gafas nasales</text>
+  <text class="small" x="740" y="795" text-anchor="middle">Flujo: 1–6 L/min</text>
+  <text class="small" x="740" y="820" text-anchor="middle">FiO₂ aprox.: 0,24–0,44</text>
+
+  <!-- Decision 3: FR normal or increased? -->
+  <g class="shadow">
+    <polygon class="decision" points="500,870 640,935 500,1000 360,935"></polygon>
+  </g>
+  <text class="txt" x="500" y="930" text-anchor="middle">¿FR normal o aumentada?</text>
+
+  <!-- Connect from Nasal cannula to Decision 3 (down from right device) -->
+  <path class="arrow" d="M740 850 L740 900 L640 935" marker-end="url(#arrowHead)"></path>
+
+  <!-- YES (increased) -> assess ventilation effectiveness decision 4 -->
+  <path class="arrow" d="M500 1000 L500 1060" marker-end="url(#arrowHead)"></path>
+  <text class="label" x="520" y="1045">AUMENTADA / TRABAJO RESP.</text>
+
+  <!-- NO (normal) -> continue nasal cannula / monitor -->
+  <path class="arrow" d="M360 935 L210 935 L210 1025" marker-end="url(#arrowHead)"></path>
+  <text class="label" x="305" y="918" text-anchor="middle">NORMAL</text>
+
+  <g class="shadow">
+    <rect class="box2" x="90" y="1035" rx="18" ry="18" width="360" height="115"></rect>
+  </g>
+  <text class="txt" x="270" y="1070" text-anchor="middle">Mantener gafas nasales</text>
+  <text class="small" x="270" y="1098" text-anchor="middle">Monitorizar SatO₂, FR y esfuerzo</text>
+  <text class="note" x="270" y="1125" text-anchor="middle">→ Reajustar si empeora</text>
+
+  <!-- Decision 4: Ventilation ineffective? -->
+  <g class="shadow">
+    <polygon class="decision" points="500,1070 650,1145 500,1220 350,1145"></polygon>
+  </g>
+  <text class="txt" x="500" y="1140" text-anchor="middle">¿Ventilación ineficaz?</text>
+  <text class="small" x="500" y="1165" text-anchor="middle">(fatiga, hipoventilación, mal patrón, deterioro)</text>
+
+  <!-- NO -> simple mask / titrate -->
+  <path class="arrow" d="M350 1145 L250 1145 L250 1280" marker-end="url(#arrowHead)"></path>
+  <text class="label" x="315" y="1126" text-anchor="middle">NO</text>
+
+  <!-- YES -> NRB / BVM depending on severity -->
+  <path class="arrow" d="M500 1220 L500 1280" marker-end="url(#arrowHead)"></path>
+  <text class="label" x="520" y="1265">SÍ</text>
+
+  <!-- Device: Simple mask -->
+  <g class="shadow">
+    <rect class="device" x="70" y="1290" rx="18" ry="18" width="420" height="140"></rect>
+  </g>
+  <!-- icon: simple face mask -->
+  <g transform="translate(95,1318)">
+    <path class="hand" d="M70 20 C52 22,38 40,40 60 C42 84,60 102,80 104 C100 102,118 84,120 60 C122 40,108 22,90 20 Z"></path>
+    <path class="hand" d="M52 58 C60 55,70 55,80 55 C90 55,100 55,108 58"></path>
+    <path class="hand" d="M40 55 L18 45"></path>
+    <path class="hand" d="M120 55 L142 45"></path>
+    <path class="hand" d="M80 104 L80 128"></path>
+  </g>
+  <text class="txt" x="280" y="1332" text-anchor="middle">Mascarilla simple</text>
+  <text class="small" x="280" y="1362" text-anchor="middle">Flujo: 5–10 L/min</text>
+  <text class="small" x="280" y="1387" text-anchor="middle">FiO₂ aprox.: 0,35–0,55</text>
+  <text class="note" x="280" y="1414" text-anchor="middle">→ Aumentar si SatO₂ baja o empeora el trabajo respiratorio</text>
+
+  <!-- Device: Non-rebreather mask -->
+  <g class="shadow">
+    <rect class="device" x="530" y="1290" rx="18" ry="18" width="400" height="155"></rect>
+  </g>
+  <!-- icon: reservoir mask -->
+  <g transform="translate(555,1315)">
+    <path class="hand" d="M70 20 C52 22,38 40,40 60 C42 84,60 102,80 104 C100 102,118 84,120 60 C122 40,108 22,90 20 Z"></path>
+    <path class="hand" d="M40 55 L18 45"></path>
+    <path class="hand" d="M120 55 L142 45"></path>
+    <path class="hand" d="M80 104 L80 118"></path>
+    <path class="hand" d="M62 122 C62 108,98 108,98 122 L98 148 C98 160,62 160,62 148 Z"></path>
+    <path class="hand" d="M62 136 L98 136"></path>
+  </g>
+  <text class="txt" x="730" y="1330" text-anchor="middle">Mascarilla con reservorio</text>
+  <text class="small" x="730" y="1360" text-anchor="middle">Flujo: 10–15 L/min</text>
+  <text class="small" x="730" y="1385" text-anchor="middle">FiO₂ aprox.: 0,60–0,90</text>
+  <text class="note" x="730" y="1412" text-anchor="middle">→ Si ventilación ineficaz: considerar BVM</text>
+
+  <!-- Arrow from Decision 4 YES to both NRB and BVM suggestion -->
+  <path class="arrow" d="M500 1280 L500 1288" marker-end="url(#arrowHead)"></path>
+
+  <!-- Connector: from Decision 4 YES to NRB (down then right) -->
+  <path class="arrow" d="M500 1280 L500 1290 L530 1290" marker-end="url(#arrowHead)"></path>
+
+  <!-- Footer guidance -->
+  <g class="shadow">
+    <rect class="box2" x="170" y="1475" rx="18" ry="18" width="660" height="125"></rect>
+  </g>
+
+  <!-- small medical cross icon -->
+  <g transform="translate(210,1506)">
+    <rect x="0" y="18" width="44" height="12" rx="4" fill="#dff1ff" stroke="#3f90c1" stroke-width="2"></rect>
+    <rect x="16" y="2" width="12" height="44" rx="4" fill="#dff1ff" stroke="#3f90c1" stroke-width="2"></rect>
+  </g>
+
+  <text class="txt" x="530" y="1515" text-anchor="middle">Reevaluación y titulación</text>
+  <text class="small" x="530" y="1543" text-anchor="middle">Objetivo general: SatO₂ ≥ 94% (individualizar según protocolo local y clínica).</text>
+  <text class="small" x="530" y="1568" text-anchor="middle">Vigilar: FR, esfuerzo, nivel de conciencia, auscultación, signos de fatiga y respuesta al O₂.</text>
+  <text class="note" x="530" y="1595" text-anchor="middle">Los rangos de FiO₂ son aproximados y dependen de sellado, patrón respiratorio y ajuste del flujo.</text>
+</svg>

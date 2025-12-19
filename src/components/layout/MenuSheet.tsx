@@ -9,6 +9,39 @@ interface MenuSheetProps {
 const MenuSheet = ({ isOpen, onClose }: MenuSheetProps) => {
   if (!isOpen) return null;
 
+  const handleShare = async () => {
+    const shareData = {
+      title: 'EMERGES TES - Guía de Protocolos',
+      text: 'Guía rápida de protocolos médicos de emergencias para Técnicos de Emergencias Sanitarias',
+      url: window.location.origin,
+    };
+
+    try {
+      // Intentar usar Web Share API nativa (móviles)
+      if (navigator.share) {
+        await navigator.share(shareData);
+        onClose();
+      } else {
+        // Fallback: copiar URL al portapapeles
+        await navigator.clipboard.writeText(shareData.url);
+        alert('URL copiada al portapapeles');
+        onClose();
+      }
+    } catch (error) {
+      // Usuario canceló o error
+      if ((error as Error).name !== 'AbortError') {
+        console.error('Error al compartir:', error);
+        // Fallback: copiar URL
+        try {
+          await navigator.clipboard.writeText(shareData.url);
+          alert('URL copiada al portapapeles');
+        } catch (clipboardError) {
+          console.error('Error al copiar:', clipboardError);
+        }
+      }
+    }
+  };
+
   const menuItems = [
     { icon: <BookOpen className="w-5 h-5" />, label: 'Manual Completo', path: '/manual', onClick: onClose },
     { icon: <Phone className="w-5 h-5" />, label: 'Protocolos Transtelefónicos', path: '/telefono', onClick: onClose },
@@ -16,7 +49,7 @@ const MenuSheet = ({ isOpen, onClose }: MenuSheetProps) => {
     { icon: <ClipboardCheck className="w-5 h-5" />, label: 'Checklists Material', path: '/material', onClick: onClose },
     { icon: <Star className="w-5 h-5" />, label: 'Favoritos', onClick: () => {} },
     { icon: <History className="w-5 h-5" />, label: 'Historial', onClick: () => {} },
-    { icon: <Share2 className="w-5 h-5" />, label: 'Compartir App', onClick: () => {} },
+    { icon: <Share2 className="w-5 h-5" />, label: 'Compartir App', onClick: handleShare },
     { icon: <Settings className="w-5 h-5" />, label: 'Ajustes', onClick: () => {} },
     { icon: <Info className="w-5 h-5" />, label: 'Acerca de', onClick: () => {} },
   ];

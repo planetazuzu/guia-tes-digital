@@ -19,6 +19,8 @@ const STATIC_ASSETS = [
   normalizePath('/index.html'),
   normalizePath('/manifest.json'),
   normalizePath('/favicon.ico'),
+  // Nota: Las imágenes en /assets/infografias/ se cachearán automáticamente
+  // cuando se soliciten (cache-first strategy para imágenes)
 ];
 
 // Instalación del Service Worker
@@ -78,7 +80,9 @@ self.addEventListener('fetch', (event) => {
     request.destination === 'style' ||
     request.destination === 'image' ||
     request.destination === 'font' ||
-    url.pathname.endsWith('.md')
+    url.pathname.endsWith('.md') ||
+    url.pathname.includes('/assets/infografias/') ||
+    url.pathname.includes('/assets/')
   ) {
     event.respondWith(cacheFirst(request));
   } else {

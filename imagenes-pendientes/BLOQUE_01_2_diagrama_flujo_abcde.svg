@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-label="Diagrama de flujo clínico ABCDE (Airway, Breathing, Circulation, Disability, Exposure)">
+  <defs>
+    <style>
+      .title{font:800 36px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;fill:#111827}
+      .sub{font:500 14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;fill:#4b5563}
+      .box{fill:#ffffff;stroke:#d1d5db;stroke-width:2}
+      .head{fill:#f8fafc}
+      .letter{font:900 22px/1 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;fill:#111827}
+      .step{font:800 18px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;fill:#111827}
+      .txt{font:600 13px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;fill:#374151}
+      .small{font:500 12px/1.35 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;fill:#6b7280}
+      .pill{fill:#f3f4f6;stroke:#e5e7eb;stroke-width:1}
+      .alarm{fill:#fff7ed;stroke:#f59e0b;stroke-width:2}
+      .action{fill:#eef2ff;stroke:#6366f1;stroke-width:2}
+      .arrow{stroke:#6b7280;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .iconStroke{stroke:#374151;stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .iconFill{fill:#374151}
+      .danger{stroke:#ef4444}
+      .dangerFill{fill:#ef4444}
+    </style>
+
+    <marker id="arrowHead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"></path>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1600" height="980" fill="#ffffff"></rect>
+
+  <!-- Title -->
+  <text class="title" x="70" y="70">Diagrama de Flujo Clínico ABCDE</text>
+  <text class="sub" x="70" y="98">En cada letra: identificar signos de alarma → intervenir de forma prioritaria → reevaluar y continuar. (Uso didáctico; adaptar a protocolo local)</text>
+
+  <!-- Top band: global rule -->
+  <g transform="translate(70,122)">
+    <rect class="action" x="0" y="0" width="1460" height="64" rx="14"></rect>
+    <text class="step" x="18" y="28">Regla de oro:</text>
+    <text class="txt" x="150" y="28">Si hay compromiso vital en cualquier letra,</text>
+    <text class="txt" x="550" y="28">TRATAR PRIMERO y luego seguir con la secuencia.</text>
+    <text class="small" x="18" y="50">Reevaluación rápida tras cada intervención (respuesta clínica, constantes, monitorización).</text>
+  </g>
+
+  <!-- Layout: 5 main boxes vertical with alarms + decisions -->
+  <!-- Box geometry -->
+  <!-- Main column: x=70, y=210, w=1460, each h=132, gap=20 -->
+  <!-- Internal columns: left icon+title, middle alarms, right decisions/actions -->
+
+  <!-- ===== A: Airway ===== -->
+  <g transform="translate(70,210)">
+    <rect class="box" x="0" y="0" width="1460" height="132" rx="18"></rect>
+    <rect class="head" x="0" y="0" width="1460" height="44" rx="18"></rect>
+
+    <!-- Letter pill -->
+    <rect class="pill" x="16" y="10" width="64" height="24" rx="12"></rect>
+    <text class="letter" x="38" y="28">A</text>
+
+    <text class="step" x="96" y="29">A – Vía aérea (Airway) + control cervical</text>
+
+    <!-- Left icon (airway) -->
+    <g transform="translate(26,62)">
+      <!-- simple head/neck + airway line -->
+      <circle class="iconStroke" cx="24" cy="22" r="14"></circle>
+      <path class="iconStroke" d="M34 32c6 8 6 18 0 26"></path>
+      <path class="iconStroke" d="M22 30c0 10 0 18 0 26"></path>
+      <path class="iconStroke" d="M16 48c6-6 12-6 16 0"></path>
+    </g>
+
+    <!-- Alarms -->
+    <g transform="translate(190,56)">
+      <rect class="alarm" x="0" y="0" width="560" height="66" rx="14"></rect>
+      <text class="txt" x="16" y="22">Signos de alarma:</text>
+      <text class="small" x="16" y="44">Obstrucción, estridor/roncus, gorgoteo, voz apagada, dificultad para hablar, vómitos/sangre, GCS ↓</text>
+      <!-- alert icon -->
+      <g transform="translate(520,14)">
+        <path class="iconStroke danger" d="M20 4L2 36h36L20 4Z"></path>
+        <line class="iconStroke danger" x1="20" y1="14" x2="20" y2="24"></line>
+        <circle class="dangerFill" cx="20" cy="30" r="2.5"></circle>
+      </g>
+    </g>
+
+    <!-- Decisions / actions -->
+    <g transform="translate(780,56)">
+      <rect class="action" x="0" y="0" width="660" height="66" rx="14"></rect>
+      <text class="txt" x="16" y="22">Decisión prioritaria:</text>
+      <text class="small" x="16" y="44">¿Vía aérea permeable? → Apertura (frente-mentón / tracción mandibular), aspiración, cánula OPA/NPA, O₂, inmovilización cervical si procede.</text>
+    </g>
+  </g>
+
+  <!-- Arrow down -->
+  <path class="arrow" marker-end="url(#arrowHead)" d="M800 342 V360"></path>
+
+  <!-- ===== B: Breathing ===== -->
+  <g transform="translate(70,362)">
+    <rect class="box" x="0" y="0" width="1460" height="132" rx="18"></rect>
+    <rect class="head" x="0" y="0" width="1460" height="44" rx="18"></rect>
+    <rect class="pill" x="16" y="10" width="64" height="24" rx="12"></rect>
+    <text class="letter" x="38" y="28">B</text>
+    <text class="step" x="96" y="29">B – Respiración (Breathing)</text>
+
+    <!-- Left icon (lungs) -->
+    <g transform="translate(26,62)">
+      <path class="iconStroke" d="M24 6v44"></path>
+      <path class="iconStroke" d="M24 26c-6-10-16-10-20-3-4 7-1 22 12 27"></path>
+      <path class="iconStroke" d="M24 26c6-10 16-10 20-3 4 7 1 22-12 27"></path>
+    </g>
+
+    <g transform="translate(190,56)">
+      <rect class="alarm" x="0" y="0" width="560" height="66" rx="14"></rect>
+      <text class="txt" x="16" y="22">Signos de alarma:</text>
+      <text class="small" x="16" y="44">FR &lt; 8 o &gt; 30, SpO₂ baja, tiraje, cianosis, asimetría, silencio auscultatorio, dolor torácico, inestabilidad</text>
+      <g transform="translate(520,14)">
+        <path class="iconStroke danger" d="M20 4L2 36h36L20 4Z"></path>
+        <line class="iconStroke danger" x1="20" y1="14" x2="20" y2="24"></line>
+        <circle class="dangerFill" cx="20" cy="30" r="2.5"></circle>
+      </g>
+    </g>
+
+    <g transform="translate(780,56)">
+      <rect class="action" x="0" y="0" width="660" height="66" rx="14"></rect>
+      <text class="txt" x="16" y="22">Decisión prioritaria:</text>
+      <text class="small" x="16" y="44">¿Ventila/oxigena adecuadamente? → O₂ titulado, ventilación asistida (BVM), monitorizar ETCO₂ si disponible, tratar causas críticas (p. ej., neumotórax a tensión según protocolo).</text>
+    </g>
+  </g>
+
+  <path class="arrow" marker-end="url(#arrowHead)" d="M800 494 V512"></path>
+
+  <!-- ===== C: Circulation ===== -->
+  <g transform="translate(70,514)">
+    <rect class="box" x="0" y="0" width="1460" height="132" rx="18"></rect>
+    <rect class="head" x="0" y="0" width="1460" height="44" rx="18"></rect>
+    <rect class="pill" x="16" y="10" width="64" height="24" rx="12"></rect>
+    <text class="letter" x="38" y="28">C</text>
+    <text class="step" x="96" y="29">C – Circulación (Circulation) + control de hemorragias</text>
+
+    <!-- Left icon (heart + drop) -->
+    <g transform="translate(26,60)">
+      <path class="iconStroke" d="M24 40C8 26 4 20 4 14a8 8 0 0 1 14-6l6 6 6-6a8 8 0 0 1 14 6c0 6-4 12-20 26Z"></path>
+      <path class="iconStroke" d="M52 10c6 10 6 18 0 28c-6-10-6-18 0-28Z"></path>
+    </g>
+
+    <g transform="translate(190,56)">
+      <rect class="alarm" x="0" y="0" width="560" height="66" rx="14"></rect>
+      <text class="txt" x="16" y="22">Signos de alarma:</text>
+      <text class="small" x="16" y="44">Hemorragia masiva, pulso débil/rápido, piel fría, relleno capilar &gt; 2 s, hipotensión, alteración mental, dolor torácico</text>
+      <g transform="translate(520,14)">
+        <path class="iconStroke danger" d="M20 4L2 36h36L20 4Z"></path>
+        <line class="iconStroke danger" x1="20" y1="14" x2="20" y2="24"></line>
+        <circle class="dangerFill" cx="20" cy="30" r="2.5"></circle>
+      </g>
+    </g>
+
+    <g transform="translate(780,56)">
+      <rect class="action" x="0" y="0" width="660" height="66" rx="14"></rect>
+      <text class="txt" x="16" y="22">Decisión prioritaria:</text>
+      <text class="small" x="16" y="44">¿Perfusión adecuada? → Control de hemorragia (presión/tourniquet), acceso IV/IO, fluidos según contexto, monitor ECG, considerar RCP si parada.</text>
+    </g>
+  </g>
+
+  <path class="arrow" marker-end="url(#arrowHead)" d="M800 646 V664"></path>
+
+  <!-- ===== D: Disability ===== -->
+  <g transform="translate(70,666)">
+    <rect class="box" x="0" y="0" width="1460" height="132" rx="18"></rect>
+    <rect class="head" x="0" y="0" width="1460" height="44" rx="18"></rect>
+    <rect class="pill" x="16" y="10" width="64" height="24" rx="12"></rect>
+    <text class="letter" x="38" y="28">D</text>
+    <text class="step" x="96" y="29">D – Neurológico (Disability)</text>
+
+    <!-- Left icon (brain) -->
+    <g transform="translate(26,62)">
+      <path class="iconStroke" d="M20 10c-6 0-10 4-10 10v6c0 6 4 10 10 10"></path>
+      <path class="iconStroke" d="M20 10c0-6 6-10 12-8s8 8 6 14c6 2 8 10 4 16s-10 6-14 2"></path>
+      <path class="iconStroke" d="M18 18h6M18 26h8M18 34h6"></path>
+    </g>
+
+    <g transform="translate(190,56)">
+      <rect class="alarm" x="0" y="0" width="560" height="66" rx="14"></rect>
+      <text class="txt" x="16" y="22">Signos de alarma:</text>
+      <text class="small" x="16" y="44">GCS ↓, convulsiones, pupilas anormales, focalidad, hipoglucemia, agitación súbita, cefalea intensa</text>
+      <g transform="translate(520,14)">
+        <path class="iconStroke danger" d="M20 4L2 36h36L20 4Z"></path>
+        <line class="iconStroke danger" x1="20" y1="14" x2="20" y2="24"></line>
+        <circle class="dangerFill" cx="20" cy="30" r="2.5"></circle>
+      </g>
+    </g>
+
+    <g transform="translate(780,56)">
+      <rect class="action" x="0" y="0" width="660" height="66" rx="14"></rect>
+      <text class="txt" x="16" y="22">Decisión prioritaria:</text>
+      <text class="small" x="16" y="44">¿Alteración neurológica crítica? → Glucemia capilar, proteger vía aérea, tratar convulsión según protocolo, controlar ventilación/oxigenación, valorar causa.</text>
+    </g>
+  </g>
+
+  <path class="arrow" marker-end="url(#arrowHead)" d="M800 798 V816"></path>
+
+  <!-- ===== E: Exposure ===== -->
+  <g transform="translate(70,818)">
+    <rect class="box" x="0" y="0" width="1460" height="132" rx="18"></rect>
+    <rect class="head" x="0" y="0" width="1460" height="44" rx="18"></rect>
+    <rect class="pill" x="16" y="10" width="64" height="24" rx="12"></rect>
+    <text class="letter" x="38" y="28">E</text>
+    <text class="step" x="96" y="29">E – Exposición / Entorno (Exposure) + control térmico</text>
+
+    <!-- Left icon (thermometer + body) -->
+    <g transform="translate(26,62)">
+      <path class="iconStroke" d="M18 10v26a10 10 0 1 0 12 0V10a6 6 0 0 0-12 0Z"></path>
+      <line class="iconStroke" x1="24" y1="18" x2="24" y2="36"></line>
+      <circle class="iconFill" cx="24" cy="40" r="4"></circle>
+      <path class="iconStroke" d="M44 18c6 10 6 20 0 30"></path>
+    </g>
+
+    <g transform="translate(190,56)">
+      <rect class="alarm" x="0" y="0" width="560" height="66" rx="14"></rect>
+      <text class="txt" x="16" y="22">Signos de alarma:</text>
+      <text class="small" x="16" y="44">Hemorragias ocultas, lesiones no vistas, hipotermia, quemaduras, contaminación, riesgo ambiental (calor/frío)</text>
+      <g transform="translate(520,14)">
+        <path class="iconStroke danger" d="M20 4L2 36h36L20 4Z"></path>
+        <line class="iconStroke danger" x1="20" y1="14" x2="20" y2="24"></line>
+        <circle class="dangerFill" cx="20" cy="30" r="2.5"></circle>
+      </g>
+    </g>
+
+    <g transform="translate(780,56)">
+      <rect class="action" x="0" y="0" width="660" height="66" rx="14"></rect>
+      <text class="txt" x="16" y="22">Decisión prioritaria:</text>
+      <text class="small" x="16" y="44">Exponer lo necesario para explorar, mantener privacidad y calor (mantas térmicas), buscar lesiones ocultas, controlar el entorno y preparar traslado.</text>
+    </g>
+  </g>
+
+  <!-- Note -->
+  <text class="small" x="70" y="968">Consejo TES: repetir ABCDE de forma cíclica. Si empeora en cualquier punto, volver a la letra comprometida.</text>
+</svg>

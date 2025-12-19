@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-label="Rangos normales de constantes vitales - Adulto y Pediátrico">
+  <defs>
+    <style>
+      .bg{fill:#fff}
+      .title{font:700 34px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;fill:#1f3b55}
+      .sub{font:500 15px/1.3 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;fill:#3a5873}
+      .h{font:800 16px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;fill:#163246}
+      .t{font:700 14px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;fill:#163246}
+      .p{font:600 13px/1.25 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;fill:#23465f}
+      .tiny{font:500 12px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;fill:#2f516a}
+
+      .card{fill:#f6fbff;stroke:#5aa7d6;stroke-width:2.2}
+      .grid{stroke:#c9e3f5;stroke-width:1.2}
+      .head{fill:#e8f5ff;stroke:#5aa7d6;stroke-width:2.2}
+      .left{fill:#f3faff;stroke:#5aa7d6;stroke-width:2.2}
+
+      /* traffic-light palette (soft, medical) */
+      .g{fill:#eaf8ef;stroke:#55a868;stroke-width:1.6}
+      .y{fill:#fff7e6;stroke:#d9a441;stroke-width:1.6}
+      .r{fill:#ffecec;stroke:#d66a6a;stroke-width:1.6}
+
+      .badge{fill:#dff1ff;stroke:#3f90c1;stroke-width:2}
+      .shadow{filter:url(#shadow)}
+    </style>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0b3756" flood-opacity="0.12"></feDropShadow>
+    </filter>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1400" height="900"></rect>
+
+  <text class="title" x="700" y="70" text-anchor="middle">Constantes vitales: rangos orientativos (Adulto y Pediatría)</text>
+  <text class="sub" x="700" y="102" text-anchor="middle">Estilo manual TES • Código tipo semáforo • Alta legibilidad • Uso educativo</text>
+
+  <!-- Legend -->
+  <g transform="translate(290,130)">
+    <rect class="badge" x="0" y="0" rx="18" ry="18" width="820" height="54"></rect>
+    <g transform="translate(18,12)">
+      <rect class="g" x="0" y="0" rx="10" ry="10" width="120" height="30"></rect>
+      <text class="t" x="60" y="20" text-anchor="middle">Normal</text>
+
+      <rect class="y" x="140" y="0" rx="10" ry="10" width="190" height="30"></rect>
+      <text class="t" x="235" y="20" text-anchor="middle">Vigilar / repetir</text>
+
+      <rect class="r" x="350" y="0" rx="10" ry="10" width="240" height="30"></rect>
+      <text class="t" x="470" y="20" text-anchor="middle">Alerta / valorar</text>
+
+      <text class="tiny" x="620" y="20">* Rangos pueden variar por contexto clínico.</text>
+    </g>
+  </g>
+
+  <!-- Table container -->
+  <g class="shadow">
+    <rect class="card" x="80" y="210" rx="26" ry="26" width="1240" height="610"></rect>
+  </g>
+
+  <!-- Column headers -->
+  <!-- Column widths: Param 220, Adult 320, Ped 540, Notes 160 -->
+  <g transform="translate(110,240)">
+    <rect class="head" x="0" y="0" rx="18" ry="18" width="1180" height="58"></rect>
+    <text class="h" x="110" y="36" text-anchor="middle">Parámetro</text>
+    <text class="h" x="380" y="36" text-anchor="middle">Adulto</text>
+    <text class="h" x="820" y="36" text-anchor="middle">Pediatría (orientativo)</text>
+    <text class="h" x="1110" y="36" text-anchor="middle">Notas</text>
+  </g>
+
+  <!-- Rows -->
+  <!-- Row geometry -->
+  <!-- Start y for rows: 310; row height: 100; 5 rows -->
+  <!-- X positions relative to table origin (110,240) -->
+  <!-- Param col: 0..220; Adult: 220..540; Ped: 540..1080; Notes: 1080..1180 -->
+  <g transform="translate(110,310)">
+    <!-- GRID background columns -->
+    <rect class="left" x="0" y="0" rx="18" ry="18" width="220" height="500"></rect>
+    <rect class="card" x="220" y="0" rx="18" ry="18" width="960" height="500"></rect>
+
+    <!-- Horizontal grid lines -->
+    <line class="grid" x1="0" y1="100" x2="1180" y2="100"></line>
+    <line class="grid" x1="0" y1="200" x2="1180" y2="200"></line>
+    <line class="grid" x1="0" y1="300" x2="1180" y2="300"></line>
+    <line class="grid" x1="0" y1="400" x2="1180" y2="400"></line>
+
+    <!-- Vertical grid lines -->
+    <line class="grid" x1="220" y1="0" x2="220" y2="500"></line>
+    <line class="grid" x1="540" y1="0" x2="540" y2="500"></line>
+    <line class="grid" x1="1080" y1="0" x2="1080" y2="500"></line>
+
+    <!-- PARAM LABELS -->
+    <text class="h" x="110" y="60" text-anchor="middle">FC</text>
+    <text class="tiny" x="110" y="82" text-anchor="middle">lpm</text>
+
+    <text class="h" x="110" y="160" text-anchor="middle">FR</text>
+    <text class="tiny" x="110" y="182" text-anchor="middle">rpm</text>
+
+    <text class="h" x="110" y="260" text-anchor="middle">TA</text>
+    <text class="tiny" x="110" y="282" text-anchor="middle">mmHg</text>
+
+    <text class="h" x="110" y="360" text-anchor="middle">SatO₂</text>
+    <text class="tiny" x="110" y="382" text-anchor="middle">%</text>
+
+    <text class="h" x="110" y="460" text-anchor="middle">Tª</text>
+    <text class="tiny" x="110" y="482" text-anchor="middle">°C</text>
+
+    <!-- ADULTO CELLS -->
+    <!-- FC Adult -->
+    <rect class="g" x="245" y="22" rx="16" ry="16" width="270" height="56"></rect>
+    <text class="t" x="380" y="55" text-anchor="middle">60–100</text>
+    <rect class="y" x="245" y="78" rx="16" ry="16" width="270" height="18"></rect>
+    <text class="tiny" x="380" y="92" text-anchor="middle">51–59 o 101–110</text>
+    <rect class="r" x="245" y="96" rx="16" ry="16" width="270" height="18"></rect>
+    <text class="tiny" x="380" y="110" text-anchor="middle">≤50 o ≥111</text>
+
+    <!-- FR Adult -->
+    <rect class="g" x="245" y="122" rx="16" ry="16" width="270" height="56"></rect>
+    <text class="t" x="380" y="155" text-anchor="middle">12–20</text>
+    <rect class="y" x="245" y="178" rx="16" ry="16" width="270" height="18"></rect>
+    <text class="tiny" x="380" y="192" text-anchor="middle">10–11 o 21–24</text>
+    <rect class="r" x="245" y="196" rx="16" ry="16" width="270" height="18"></rect>
+    <text class="tiny" x="380" y="210" text-anchor="middle">≤9 o ≥25</text>
+
+    <!-- TA Adult -->
+    <rect class="g" x="245" y="222" rx="16" ry="16" width="270" height="56"></rect>
+    <text class="t" x="380" y="246" text-anchor="middle">PAS 100–140</text>
+    <text class="tiny" x="380" y="266" text-anchor="middle">PAD 60–90</text>
+    <rect class="y" x="245" y="278" rx="16" ry="16" width="270" height="18"></rect>
+    <text class="tiny" x="380" y="292" text-anchor="middle">PAS 90–99 o 141–160</text>
+    <rect class="r" x="245" y="296" rx="16" ry="16" width="270" height="18"></rect>
+    <text class="tiny" x="380" y="310" text-anchor="middle">PAS &lt;90 o &gt;160</text>
+
+    <!-- SatO2 Adult -->
+    <rect class="g" x="245" y="322" rx="16" ry="16" width="270" height="56"></rect>
+    <text class="t" x="380" y="355" text-anchor="middle">≥ 95</text>
+    <rect class="y" x="245" y="378" rx="16" ry="16" width="270" height="18"></rect>
+    <text class="tiny" x="380" y="392" text-anchor="middle">93–94</text>
+    <rect class="r" x="245" y="396" rx="16" ry="16" width="270" height="18"></rect>
+    <text class="tiny" x="380" y="410" text-anchor="middle">≤ 92</text>
+
+    <!-- Temp Adult -->
+    <rect class="g" x="245" y="422" rx="16" ry="16" width="270" height="56"></rect>
+    <text class="t" x="380" y="446" text-anchor="middle">36,0–37,5</text>
+    <text class="tiny" x="380" y="466" text-anchor="middle">(oral/axilar aprox.)</text>
+    <rect class="y" x="245" y="478" rx="16" ry="16" width="270" height="18"></rect>
+    <text class="tiny" x="380" y="492" text-anchor="middle">35,5–35,9 o 37,6–38,4</text>
+    <rect class="r" x="245" y="496" rx="16" ry="16" width="270" height="18"></rect>
+    <text class="tiny" x="380" y="510" text-anchor="middle">≤35,4 o ≥38,5</text>
+
+    <!-- PEDIATRÍA CELLS (use grouped ranges) -->
+    <!-- FC Ped -->
+    <rect class="g" x="565" y="22" rx="16" ry="16" width="490" height="56"></rect>
+    <text class="p" x="810" y="48" text-anchor="middle">RN: 100–160 • Lact.: 100–160 • 1–5a: 80–120</text>
+    <text class="p" x="810" y="70" text-anchor="middle">6–12a: 70–110 • Adol.: 60–100</text>
+
+    <!-- FR Ped -->
+    <rect class="g" x="565" y="122" rx="16" ry="16" width="490" height="56"></rect>
+    <text class="p" x="810" y="148" text-anchor="middle">RN: 30–60 • Lact.: 30–50 • 1–5a: 20–30</text>
+    <text class="p" x="810" y="170" text-anchor="middle">6–12a: 18–25 • Adol.: 12–20</text>
+
+    <!-- TA Ped (approx systolic by age) -->
+    <rect class="g" x="565" y="222" rx="16" ry="16" width="490" height="56"></rect>
+    <text class="p" x="810" y="248" text-anchor="middle">PAS aprox.: RN 60–85 • Lact. 70–100 • 1–5a 80–110</text>
+    <text class="p" x="810" y="270" text-anchor="middle">6–12a 90–120 • Adol. 100–130</text>
+
+    <!-- SatO2 Ped -->
+    <rect class="g" x="565" y="322" rx="16" ry="16" width="490" height="56"></rect>
+    <text class="p" x="810" y="355" text-anchor="middle">≥ 95 (similar al adulto, según contexto)</text>
+
+    <!-- Temp Ped -->
+    <rect class="g" x="565" y="422" rx="16" ry="16" width="490" height="56"></rect>
+    <text class="p" x="810" y="446" text-anchor="middle">36,5–37,5 (aprox.)</text>
+    <text class="p" x="810" y="468" text-anchor="middle">Interpretar según método y edad</text>
+
+    <!-- NOTES column -->
+    <text class="tiny" x="1130" y="50" text-anchor="middle">Dolor/fiebre</text>
+    <text class="tiny" x="1130" y="68" text-anchor="middle">↑ FC</text>
+
+    <text class="tiny" x="1130" y="150" text-anchor="middle">Ansiedad</text>
+    <text class="tiny" x="1130" y="168" text-anchor="middle">↑ FR</text>
+
+    <text class="tiny" x="1130" y="250" text-anchor="middle">Valorar</text>
+    <text class="tiny" x="1130" y="268" text-anchor="middle">perfusión</text>
+
+    <text class="tiny" x="1130" y="350" text-anchor="middle">Objetivo</text>
+    <text class="tiny" x="1130" y="368" text-anchor="middle">clínico</text>
+
+    <text class="tiny" x="1130" y="450" text-anchor="middle">Método</text>
+    <text class="tiny" x="1130" y="468" text-anchor="middle">importa</text>
+  </g>
+
+  <!-- Footer note -->
+  <text class="sub" x="700" y="860" text-anchor="middle">
+    Nota: Rangos pediátricos varían mucho por edad; usar guías locales y contexto clínico. Semáforo = ayuda visual, no diagnóstico.
+  </text>
+</svg>

@@ -237,15 +237,40 @@ const MarkdownViewer = ({
           ),
 
           // Images
-          img: ({ node, src, alt, ...props }: any) => (
-            <img 
-              className="rounded-lg my-4 max-w-full h-auto border border-border" 
-              src={src}
-              alt={alt}
-              loading="lazy"
-              {...props} 
-            />
-          ),
+          img: ({ node, src, alt, ...props }: any) => {
+            // Normalizar rutas de imágenes
+            let imageSrc = src || '';
+            
+            // Si es una ruta relativa que empieza con ./assets o ../assets
+            if (imageSrc.startsWith('./assets/') || imageSrc.startsWith('../assets/')) {
+              // Convertir a ruta absoluta desde public/
+              imageSrc = imageSrc.replace(/^\.\.?\/assets\//, '/assets/');
+            }
+            // Si es una ruta relativa que empieza con assets/
+            else if (imageSrc.startsWith('assets/') && !imageSrc.startsWith('/assets/')) {
+              // Convertir a ruta absoluta
+              imageSrc = `/${imageSrc}`;
+            }
+            // Si no empieza con /, asumir que es relativa desde public/
+            else if (imageSrc && !imageSrc.startsWith('/') && !imageSrc.startsWith('http')) {
+              imageSrc = `/${imageSrc}`;
+            }
+            
+            return (
+              <img 
+                className="rounded-lg my-4 max-w-full h-auto border border-border shadow-sm" 
+                src={imageSrc}
+                alt={alt || 'Imagen'}
+                loading="lazy"
+                onError={(e) => {
+                  // Fallback si la imagen no se carga
+                  console.warn(`No se pudo cargar la imagen: ${imageSrc}`);
+                  (e.target as HTMLImageElement).style.display = 'none';
+                }}
+                {...props} 
+              />
+            );
+          },
         }}
       >
         {content}
