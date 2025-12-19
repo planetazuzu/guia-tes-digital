@@ -765,5 +765,16 @@ Este procedimiento es de **uso exclusivo como apoyo** y **NO sustituye**:
 
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+### Prerrequisitos
+- [Constantes Vitales](../02_PROCEDIMIENTOS_BASICOS/1.1_constantes_vitales.md) - Monitorización durante oxigenoterapia
+- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md) - Valoración inicial
+
+### Capítulos relacionados
+- [Dispositivos de Oxigenoterapia](./BLOQUE_03_1_DISPOSITIVOS_OXIGENOTERAPIA.md) - Tipos de dispositivos
+- [Ventilación BVM](./BLOQUE_03_3_BVM.md) - Ventilación con bolsa-mascarilla
+- [Monitorización Básica](./BLOQUE_03_10_MONITORIZACION_BASICA.md) - Seguimiento del paciente
+
+### Aplicación práctica
+- [RCP Adultos](../03_SOPORTE_VITAL_BASICO/BLOQUE_04_1_RCP_ADULTOS.md) - Uso durante RCP
+- [Ventilación BVM](../03_SOPORTE_VITAL_BASICO/BLOQUE_04_5_VENTILACION_BVM.md) - Técnica de ventilación
 

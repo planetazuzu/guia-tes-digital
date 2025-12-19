@@ -282,5 +282,16 @@ Estas habilidades son el núcleo para:
 
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+### Prerrequisitos
+- [Principios de Administración de Fármacos](./BLOQUE_06_0_PRINCIPIOS_ADMINISTRACION.md) - Fundamentos de seguridad farmacológica
+- [Constantes Vitales](../02_PROCEDIMIENTOS_BASICOS/1.1_constantes_vitales.md) - Monitorización durante administración
+
+### Capítulos relacionados (Vademécum)
+- [Analgésicos y Sedantes](./BLOQUE_06_2_ANALGESICOS_SEDANTES.md) - Aplicación práctica
+- [Vasoactivos y Aminas](./BLOQUE_06_3_VASOACTIVOS_AMINAS.md) - Aplicación práctica
+- [Fármacos Cardiológicos](./BLOQUE_06_5_FARMACOS_CARDIOLOGICOS.md) - Aplicación práctica
+
+### Aplicación práctica
+- [RCP Adultos](../03_SOPORTE_VITAL_BASICO/BLOQUE_04_1_RCP_ADULTOS.md) - Contexto de uso en PCR
+- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md) - Valoración durante administración
 

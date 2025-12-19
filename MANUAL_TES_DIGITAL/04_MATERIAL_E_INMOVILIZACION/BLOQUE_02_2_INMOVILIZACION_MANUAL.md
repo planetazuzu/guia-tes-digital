@@ -711,5 +711,16 @@ Este procedimiento es de **uso exclusivo como apoyo** y **NO sustituye**:
 
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+### Prerrequisitos
+- [Anatomía Operativa](./BLOQUE_02_0_ANATOMIA_OPERATIVA.md) - Fundamentos anatómicos
+- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md) - Valoración inicial
+
+### Capítulos relacionados (Sistema de Inmovilización)
+- [Collarín Cervical](./BLOQUE_02_3_COLLARIN_CERVICAL.md) - Dispositivo de inmovilización cervical
+- [Tablero Espinal](./BLOQUE_02_5_TABLERO_ESPINAL.md) - Inmovilización corporal completa
+- [Colchón de Vacío](./BLOQUE_02_6_COLCHON_VACIO.md) - Alternativa al tablero
+- [Extricación y Movimientos Bloque](./BLOQUE_02_7_EXTRICACION_MOVIMIENTOS_BLOQUE.md) - Técnicas de movilización
+
+### Continuación
+- [Collarín Cervical](./BLOQUE_02_3_COLLARIN_CERVICAL.md) - Siguiente paso en inmovilización
 

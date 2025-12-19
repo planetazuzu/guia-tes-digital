@@ -513,5 +513,16 @@ Este procedimiento es de **uso exclusivo como apoyo** y **NO sustituye**:
 
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+### Prerrequisitos
+- [Inmovilización Manual](./BLOQUE_02_2_INMOVILIZACION_MANUAL.md) - Técnica previa
+- [Collarín Cervical](./BLOQUE_02_3_COLLARIN_CERVICAL.md) - Parte del sistema completo
+
+### Capítulos relacionados (Sistema de Inmovilización)
+- [Colchón de Vacío](./BLOQUE_02_6_COLCHON_VACIO.md) - Alternativa para traslados largos
+- [Camilla Cuchara](./BLOQUE_02_4_CAMILLA_CUCHARA.md) - Dispositivo de transferencia
+- [Extricación y Movimientos Bloque](./BLOQUE_02_7_EXTRICACION_MOVIMIENTOS_BLOQUE.md) - Técnicas de movilización
+
+### Continuación
+- [Colchón de Vacío](./BLOQUE_02_6_COLCHON_VACIO.md) - Considerar para traslados prolongados
+- [Transferencia y Movilización](./BLOQUE_02_8_TRANSFERENCIAS_MOVILIZACION.md) - Continuación del proceso
 

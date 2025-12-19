@@ -884,5 +884,21 @@ Este procedimiento es de **uso exclusivo como apoyo** y **NO sustituye**:
 
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+### Prerrequisitos
+- [Anatomía Operativa](./BLOQUE_02_0_ANATOMIA_OPERATIVA.md) - Fundamentos anatómicos
+- [Inmovilización Manual](./BLOQUE_02_2_INMOVILIZACION_MANUAL.md) - Técnica previa
+
+### Capítulos relacionados (Sistema de Inmovilización)
+- [Tablero Espinal](./BLOQUE_02_5_TABLERO_ESPINAL.md) - Inmovilización corporal completa
+- [Colchón de Vacío](./BLOQUE_02_6_COLCHON_VACIO.md) - Alternativa al tablero
+- [Camilla Cuchara](./BLOQUE_02_4_CAMILLA_CUCHARA.md) - Dispositivo de transferencia
+- [Extricación y Movimientos Bloque](./BLOQUE_02_7_EXTRICACION_MOVIMIENTOS_BLOQUE.md) - Técnicas de movilización
+
+### Aplicación práctica
+- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md) - Valoración inicial
+- [RCP Adultos](../03_SOPORTE_VITAL_BASICO/BLOQUE_04_1_RCP_ADULTOS.md) - Contexto de uso
+- [Transferencia y Movilización](./BLOQUE_02_8_TRANSFERENCIAS_MOVILIZACION.md) - Continuación del proceso
+
+### Errores y prevención
+- [Errores Críticos en Inmovilización](./BLOQUE_02_9_ERRORES_CRITICOS.md) - Errores comunes a evitar
 
