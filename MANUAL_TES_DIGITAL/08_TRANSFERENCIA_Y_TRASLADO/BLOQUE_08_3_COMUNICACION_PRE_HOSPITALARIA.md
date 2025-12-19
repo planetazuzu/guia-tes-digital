@@ -420,8 +420,6 @@ Establecer el marco operativo para la comunicación estructurada con el hospital
 
 ## INDICADORES DE CALIDAD/SEGURIDAD
 
-[ESTRUCTURA - NO CONTENIDO CLÍNICO]
-
 **Métricas de Éxito Operativo:**
 - Comunicación estructurada realizada
 - Información completa comunicada
@@ -496,5 +494,9 @@ Establecer el marco operativo para la comunicación estructurada con el hospital
 
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+- [Fundamentos de Transferencia](./BLOQUE_08_0_FUNDAMENTOS_TRANSFERENCIA.md)
+- [Comunicación Transtelefónica Fundamental](../06_PROTOCOLOS_TRANSTELEFONICOS/BLOQUE_05_0_COMUNICACION_TRANSTELEFONICA_FUNDAMENTAL.md)
+- [Comunicación con Coordinadores](../06_PROTOCOLOS_TRANSTELEFONICOS/BLOQUE_05_8_COMUNICACION_COORDINADORES.md)
+- [Transferencia al Hospital](./BLOQUE_08_5_TRANSFERENCIA_AL_HOSPITAL.md)
+- [Documentación de Traslado](./BLOQUE_08_4_DOCUMENTACION_TRASLADO.md)
 

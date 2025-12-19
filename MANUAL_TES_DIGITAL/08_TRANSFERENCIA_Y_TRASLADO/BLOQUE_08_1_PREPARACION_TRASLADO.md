@@ -281,11 +281,9 @@ Establecer el marco operativo para la preparación sistemática del paciente y m
 
 ## ERRORES FRECUENTES (Y CÓMO EVITARLOS)
 
-[ESTRUCTURA - NO CONTENIDO CLÍNICO]
-
 | Error | Consecuencia | Prevención |
 |-------|--------------|------------|
-| [Pendiente contenido clínico] | [Pendiente] | [Pendiente] |
+|  | [Pendiente] | [Pendiente] |
 | No verificar estado del paciente | Empeoramiento durante traslado | Verificación sistemática antes de traslado |
 | Material no preparado | Retrasos o falta de material | Checklist de material pre-traslado |
 | No comunicar pre-hospitalaria | Hospital no preparado | Comunicación sistemática |

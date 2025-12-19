@@ -5,7 +5,7 @@
 **Versión:** 1.0  
 **Fecha:** 2024-12-19  
 **Tipo:** Bloque Operativo - Procedimiento  
-**Estado:** ⭐ NUEVO - Estructura creada
+**Estado:** ✅ COMPLETADO - Contenido operativo desarrollado
 
 ---
 
@@ -352,31 +352,38 @@ Establecer el marco operativo para la documentación completa y sistemática del
 
 ## ERRORES FRECUENTES (Y CÓMO EVITARLOS)
 
-[ESTRUCTURA - NO CONTENIDO CLÍNICO]
-
 | Error | Consecuencia | Prevención |
 |-------|--------------|------------|
-| [Pendiente contenido clínico] | [Pendiente] | [Pendiente] |
-| Documentación incompleta | Pérdida de información | Checklist de documentación |
-| Documentación tardía | Información olvidada | Registro continuo |
-| No cumplir normativa | Problemas legales | Conocer requisitos normativos |
+| **Documentación incompleta (información faltante)** | Pérdida de información, problemas legales, continuidad asistencial comprometida | Checklist de documentación, verificar completitud antes de finalizar |
+| **Documentación tardía (confiar en la memoria)** | Información olvidada, imprecisiones, pérdida de detalles | Registro continuo: documentar inmediatamente, no confiar en la memoria |
+| **Documentación ilegible** | Información no accesible, problemas legales | Escribir claro, usar sistema digital si disponible, revisar legibilidad |
+| **No documentar información crítica (alergias, medicación, incidentes)** | Puede causar reacciones adversas, problemas legales | Checklist mental: Alergias, Medicación crítica, Incidentes - SIEMPRE documentar |
+| **Documentación subjetiva (interpretaciones en lugar de hechos)** | Información no precisa, problemas legales | Documentar hechos objetivos: "Paciente agitado" no "Paciente nervioso" |
+| **No documentar hora de intervenciones** | No se puede establecer cronología, problemas legales | Registrar hora de cada intervención, usar reloj sincronizado |
+| **No documentar dosis exacta de fármacos** | No se puede verificar administración, problemas legales | Registrar dosis exacta: "Morfina 3mg IV" no "Morfina IV" |
+| **No documentar respuesta a intervenciones** | No se puede evaluar efectividad, continuidad asistencial comprometida | Registrar respuesta: "Dolor de 8/10 a 3/10 tras Morfina 3mg IV" |
+| **No cumplir normativa (información obligatoria faltante)** | Problemas legales, sanciones | Conocer requisitos normativos del servicio, usar checklist de información obligatoria |
+| **No conservar documentación según normativa** | Problemas legales, pérdida de información | Conservar según normativa vigente, proteger datos personales |
 
 ---
 
 ## INDICADORES DE CALIDAD/SEGURIDAD
 
-[ESTRUCTURA - NO CONTENIDO CLÍNICO]
-
 **Métricas de Éxito Operativo:**
-- Documentación completa
-- Registro oportuno
-- Cumplimiento normativo
-- Información accesible
+- ✅ Documentación completa (toda la información obligatoria)
+- ✅ Registro oportuno (continuo, no tardío)
+- ✅ Cumplimiento normativo (según normativa vigente)
+- ✅ Información accesible (legible, estructurada)
+- ✅ Información crítica documentada (alergias, medicación, incidentes)
+- ✅ Constantes registradas según frecuencia establecida
+- ✅ Intervenciones documentadas con hora y dosis exacta
 
 **Señales de Alerta:**
-- Documentación incompleta → Completar antes de finalizar
-- Registro tardío → Registrar inmediatamente
-- No cumplir normativa → Revisar requisitos, corregir
+- ❌ Documentación incompleta → Completar antes de finalizar, usar checklist
+- ❌ Registro tardío → Registrar inmediatamente, no confiar en la memoria
+- ❌ No cumplir normativa → Revisar requisitos normativos, corregir
+- ❌ Documentación ilegible → Escribir claro, usar sistema digital si disponible
+- ❌ Información crítica no documentada → Documentar siempre alergias, medicación crítica, incidentes
 
 ---
 
@@ -418,5 +425,8 @@ Este capítulo requiere desarrollo de contenido clínico por profesionales médi
 
 ## 🔗 Enlaces recomendados / Guía de referencia
 
-- [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
+- [Documentación Operativa](../05_OXIGENOTERAPIA_Y_MATERIAL_SANITARIO/BLOQUE_03_18_DOCUMENTACION_OPERATIVA.md)
+- [Gestión durante Traslado](./BLOQUE_08_2_GESTION_DURANTE_TRASLADO.md)
+- [Transferencia al Hospital](./BLOQUE_08_5_TRANSFERENCIA_AL_HOSPITAL.md)
+- [Registro Operativo de Constantes](../02_PROCEDIMIENTOS_BASICOS/BLOQUE_01_8_REGISTRO_OPERATIVO_CONSTANTES_VITALES.md)
 

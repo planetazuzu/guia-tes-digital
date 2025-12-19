@@ -513,5 +513,10 @@ Establecer el marco operativo para la gestión del paciente y material durante e
 
 ## 🔗 Enlaces recomendados / Guía de referencia
 
+- [Preparación para Traslado](./BLOQUE_08_1_PREPARACION_TRASLADO.md)
+- [Monitorización Básica](../05_OXIGENOTERAPIA_Y_MATERIAL_SANITARIO/BLOQUE_03_10_MONITORIZACION_BASICA.md)
+- [Monitorización Vía Aérea Traslado](../05_OXIGENOTERAPIA_Y_MATERIAL_SANITARIO/BLOQUE_03_21_MONITORIZACION_VIA_AEREA_TRASLADO.md)
+- [Comunicación Pre-Hospitalaria](./BLOQUE_08_3_COMUNICACION_PRE_HOSPITALARIA.md)
+- [Documentación de Traslado](./BLOQUE_08_4_DOCUMENTACION_TRASLADO.md)
 - [ABCDE Operativo](../02_PROCEDIMIENTOS_BASICOS/1.2_abcde_operativo.md)
 
