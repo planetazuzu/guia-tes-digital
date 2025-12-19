@@ -6,6 +6,9 @@ import PediatricDoseCalculator from '@/components/tools/PediatricDoseCalculator'
 import RCPTimer from '@/components/tools/RCPTimer';
 import OxygenDurationCalculator from '@/components/tools/OxygenDurationCalculator';
 import DripRateCalculator from '@/components/tools/DripRateCalculator';
+import BodySurfaceAreaCalculator from '@/components/tools/BodySurfaceAreaCalculator';
+import BMICalculator from '@/components/tools/BMICalculator';
+import CervicalCollarSizeCalculator from '@/components/tools/CervicalCollarSizeCalculator';
 import InfusionTableView from '@/components/tools/InfusionTableView';
 import { infusionTables } from '@/data/calculators';
 import { Link } from 'react-router-dom';
@@ -87,6 +90,9 @@ const Herramientas = () => {
           <RCPTimer />
           <OxygenDurationCalculator />
           <DripRateCalculator />
+          <BodySurfaceAreaCalculator />
+          <BMICalculator />
+          <CervicalCollarSizeCalculator />
         </div>
       )}
 
