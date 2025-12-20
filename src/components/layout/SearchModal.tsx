@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
-import { Search, X, FileText, Pill, ArrowRight } from 'lucide-react';
+import { Search, X, FileText, Pill, ArrowRight, Filter } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { searchProcedures, Procedure } from '@/data/procedures';
-import { searchDrugs, Drug } from '@/data/drugs';
+import { searchProcedures, Procedure, Category, Priority, AgeGroup } from '@/data/procedures';
+import { searchDrugs, Drug, DrugCategory } from '@/data/drugs';
 import { useSearchHistory } from '@/hooks/useSearchHistory';
+import { Button } from '@/components/ui/button';
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -15,11 +16,29 @@ type SearchResult = {
   id: string;
   title: string;
   subtitle?: string;
+  category?: string;
+  priority?: Priority;
+  ageGroup?: AgeGroup;
+};
+
+type FilterType = 'all' | 'procedure' | 'drug';
+type CategoryFilter = Category | DrugCategory | 'all';
+
+// Función helper para verificar si una categoría es de procedimientos
+const isProcedureCategory = (cat: string): cat is Category => {
+  return ['soporte_vital', 'patologias', 'escena'].includes(cat);
+};
+
+// Función helper para verificar si una categoría es de fármacos
+const isDrugCategory = (cat: string): cat is DrugCategory => {
+  return ['cardiovascular', 'respiratorio', 'neurologico', 'analgesia', 'oxigenoterapia', 'otros'].includes(cat);
 };
 
 const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
+  const [typeFilter, setTypeFilter] = useState<FilterType>('all');
+  const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>('all');
   const inputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
   const { addToHistory } = useSearchHistory();
@@ -36,22 +55,53 @@ const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
       return;
     }
 
-    const procedures = searchProcedures(query).map((p): SearchResult => ({
-      type: 'procedure',
-      id: p.id,
-      title: p.shortTitle,
-      subtitle: p.category.replace('_', ' '),
-    }));
+    let procedures: SearchResult[] = [];
+    let drugs: SearchResult[] = [];
 
-    const drugs = searchDrugs(query).map((d): SearchResult => ({
-      type: 'drug',
-      id: d.id,
-      title: d.genericName,
-      subtitle: d.tradeName,
-    }));
+    // Buscar procedimientos si el filtro lo permite
+    if (typeFilter === 'all' || typeFilter === 'procedure') {
+      const procedureResults = searchProcedures(query);
+      procedures = procedureResults
+        .filter((p) => {
+          // Filtrar por categoría si está seleccionada y es una categoría de procedimientos
+          if (categoryFilter !== 'all' && isProcedureCategory(categoryFilter)) {
+            return categoryFilter === p.category;
+          }
+          return true;
+        })
+        .map((p): SearchResult => ({
+          type: 'procedure',
+          id: p.id,
+          title: p.shortTitle,
+          subtitle: p.category.replace('_', ' '),
+          category: p.category,
+          priority: p.priority,
+          ageGroup: p.ageGroup,
+        }));
+    }
 
-    setResults([...procedures, ...drugs].slice(0, 8));
-  }, [query]);
+    // Buscar fármacos si el filtro lo permite
+    if (typeFilter === 'all' || typeFilter === 'drug') {
+      const drugResults = searchDrugs(query);
+      drugs = drugResults
+        .filter((d) => {
+          // Filtrar por categoría si está seleccionada y es una categoría de fármacos
+          if (categoryFilter !== 'all' && isDrugCategory(categoryFilter)) {
+            return categoryFilter === d.category;
+          }
+          return true;
+        })
+        .map((d): SearchResult => ({
+          type: 'drug',
+          id: d.id,
+          title: d.genericName,
+          subtitle: d.tradeName,
+          category: d.category,
+        }));
+    }
+
+    setResults([...procedures, ...drugs].slice(0, 12));
+  }, [query, typeFilter, categoryFilter]);
 
   const handleResultClick = (result: SearchResult) => {
     // Añadir al historial
@@ -99,6 +149,137 @@ const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
           </button>
         </div>
 
+        {/* Filtros */}
+        <div className="space-y-3 mb-4">
+          {/* Filtro por tipo */}
+          <div className="flex items-center gap-2">
+            <Filter className="w-4 h-4 text-muted-foreground" />
+            <span className="text-sm font-medium text-muted-foreground">Tipo:</span>
+            <div className="flex gap-2 flex-1">
+              <Button
+                variant={typeFilter === 'all' ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => {
+                  setTypeFilter('all');
+                  setCategoryFilter('all');
+                }}
+                className="text-xs"
+              >
+                Todos
+              </Button>
+              <Button
+                variant={typeFilter === 'procedure' ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => {
+                  setTypeFilter('procedure');
+                  setCategoryFilter('all');
+                }}
+                className="text-xs"
+              >
+                Protocolos
+              </Button>
+              <Button
+                variant={typeFilter === 'drug' ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => {
+                  setTypeFilter('drug');
+                  setCategoryFilter('all');
+                }}
+                className="text-xs"
+              >
+                Fármacos
+              </Button>
+            </div>
+          </div>
+
+          {/* Filtro por categoría - mostrar según tipo seleccionado */}
+          {typeFilter === 'all' && (
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="text-sm font-medium text-muted-foreground">Categoría:</span>
+              <Button
+                variant={categoryFilter === 'all' ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => setCategoryFilter('all')}
+                className="text-xs"
+              >
+                Todas
+              </Button>
+              {procedureCategories.map((cat) => (
+                <Button
+                  key={cat}
+                  variant={categoryFilter === cat ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => setCategoryFilter(cat)}
+                  className="text-xs capitalize"
+                >
+                  {cat.replace('_', ' ')}
+                </Button>
+              ))}
+              {drugCategories.map((cat) => (
+                <Button
+                  key={cat}
+                  variant={categoryFilter === cat ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => setCategoryFilter(cat)}
+                  className="text-xs capitalize"
+                >
+                  {cat}
+                </Button>
+              ))}
+            </div>
+          )}
+
+          {typeFilter === 'procedure' && (
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="text-sm font-medium text-muted-foreground">Categoría:</span>
+              <Button
+                variant={categoryFilter === 'all' ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => setCategoryFilter('all')}
+                className="text-xs"
+              >
+                Todas
+              </Button>
+              {procedureCategories.map((cat) => (
+                <Button
+                  key={cat}
+                  variant={categoryFilter === cat ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => setCategoryFilter(cat)}
+                  className="text-xs capitalize"
+                >
+                  {cat.replace('_', ' ')}
+                </Button>
+              ))}
+            </div>
+          )}
+
+          {typeFilter === 'drug' && (
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="text-sm font-medium text-muted-foreground">Categoría:</span>
+              <Button
+                variant={categoryFilter === 'all' ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => setCategoryFilter('all')}
+                className="text-xs"
+              >
+                Todas
+              </Button>
+              {drugCategories.map((cat) => (
+                <Button
+                  key={cat}
+                  variant={categoryFilter === cat ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => setCategoryFilter(cat)}
+                  className="text-xs capitalize"
+                >
+                  {cat}
+                </Button>
+              ))}
+            </div>
+          )}
+        </div>
+
         <div className="flex-1 overflow-y-auto scroll-touch">
           {results.length > 0 ? (
             <div className="space-y-2">
@@ -117,11 +298,28 @@ const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="font-medium text-foreground truncate">{result.title}</p>
-                    {result.subtitle && (
-                      <p className="text-sm text-muted-foreground capitalize truncate">
-                        {result.subtitle}
-                      </p>
-                    )}
+                    <div className="flex items-center gap-2 mt-1">
+                      {result.subtitle && (
+                        <p className="text-sm text-muted-foreground capitalize truncate">
+                          {result.subtitle}
+                        </p>
+                      )}
+                      {result.priority && (
+                        <span className={`text-xs px-2 py-0.5 rounded ${
+                          result.priority === 'critico' ? 'bg-red-500/20 text-red-600 dark:text-red-400' :
+                          result.priority === 'alto' ? 'bg-orange-500/20 text-orange-600 dark:text-orange-400' :
+                          result.priority === 'medio' ? 'bg-yellow-500/20 text-yellow-600 dark:text-yellow-400' :
+                          'bg-blue-500/20 text-blue-600 dark:text-blue-400'
+                        }`}>
+                          {result.priority}
+                        </span>
+                      )}
+                      {result.ageGroup && result.ageGroup !== 'todos' && (
+                        <span className="text-xs px-2 py-0.5 rounded bg-muted text-muted-foreground">
+                          {result.ageGroup}
+                        </span>
+                      )}
+                    </div>
                   </div>
                   <ArrowRight className="w-5 h-5 text-muted-foreground flex-shrink-0" />
                 </button>

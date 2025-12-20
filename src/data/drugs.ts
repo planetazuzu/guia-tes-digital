@@ -1,4 +1,4 @@
-export type DrugCategory = 'cardiovascular' | 'respiratorio' | 'neurologico' | 'analgesia' | 'otros';
+export type DrugCategory = 'cardiovascular' | 'respiratorio' | 'neurologico' | 'analgesia' | 'oxigenoterapia' | 'otros';
 export type AdministrationRoute = 'IV' | 'IM' | 'SC' | 'IO' | 'Nebulizado' | 'SL' | 'Rectal' | 'Nasal';
 
 export interface Drug {
