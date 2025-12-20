@@ -44,8 +44,83 @@ export default defineConfig({
   // Configuración de build para incluir archivos .md e imágenes
   build: {
     rollupOptions: {
-      // Asegurar que los archivos .md e imágenes se copien al build
+      // Code splitting: dividir el bundle en chunks más pequeños
       output: {
+        manualChunks: (id) => {
+          // Separar node_modules en chunks por librería
+          if (id.includes('node_modules')) {
+            // React y React DOM juntos (crítico, cargar primero)
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'vendor-react';
+            }
+            // React Router (crítico para navegación)
+            if (id.includes('react-router')) {
+              return 'vendor-router';
+            }
+            // Markdown y procesamiento de texto (grande, separar)
+            if (id.includes('react-markdown') || id.includes('remark') || id.includes('rehype') || id.includes('unified') || id.includes('micromark') || id.includes('mdast')) {
+              return 'vendor-markdown';
+            }
+            // Radix UI (componentes UI, agrupar)
+            if (id.includes('@radix-ui')) {
+              return 'vendor-ui';
+            }
+            // TanStack Query
+            if (id.includes('@tanstack')) {
+              return 'vendor-query';
+            }
+            // Icons (lucide-react)
+            if (id.includes('lucide-react')) {
+              return 'vendor-icons';
+            }
+            // Charts (recharts, si se usa)
+            if (id.includes('recharts')) {
+              return 'vendor-charts';
+            }
+            // Formularios (react-hook-form, zod)
+            if (id.includes('react-hook-form') || id.includes('zod') || id.includes('@hookform')) {
+              return 'vendor-forms';
+            }
+            // Date/time (date-fns, react-day-picker)
+            if (id.includes('date-fns') || id.includes('react-day-picker')) {
+              return 'vendor-dates';
+            }
+            // Carousel (embla)
+            if (id.includes('embla')) {
+              return 'vendor-carousel';
+            }
+            // Themes (next-themes)
+            if (id.includes('next-themes')) {
+              return 'vendor-themes';
+            }
+            // Sonner (toasts)
+            if (id.includes('sonner')) {
+              return 'vendor-toasts';
+            }
+            // Resto de node_modules pequeños
+            return 'vendor-other';
+          }
+          
+          // Separar páginas en chunks individuales
+          if (id.includes('/src/pages/')) {
+            const pageName = id.split('/src/pages/')[1]?.split('.')[0];
+            if (pageName) {
+              // ManualViewer es muy grande, mantenerlo separado
+              if (pageName === 'ManualViewer') {
+                return 'page-manual-viewer';
+              }
+              return `page-${pageName.toLowerCase()}`;
+            }
+          }
+          
+          // Separar componentes grandes
+          if (id.includes('/src/components/')) {
+            // MarkdownViewer es grande (usa react-markdown)
+            if (id.includes('MarkdownViewer')) {
+              return 'component-markdown';
+            }
+          }
+        },
         assetFileNames: (assetInfo) => {
           const name = assetInfo.name || '';
           

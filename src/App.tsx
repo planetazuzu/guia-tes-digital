@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, Suspense, lazy } from 'react';
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -12,28 +12,35 @@ import SearchModal from "@/components/layout/SearchModal";
 import MenuSheet from "@/components/layout/MenuSheet";
 import UpdateNotification from "@/components/layout/UpdateNotification";
 import InstallBanner from "@/components/layout/InstallBanner";
-import Home from "./pages/Index";
-import SoporteVital from "./pages/SoporteVital";
-import Patologias from "./pages/Patologias";
-import Escena from "./pages/Escena";
-import Farmacos from "./pages/Farmacos";
-import Herramientas from "./pages/Herramientas";
-import Material from "./pages/Material";
-import Telefono from "./pages/Telefono";
-import Comunicacion from "./pages/Comunicacion";
-import ManualIndex from "./pages/ManualIndex";
-import ManualViewer from "./pages/ManualViewer";
-import NotFound from "./pages/NotFound";
-import RCP from "./pages/RCP";
-import Ictus from "./pages/Ictus";
-import Shock from "./pages/Shock";
-import ViaAerea from "./pages/ViaAerea";
-import Favoritos from "./pages/Favoritos";
-import Historial from "./pages/Historial";
-import Ajustes from "./pages/Ajustes";
-import Acerca from "./pages/Acerca";
-import GaleriaImagenes from "./pages/GaleriaImagenes";
 import ErrorBoundary from "@/components/ErrorBoundary";
+import PageLoader from "@/components/ui/PageLoader";
+
+// Página principal - cargar inmediatamente (crítica)
+import Home from "./pages/Index";
+import NotFound from "./pages/NotFound";
+
+// Lazy loading de páginas de contenido (cargar bajo demanda)
+const SoporteVital = lazy(() => import("./pages/SoporteVital"));
+const Patologias = lazy(() => import("./pages/Patologias"));
+const Escena = lazy(() => import("./pages/Escena"));
+const Farmacos = lazy(() => import("./pages/Farmacos"));
+const Herramientas = lazy(() => import("./pages/Herramientas"));
+const Material = lazy(() => import("./pages/Material"));
+const Telefono = lazy(() => import("./pages/Telefono"));
+const Comunicacion = lazy(() => import("./pages/Comunicacion"));
+const ManualIndex = lazy(() => import("./pages/ManualIndex"));
+const ManualViewer = lazy(() => import("./pages/ManualViewer"));
+const RCP = lazy(() => import("./pages/RCP"));
+const Ictus = lazy(() => import("./pages/Ictus"));
+const Shock = lazy(() => import("./pages/Shock"));
+const ViaAerea = lazy(() => import("./pages/ViaAerea"));
+
+// Lazy loading de páginas de utilidades
+const Favoritos = lazy(() => import("./pages/Favoritos"));
+const Historial = lazy(() => import("./pages/Historial"));
+const Ajustes = lazy(() => import("./pages/Ajustes"));
+const Acerca = lazy(() => import("./pages/Acerca"));
+const GaleriaImagenes = lazy(() => import("./pages/GaleriaImagenes"));
 
 const queryClient = new QueryClient();
 
@@ -57,32 +64,34 @@ const App = () => {
 
                 <main className="pt-14 pb-safe flex-1">
                   <div className="container max-w-2xl py-4">
-                    <Routes>
-                      <Route
-                        path="/"
-                        element={<Home onSearchClick={() => setIsSearchOpen(true)} />}
-                      />
-                      <Route path="/soporte-vital" element={<SoporteVital />} />
-                      <Route path="/patologias" element={<Patologias />} />
-                      <Route path="/escena" element={<Escena />} />
-                      <Route path="/farmacos" element={<Farmacos />} />
-                      <Route path="/herramientas" element={<Herramientas />} />
-                      <Route path="/material" element={<Material />} />
-                      <Route path="/telefono" element={<Telefono />} />
-                      <Route path="/comunicacion" element={<Comunicacion />} />
-                      <Route path="/manual" element={<ManualIndex />} />
-                      <Route path="/manual/:parte/:bloque/:capitulo" element={<ManualViewer />} />
-                      <Route path="/rcp" element={<RCP />} />
-                      <Route path="/ictus" element={<Ictus />} />
-                      <Route path="/shock" element={<Shock />} />
-                      <Route path="/via-aerea" element={<ViaAerea />} />
-                      <Route path="/favoritos" element={<Favoritos />} />
-                      <Route path="/historial" element={<Historial />} />
-                      <Route path="/ajustes" element={<Ajustes />} />
-                      <Route path="/acerca" element={<Acerca />} />
-                      <Route path="/galeria" element={<GaleriaImagenes />} />
-                      <Route path="*" element={<NotFound />} />
-                    </Routes>
+                    <Suspense fallback={<PageLoader />}>
+                      <Routes>
+                        <Route
+                          path="/"
+                          element={<Home onSearchClick={() => setIsSearchOpen(true)} />}
+                        />
+                        <Route path="/soporte-vital" element={<SoporteVital />} />
+                        <Route path="/patologias" element={<Patologias />} />
+                        <Route path="/escena" element={<Escena />} />
+                        <Route path="/farmacos" element={<Farmacos />} />
+                        <Route path="/herramientas" element={<Herramientas />} />
+                        <Route path="/material" element={<Material />} />
+                        <Route path="/telefono" element={<Telefono />} />
+                        <Route path="/comunicacion" element={<Comunicacion />} />
+                        <Route path="/manual" element={<ManualIndex />} />
+                        <Route path="/manual/:parte/:bloque/:capitulo" element={<ManualViewer />} />
+                        <Route path="/rcp" element={<RCP />} />
+                        <Route path="/ictus" element={<Ictus />} />
+                        <Route path="/shock" element={<Shock />} />
+                        <Route path="/via-aerea" element={<ViaAerea />} />
+                        <Route path="/favoritos" element={<Favoritos />} />
+                        <Route path="/historial" element={<Historial />} />
+                        <Route path="/ajustes" element={<Ajustes />} />
+                        <Route path="/acerca" element={<Acerca />} />
+                        <Route path="/galeria" element={<GaleriaImagenes />} />
+                        <Route path="*" element={<NotFound />} />
+                      </Routes>
+                    </Suspense>
                   </div>
                 </main>
 

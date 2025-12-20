@@ -10,6 +10,10 @@
 
 ## 3.3.1 Objetivo operativo
 
+![Uso correcto de la bolsa-mascarilla (Ambú)](/assets/infografias/bloque-3-material-sanitario/uso-correcto-ambu.png)
+
+![Configuración máxima de FiO2 con bolsa-mascarilla](/assets/infografias/bloque-3-material-sanitario/configuracion-maxima-fio2-bolsa-mascarilla.png)
+
 Usar la BVM de forma **segura y eficaz** para ventilación asistida básica, integrándola con **oxigenoterapia (3.0–3.1), aspiración (3.2) y traslado**, minimizando **fugas, insuflación gástrica y pérdida de control**.
 
 Este capítulo se centra en **material, montaje, técnica de sellado y coordinación**, no en ventilación avanzada, fármacos o decisiones clínicas complejas.

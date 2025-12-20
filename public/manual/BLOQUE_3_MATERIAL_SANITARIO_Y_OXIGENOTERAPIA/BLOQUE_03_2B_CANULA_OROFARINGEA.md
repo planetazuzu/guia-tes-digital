@@ -12,6 +12,8 @@
 
 ## 1. OBJETIVO OPERATIVO
 
+![Cánulas de Guedel y nasofaríngea](/assets/infografias/bloque-3-material-sanitario/canulas-guedel-nasofaringea.png)
+
 Insertar cánula orofaríngea (OPA) de forma segura y efectiva en pacientes inconscientes sin reflejo nauseoso, manteniendo vía aérea permeable para facilitar ventilación e integrando con **ventilación con bolsa-mascarilla (3.1) y evaluación primaria ABCDE (1.2)**.
 
 Este capítulo se centra en **técnica operativa de inserción de OPA**, no en dispositivos avanzados de vía aérea.
