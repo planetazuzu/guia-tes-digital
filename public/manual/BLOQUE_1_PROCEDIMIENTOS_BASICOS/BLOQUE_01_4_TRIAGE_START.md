@@ -96,6 +96,8 @@ Este capítulo cubre:
 
 ## 1.4.4 Sistema Start: Categorías
 
+![Resumen visual del algoritmo START](/assets/infografias/bloque-0-fundamentos/RESUMEN VISUAL DEL ALGORITMO START.svg)
+
 ### Negro - Fallecido / Expectante
 
 **Criterio:**

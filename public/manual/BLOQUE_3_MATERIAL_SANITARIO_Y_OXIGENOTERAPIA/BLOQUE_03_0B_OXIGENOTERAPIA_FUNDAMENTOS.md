@@ -243,6 +243,10 @@ Este capítulo se centra en **equipos, uso seguro, montaje, verificación, logí
 
 ## 3.0.4 Dispositivos de Administración (Visión Práctica)
 
+![Diagrama de selección de dispositivo de oxigenoterapia](/assets/infografias/bloque-0-fundamentos/diagrama-seleccion-dispositivo-oxigenoterapia.png)
+
+![Tabla de rangos de FiO2 por dispositivo](/assets/infografias/bloque-0-fundamentos/tabla-rangos-fio2-oxigenoterapia.png)
+
 ### Gafas nasales
 
 **Características:**
