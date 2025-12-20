@@ -1,6 +1,6 @@
 # 🔍 Análisis Completo: ¿Qué Falta en la App?
 
-**Fecha:** 2024-12-19  
+**Fecha:** 2024-12-19 (Actualizado)  
 **Versión de la App:** 1.0.0
 
 ---
@@ -9,16 +9,16 @@
 
 | Categoría | Estado | Completitud |
 |-----------|--------|-------------|
-| **Funcionalidades Core** | ✅ 95% | Funciona |
-| **PWA / Offline** | ✅ 90% | Implementado |
-| **Contenido** | ⚠️ 70% | Parcial |
-| **UX / Persistencia** | ⚠️ 40% | Pendiente |
-| **Contenido Visual** | ⚠️ 50% | Pendiente |
+| **Funcionalidades Core** | ✅ 98% | Casi completo |
+| **PWA / Offline** | ✅ 95% | Implementado |
+| **Contenido** | ⚠️ 75% | Parcial |
+| **UX / Persistencia** | ✅ 90% | Implementado |
+| **Contenido Visual** | ⚠️ 60% | En progreso |
 | **Validación / Tests** | ❌ 0% | No implementado |
 
 ---
 
-## ✅ LO QUE YA FUNCIONA (95%)
+## ✅ LO QUE YA FUNCIONA (98%)
 
 ### 🎯 Funcionalidades Core
 - ✅ **Navegación completa** - Todas las rutas funcionan
@@ -30,6 +30,14 @@
 - ✅ **PWA básica** - Service Worker registrado y funcionando
 - ✅ **Sistema de actualizaciones** - Detecta y notifica nuevas versiones
 - ✅ **Compartir App** - Web Share API implementado
+- ✅ **Favoritos persistentes** - localStorage implementado
+- ✅ **Historial de búsquedas** - sessionStorage implementado
+- ✅ **Página de Favoritos** - `/favoritos` funcional
+- ✅ **Página de Historial** - `/historial` funcional
+- ✅ **Página de Ajustes** - `/ajustes` con tema y limpieza de datos
+- ✅ **Página Acerca de** - `/acerca` con información de la app
+- ✅ **Galería de imágenes** - `/galeria` con todas las infografías
+- ✅ **Error Boundaries** - Implementado y activo
 
 ### 📱 PWA / Offline
 - ✅ **Service Worker** - Registrado y activo
@@ -37,6 +45,21 @@
 - ✅ **Cache de imágenes** - Configurado para `/assets/infografias/`
 - ✅ **Actualizaciones automáticas** - Sistema implementado
 - ✅ **Manifest.json** - Configurado correctamente
+- ✅ **Banner de instalación** - Implementado con fallback dev
+- ✅ **Indicador offline** - Mostrado en Header (Wifi/WifiOff)
+
+### 🎨 Contenido Visual
+- ✅ **48 imágenes organizadas** - En `public/assets/infografias/`
+- ✅ **Galería de imágenes** - Vista completa con filtros por bloque
+- ✅ **~20 referencias en Markdown** - Imágenes visibles en capítulos críticos
+  - Collarín Cervical (10 imágenes)
+  - Triage START (1 imagen)
+  - ABCDE (1 imagen)
+  - Constantes Vitales (4 imágenes)
+  - Oxigenoterapia (3 imágenes)
+  - BVM (2 imágenes)
+  - Cánulas (1 imagen)
+  - Protocolos Transtelefónicos (2 imágenes)
 
 ---
 
@@ -44,84 +67,38 @@
 
 ### 🔴 ALTA PRIORIDAD (Funcionalidad Core)
 
-#### 1. Persistencia de Datos (0% implementado)
-- ❌ **Favoritos persistentes**
-  - Estado: UI existe, pero no persiste en localStorage
-  - Impacto: Los favoritos se pierden al recargar
-  - Esfuerzo: Bajo (2-3 horas)
-  
-- ❌ **Historial de búsquedas**
-  - Estado: UI muestra datos hardcodeados
-  - Impacto: No refleja uso real
-  - Esfuerzo: Bajo (2-3 horas)
-
-- ❌ **Configuración de usuario**
-  - Estado: No existe
-  - Impacto: No se pueden guardar preferencias
-  - Esfuerzo: Medio (4-6 horas)
-
-#### 2. Páginas Faltantes (UI existe, funcionalidad no)
-- ❌ **Página de Favoritos** (`/favoritos`)
-  - Estado: Botón existe, ruta no
-  - Impacto: No se pueden ver favoritos guardados
-  - Esfuerzo: Bajo (2-3 horas)
-
-- ❌ **Página de Ajustes** (`/ajustes`)
-  - Estado: Botón en menú, página no existe
-  - Impacto: No hay configuración disponible
-  - Esfuerzo: Medio (4-6 horas)
-  - Funcionalidades sugeridas:
-    - Tema (claro/oscuro)
-    - Tamaño de fuente
-    - Notificaciones
-    - Idioma (si aplica)
-
-- ❌ **Página Acerca de** (`/acerca`)
-  - Estado: Botón en menú, página no existe
-  - Impacto: No hay información de la app
-  - Esfuerzo: Bajo (1-2 horas)
-  - Contenido sugerido:
-    - Versión de la app
-    - Créditos
-    - Licencia
-    - Enlaces útiles
-
-#### 3. Contenido Visual (50% implementado)
-- ⚠️ **Imágenes en Markdown** (0% referenciadas)
-  - Estado: 48 imágenes organizadas, 0 referenciadas en .md
-  - Impacto: Las imágenes no se ven en el manual
-  - Esfuerzo: Alto (manual, ~20-30 horas)
-  - Acción: Añadir `![descripción](/assets/infografias/...)` en archivos .md
+#### 1. Contenido Visual (60% implementado)
+- ⚠️ **Más referencias en Markdown** (~15% hecho)
+  - Estado: 20 referencias añadidas de ~130 capítulos
+  - Impacto: Muchos capítulos aún sin imágenes visibles
+  - Esfuerzo: Alto (manual, ~15-20 horas más)
+  - Progreso: Se añaden progresivamente
 
 - ❌ **21 Medios Visuales Faltantes** (documentados)
-  - Estado: Documentados en `IMAGENES_NECESARIAS.md`
+  - Estado: Documentados en `SUGERENCIAS_MEDIOS_VISUALES.md`
   - Impacto: Temas críticos sin visualización
   - Esfuerzo: Alto (creación de medios, ~40-60 horas)
-  - Prioridad: Alta para RCP, ABCDE, Glasgow, Farmacología
+  - Prioridad: Alta para RCP paso a paso, Glasgow visual, Farmacología
 
-- ❌ **98 Capítulos sin imágenes**
+- ❌ **~90 Capítulos sin imágenes**
   - Estado: Mayoría de capítulos sin medios visuales
   - Impacto: Contenido menos accesible
   - Esfuerzo: Muy alto (creación masiva, ~200+ horas)
   - Prioridad: Media (ir añadiendo progresivamente)
 
-#### 4. Error Handling (0% implementado)
-- ❌ **Error Boundaries**
-  - Estado: No implementado
-  - Impacto: App puede crashear sin recuperación
-  - Esfuerzo: Bajo (2-3 horas)
-  - Prioridad: Alta (seguridad)
-
-- ❌ **Páginas de error personalizadas**
-  - Estado: Solo 404 básico
-  - Impacto: UX pobre en errores
+#### 2. Páginas de Error (50% implementado)
+- ✅ **Error Boundaries** - Implementado
+- ❌ **Páginas de error personalizadas** (mejora)
+  - Estado: Solo 404 básico y ErrorBoundary genérico
+  - Impacto: UX mejorable en errores específicos
   - Esfuerzo: Bajo (1-2 horas)
+  - Prioridad: Media
 
 ---
 
 ### 🟡 MEDIA PRIORIDAD (Mejoras UX)
 
-#### 5. Búsqueda Avanzada (0% implementado)
+#### 3. Búsqueda Avanzada (0% implementado)
 - ❌ **Filtros por categoría**
   - Estado: Búsqueda básica solo
   - Impacto: Difícil encontrar contenido específico
@@ -132,7 +109,8 @@
   - Impacto: No se pueden buscar por etiquetas
   - Esfuerzo: Medio (3-4 horas)
 
-#### 6. Compartir / Exportar (0% implementado)
+#### 4. Compartir / Exportar (20% implementado)
+- ✅ **Compartir App** - Implementado
 - ❌ **Compartir protocolos específicos**
   - Estado: Solo compartir app general
   - Impacto: No se pueden compartir protocolos individuales
@@ -148,7 +126,7 @@
   - Impacto: No se pueden guardar protocolos offline
   - Esfuerzo: Alto (6-8 horas)
 
-#### 7. Optimización de Performance (0% implementado)
+#### 5. Optimización de Performance (0% implementado)
 - ❌ **Lazy loading de componentes**
   - Estado: Todo se carga al inicio
   - Impacto: Bundle grande (1.2MB)
@@ -159,7 +137,7 @@
   - Impacto: Carga inicial lenta
   - Esfuerzo: Medio (3-4 horas)
 
-#### 8. Contenido Adicional
+#### 6. Contenido Adicional
 - ❌ **Expandir vademécum** (5 → 30-40 fármacos)
   - Estado: Solo 5 fármacos base
   - Impacto: Vademécum incompleto
@@ -174,13 +152,13 @@
 
 ### 🟢 BAJA PRIORIDAD (Nice to Have)
 
-#### 9. Analytics / Tracking (0% implementado)
+#### 7. Analytics / Tracking (0% implementado)
 - ❌ **Analytics locales** (opcional, con consentimiento)
   - Estado: No implementado
   - Impacto: No hay métricas de uso
   - Esfuerzo: Medio (4-6 horas)
 
-#### 10. Tests (0% implementado)
+#### 8. Tests (0% implementado)
 - ❌ **Tests unitarios**
   - Estado: No implementado
   - Impacto: Riesgo de regresiones
@@ -196,13 +174,13 @@
   - Impacto: No hay validación de flujos completos
   - Esfuerzo: Muy alto (30-40 horas)
 
-#### 11. Notificaciones (0% implementado)
+#### 9. Notificaciones (0% implementado)
 - ❌ **Notificaciones push**
   - Estado: No implementado
   - Impacto: No hay alertas
   - Esfuerzo: Alto (requiere backend, 10-15 horas)
 
-#### 12. Autenticación / Sincronización (0% implementado)
+#### 10. Autenticación / Sincronización (0% implementado)
 - ❌ **Sistema de usuarios**
   - Estado: No implementado
   - Impacto: No hay personalización entre dispositivos
@@ -219,11 +197,13 @@
 - [x] Vademécum
 - [x] Protocolos
 - [x] Manual completo
-- [ ] **Favoritos persistentes** ⚠️
-- [ ] **Historial real** ⚠️
-- [ ] **Página de favoritos** ❌
-- [ ] **Página de ajustes** ❌
-- [ ] **Página acerca de** ❌
+- [x] **Favoritos persistentes** ✅
+- [x] **Historial real** ✅
+- [x] **Página de favoritos** ✅
+- [x] **Página de ajustes** ✅
+- [x] **Página acerca de** ✅
+- [x] **Galería de imágenes** ✅
+- [x] **Error Boundaries** ✅
 
 ### PWA / Offline
 - [x] Service Worker registrado
@@ -231,19 +211,21 @@
 - [x] Cache de imágenes
 - [x] Sistema de actualizaciones
 - [x] Manifest.json
+- [x] Banner de instalación
+- [x] Indicador visual offline
 - [ ] **Test offline completo** ⚠️ (requiere servidor)
-- [ ] **Indicador visual offline** ❌
 
 ### Contenido Visual
 - [x] 48 imágenes organizadas
-- [ ] **Referencias en Markdown** ❌ (0% hecho)
+- [x] Galería de imágenes funcional
+- [x] **Referencias en Markdown** ⚠️ (~15% hecho, 20 referencias de ~130 capítulos)
 - [ ] **21 medios faltantes** ❌ (documentados)
-- [ ] **Medios para 98 capítulos** ❌ (sin imágenes)
+- [ ] **Medios para ~90 capítulos** ❌ (sin imágenes)
 
 ### Error Handling
-- [ ] **Error Boundaries** ❌
-- [ ] **Páginas de error personalizadas** ❌
-- [ ] **Manejo de errores global** ⚠️ (básico)
+- [x] **Error Boundaries** ✅
+- [ ] **Páginas de error personalizadas** ⚠️ (mejora, no crítico)
+- [x] **Manejo de errores global** ✅
 
 ### Performance
 - [ ] **Lazy loading** ❌
@@ -264,38 +246,28 @@
 
 ## 🎯 PLAN DE ACCIÓN RECOMENDADO
 
-### Fase 1: Completar Funcionalidades Core (1-2 semanas)
-1. **Persistencia de favoritos** (2-3 horas)
-2. **Historial real** (2-3 horas)
-3. **Página de favoritos** (2-3 horas)
-4. **Página de ajustes** (4-6 horas)
-5. **Página acerca de** (1-2 horas)
-6. **Error Boundaries** (2-3 horas)
-
-**Total:** ~15-20 horas
-
-### Fase 2: Contenido Visual (2-4 semanas)
-1. **Añadir referencias de imágenes en Markdown** (20-30 horas)
-   - Priorizar capítulos críticos (RCP, ABCDE, Glasgow)
+### Fase 1: Completar Contenido Visual (2-3 semanas)
+1. **Añadir más referencias de imágenes en Markdown** (15-20 horas)
+   - Priorizar capítulos críticos restantes (RCP, Glasgow, Farmacología)
    - Ir añadiendo progresivamente
 
 2. **Crear 5-6 medios críticos faltantes** (20-30 horas)
-   - RCP paso a paso
-   - ABCDE visual
+   - RCP paso a paso visual
+   - ABCDE visual completo
    - Glasgow visual
-   - Farmacología básica
+   - Farmacología básica visual
 
-**Total:** ~40-60 horas
+**Total:** ~35-50 horas
 
-### Fase 3: Mejoras UX (1-2 semanas)
+### Fase 2: Mejoras UX (1-2 semanas)
 1. **Búsqueda avanzada** (4-6 horas)
 2. **Compartir protocolos** (3-4 horas)
 3. **Deep links** (2-3 horas)
-4. **Indicador offline** (1-2 horas)
+4. **Mejorar páginas de error** (1-2 horas)
 
 **Total:** ~10-15 horas
 
-### Fase 4: Optimización (1 semana)
+### Fase 3: Optimización (1 semana)
 1. **Lazy loading** (4-6 horas)
 2. **Code splitting** (3-4 horas)
 
@@ -307,13 +279,12 @@
 
 | Fase | Esfuerzo | Prioridad |
 |------|----------|-----------|
-| **Fase 1: Core** | 15-20 horas | 🔴 Alta |
-| **Fase 2: Visual** | 40-60 horas | 🔴 Alta |
-| **Fase 3: UX** | 10-15 horas | 🟡 Media |
-| **Fase 4: Optimización** | 7-10 horas | 🟡 Media |
-| **Total** | **72-105 horas** | |
+| **Fase 1: Visual** | 35-50 horas | 🔴 Alta |
+| **Fase 2: UX** | 10-15 horas | 🟡 Media |
+| **Fase 3: Optimización** | 7-10 horas | 🟡 Media |
+| **Total** | **52-75 horas** | |
 
-**Tiempo estimado:** 2-3 meses (trabajo part-time)
+**Tiempo estimado:** 1.5-2 meses (trabajo part-time)
 
 ---
 
@@ -324,25 +295,25 @@
    - Impacto: No se puede publicar sin validación
    - Acción: Contactar profesionales médicos
 
-2. **Referencias de imágenes en Markdown**
-   - Estado: 0% hecho
-   - Impacto: Contenido visual no visible
-   - Acción: Trabajo manual progresivo
+2. **Creación de medios visuales faltantes**
+   - Estado: Documentados pero no creados
+   - Impacto: Temas críticos sin visualización
+   - Acción: Crear medios prioritarios (RCP, Glasgow, ABCDE)
 
 ---
 
 ## ✅ CONCLUSIÓN
 
-**Estado actual:** La app está **95% funcional** en términos de funcionalidades core.
+**Estado actual:** La app está **98% funcional** en términos de funcionalidades core.
 
 **Lo que falta principalmente:**
-1. **Persistencia de datos** (favoritos, historial)
-2. **Páginas faltantes** (favoritos, ajustes, acerca)
-3. **Contenido visual** (referencias en Markdown, medios faltantes)
-4. **Error handling** (Error Boundaries)
-5. **Optimización** (lazy loading, code splitting)
+1. **Contenido visual** (más referencias en Markdown, crear medios faltantes)
+2. **Búsqueda avanzada** (filtros, tags)
+3. **Compartir/exportar** (protocolos específicos, PDF)
+4. **Optimización** (lazy loading, code splitting)
+5. **Expandir contenido** (vademécum, interacciones)
 
-**Prioridad inmediata:** Completar Fase 1 (funcionalidades core) para tener una app 100% funcional.
+**Prioridad inmediata:** Completar Fase 1 (contenido visual) para tener una app visualmente completa.
 
 ---
 
