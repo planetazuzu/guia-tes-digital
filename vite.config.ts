@@ -20,6 +20,14 @@ export default defineConfig({
       // Permitir acceso a archivos fuera del proyecto si es necesario
       strict: true,
     },
+    // SPA fallback: todas las rutas no encontradas redirigen a index.html
+    // Esto permite que React Router maneje el enrutamiento del lado del cliente
+    middlewareMode: false,
+  },
+  preview: {
+    port: 4173,
+    // Configurar preview para SPA routing
+    // Esto asegura que el servidor de preview también maneje rutas correctamente
   },
   plugins: [
     react(),

@@ -47,11 +47,11 @@ const MenuSheet = ({ isOpen, onClose }: MenuSheetProps) => {
     { icon: <Phone className="w-5 h-5" />, label: 'Protocolos Transtelefónicos', path: '/telefono', onClick: onClose },
     { icon: <MessageSquare className="w-5 h-5" />, label: 'Guiones de Comunicación', path: '/comunicacion', onClick: onClose },
     { icon: <ClipboardCheck className="w-5 h-5" />, label: 'Checklists Material', path: '/material', onClick: onClose },
-    { icon: <Star className="w-5 h-5" />, label: 'Favoritos', onClick: () => {} },
-    { icon: <History className="w-5 h-5" />, label: 'Historial', onClick: () => {} },
+    { icon: <Star className="w-5 h-5" />, label: 'Favoritos', path: '/favoritos', onClick: onClose },
+    { icon: <History className="w-5 h-5" />, label: 'Historial', path: '/historial', onClick: onClose },
     { icon: <Share2 className="w-5 h-5" />, label: 'Compartir App', onClick: handleShare },
-    { icon: <Settings className="w-5 h-5" />, label: 'Ajustes', onClick: () => {} },
-    { icon: <Info className="w-5 h-5" />, label: 'Acerca de', onClick: () => {} },
+    { icon: <Settings className="w-5 h-5" />, label: 'Ajustes', path: '/ajustes', onClick: onClose },
+    { icon: <Info className="w-5 h-5" />, label: 'Acerca de', path: '/acerca', onClick: onClose },
   ];
 
   return (

@@ -32,9 +32,16 @@ server {
     }
 
     # SPA: todas las rutas van a index.html
+    # Esto permite que React Router maneje el enrutamiento del lado del cliente
     location / {
         try_files $uri $uri/ /index.html;
     }
+    
+    # Asegurar que las rutas de la API o servicios no se redirijan
+    # (si en el futuro se añade un backend)
+    # location /api/ {
+    #     proxy_pass http://localhost:3001;
+    # }
 
     # No cachear index.html (para actualizaciones)
     location = /index.html {

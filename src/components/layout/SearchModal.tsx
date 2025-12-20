@@ -3,6 +3,7 @@ import { Search, X, FileText, Pill, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { searchProcedures, Procedure } from '@/data/procedures';
 import { searchDrugs, Drug } from '@/data/drugs';
+import { useSearchHistory } from '@/hooks/useSearchHistory';
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -21,6 +22,7 @@ const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   const [results, setResults] = useState<SearchResult[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
+  const { addToHistory } = useSearchHistory();
 
   useEffect(() => {
     if (isOpen && inputRef.current) {
@@ -52,6 +54,16 @@ const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   }, [query]);
 
   const handleResultClick = (result: SearchResult) => {
+    // Añadir al historial
+    addToHistory({
+      id: result.id,
+      type: result.type,
+      title: result.title,
+      path: result.type === 'procedure' 
+        ? `/soporte-vital?id=${result.id}`
+        : `/farmacos?id=${result.id}`,
+    });
+
     if (result.type === 'procedure') {
       navigate(`/soporte-vital?id=${result.id}`);
     } else {

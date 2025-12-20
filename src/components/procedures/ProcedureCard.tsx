@@ -3,6 +3,7 @@ import { ChevronDown, ChevronUp, Star, AlertTriangle, User, Baby } from 'lucide-
 import { Procedure, Priority } from '@/data/procedures';
 import Badge from '@/components/shared/Badge';
 import { cn } from '@/lib/utils';
+import { useFavorites } from '@/hooks/useFavorites';
 
 interface ProcedureCardProps {
   procedure: Procedure;
@@ -18,12 +19,19 @@ const priorityToBadgeVariant: Record<Priority, 'critical' | 'high' | 'medium' | 
 
 const ProcedureCard = ({ procedure, defaultExpanded = false }: ProcedureCardProps) => {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
-  const [isFavorite, setIsFavorite] = useState(false);
+  const { isFavorite, toggleFavorite: toggleFavoriteHook } = useFavorites();
 
   const toggleFavorite = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setIsFavorite(!isFavorite);
+    toggleFavoriteHook({
+      id: procedure.id,
+      type: 'procedure',
+      title: procedure.shortTitle,
+      path: `/soporte-vital?id=${procedure.id}`,
+    });
   };
+
+  const isFav = isFavorite(procedure.id);
 
   return (
     <div className="card-procedure">
@@ -54,11 +62,11 @@ const ProcedureCard = ({ procedure, defaultExpanded = false }: ProcedureCardProp
               onClick={toggleFavorite}
               className={cn(
                 'w-10 h-10 flex items-center justify-center rounded-lg transition-colors',
-                isFavorite ? 'text-warning' : 'text-muted-foreground hover:text-foreground'
+                isFav ? 'text-warning' : 'text-muted-foreground hover:text-foreground'
               )}
-              aria-label={isFavorite ? 'Quitar de favoritos' : 'Añadir a favoritos'}
+              aria-label={isFav ? 'Quitar de favoritos' : 'Añadir a favoritos'}
             >
-              <Star className={cn('w-5 h-5', isFavorite && 'fill-current')} />
+              <Star className={cn('w-5 h-5', isFav && 'fill-current')} />
             </button>
             <div className="w-10 h-10 flex items-center justify-center">
               {isExpanded ? (

@@ -1,0 +1,5 @@
+# Netlify SPA fallback configuration
+# Todas las rutas que no sean archivos estáticos redirigen a index.html
+# Esto permite que React Router maneje el enrutamiento del lado del cliente
+
+/*    /index.html   200

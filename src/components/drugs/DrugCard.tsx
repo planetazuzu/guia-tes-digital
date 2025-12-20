@@ -3,6 +3,7 @@ import { ChevronDown, ChevronUp, Star, Package, Syringe, User, Baby, AlertCircle
 import { Drug } from '@/data/drugs';
 import Badge from '@/components/shared/Badge';
 import { cn } from '@/lib/utils';
+import { useFavorites } from '@/hooks/useFavorites';
 
 interface DrugCardProps {
   drug: Drug;
@@ -11,12 +12,19 @@ interface DrugCardProps {
 
 const DrugCard = ({ drug, defaultExpanded = false }: DrugCardProps) => {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
-  const [isFavorite, setIsFavorite] = useState(false);
+  const { isFavorite, toggleFavorite: toggleFavoriteHook } = useFavorites();
 
   const toggleFavorite = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setIsFavorite(!isFavorite);
+    toggleFavoriteHook({
+      id: drug.id,
+      type: 'drug',
+      title: drug.genericName,
+      path: `/farmacos?id=${drug.id}`,
+    });
   };
+
+  const isFav = isFavorite(drug.id);
 
   return (
     <div className="card-procedure">
@@ -41,11 +49,11 @@ const DrugCard = ({ drug, defaultExpanded = false }: DrugCardProps) => {
               onClick={toggleFavorite}
               className={cn(
                 'w-10 h-10 flex items-center justify-center rounded-lg transition-colors',
-                isFavorite ? 'text-warning' : 'text-muted-foreground hover:text-foreground'
+                isFav ? 'text-warning' : 'text-muted-foreground hover:text-foreground'
               )}
-              aria-label={isFavorite ? 'Quitar de favoritos' : 'Añadir a favoritos'}
+              aria-label={isFav ? 'Quitar de favoritos' : 'Añadir a favoritos'}
             >
-              <Star className={cn('w-5 h-5', isFavorite && 'fill-current')} />
+              <Star className={cn('w-5 h-5', isFav && 'fill-current')} />
             </button>
             <div className="w-10 h-10 flex items-center justify-center">
               {isExpanded ? (

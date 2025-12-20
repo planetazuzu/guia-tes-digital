@@ -11,12 +11,7 @@ import {
   AlertTriangle,
 } from 'lucide-react';
 import EmergencyButton from '@/components/shared/EmergencyButton';
-
-const recentSearches = [
-  { id: 'rcp-adulto-svb', title: 'RCP Adulto SVB', type: 'procedure' },
-  { id: 'adrenalina', title: 'Adrenalina', type: 'drug' },
-  { id: 'shock-hemorragico', title: 'Shock Hemorrágico', type: 'procedure' },
-];
+import { useSearchHistory } from '@/hooks/useSearchHistory';
 
 const quickAccess = [
   { label: 'OVACE', path: '/via-aerea' },
@@ -32,6 +27,9 @@ interface HomeProps {
 }
 
 const Home = ({ onSearchClick }: HomeProps) => {
+  const { getRecentHistory } = useSearchHistory();
+  const recentSearches = getRecentHistory(3);
+
   return (
     <div className="space-y-6">
       {/* Search Bar */}
@@ -108,20 +106,22 @@ const Home = ({ onSearchClick }: HomeProps) => {
           <Clock className="w-4 h-4 text-muted-foreground" />
         </div>
         <div className="space-y-2">
-          {recentSearches.map((item) => (
-            <Link
-              key={item.id}
-              to={
-                item.type === 'procedure'
-                  ? `/soporte-vital?id=${item.id}`
-                  : `/farmacos?id=${item.id}`
-              }
-              className="flex items-center justify-between p-3 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
-            >
-              <span className="text-foreground">{item.title}</span>
-              <ChevronRight className="w-5 h-5 text-muted-foreground" />
-            </Link>
-          ))}
+          {recentSearches.length > 0 ? (
+            recentSearches.map((item) => (
+              <Link
+                key={item.id}
+                to={item.path}
+                className="flex items-center justify-between p-3 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
+              >
+                <span className="text-foreground">{item.title}</span>
+                <ChevronRight className="w-5 h-5 text-muted-foreground" />
+              </Link>
+            ))
+          ) : (
+            <p className="text-muted-foreground text-sm text-center py-4">
+              No hay búsquedas recientes
+            </p>
+          )}
         </div>
       </section>
 

@@ -112,10 +112,11 @@
 - ❌ **Configuración de usuario** - No se guarda
 
 ### 🔄 Service Worker / Offline
-- ⚠️ **Service Worker existe** - `public/sw.js` presente
-- ❌ **No está registrado** - No se registra en la app
-- ❌ **No funciona offline** - Requiere conexión
-- ❌ **Cache no configurado** - No cachea recursos
+- ✅ **Service Worker existe** - `public/sw.js` presente
+- ✅ **Registrado y activo** - Se registra en `src/main.tsx`
+- ✅ **Funciona offline** - Cache First para assets
+- ✅ **Cache configurado** - Cachea JS, CSS, HTML, imágenes
+- ✅ **Sistema de actualizaciones** - Detecta y notifica nuevas versiones
 
 ### 📤 Exportar/Compartir
 - ❌ **Exportar protocolos a PDF** - No implementado

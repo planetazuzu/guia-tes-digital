@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight, ChevronDown, BookOpen, Search } from 'lucide-react';
+import { ChevronRight, ChevronDown, BookOpen, Search, Image } from 'lucide-react';
 import BackButton from '@/components/ui/BackButton';
 import { manualIndex, Parte, Bloque, Capitulo } from '@/data/manual-index';
 
@@ -88,16 +88,25 @@ const ManualIndex = () => {
           </div>
         </div>
 
-        {/* Búsqueda */}
-        <div className="relative">
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Buscar capítulo, palabra clave..."
-            className="w-full h-12 pl-12 pr-4 bg-card border border-border rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-          />
+        {/* Búsqueda y Galería */}
+        <div className="flex gap-3">
+          <div className="relative flex-1">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Buscar capítulo, palabra clave..."
+              className="w-full h-12 pl-12 pr-4 bg-card border border-border rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+          </div>
+          <Link
+            to="/galeria"
+            className="flex items-center gap-2 px-4 h-12 bg-card border border-border rounded-xl hover:bg-muted transition-colors text-foreground"
+          >
+            <Image className="w-5 h-5" />
+            <span className="hidden sm:inline">Galería</span>
+          </Link>
         </div>
       </div>
 
