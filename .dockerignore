@@ -1,0 +1,69 @@
+# Dependencias
+node_modules
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Build outputs
+dist
+build
+.next
+out
+
+# Desarrollo
+.env.local
+.env.development
+.env.test
+
+# Testing
+coverage
+.nyc_output
+
+# Logs
+logs
+*.log
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+.localized
+
+# Git
+.git
+.gitignore
+
+# Backups y temporales
+_BACKUP_MD
+backup_*
+deleted_*
+imagenes-pendientes
+MANUAL_TES_DIGITAL
+
+# Documentación temporal
+docs/backup
+docs/archive
+*.md.bak
+
+# Scripts de desarrollo
+*.py
+*.sh
+!deploy-docker.sh
+
+# Configuraciones no necesarias en Docker
+ecosystem.config.js
+webhook-deploy.sh
+.github
+vercel.json
+netlify.toml
+nginx.conf.example
+
+# Documentación (opcional, comentar si quieres incluirla)
+# docs/
+# *.md
