@@ -12,7 +12,7 @@
 
 Obtener constantes vitales fiables en campo y durante traslado, registrando correctamente los valores obtenidos, evitando lecturas falsas por técnica incorrecta, perfusión, movimiento o mala colocación.
 
-![Registro de constantes vitales](/assets/infografias/bloque-3-material-sanitario/registro-constantes-vitales.png)
+![registro-constantes-vitales]
 
 Este capítulo se centra en **técnica operativa de toma de constantes vitales (TA, FC, FR, temperatura) y registro en campo**, no en interpretación clínica avanzada ni tratamiento.
 
@@ -304,7 +304,7 @@ Este capítulo cubre:
 
 ### E) Saturación de Oxígeno (SpO₂)
 
-![Uso correcto del pulsioxímetro](/assets/infografias/bloque-3-material-sanitario/uso-correcto-pulsioximetro.png)
+![uso-pulsioximetro]
 
 **Procedimiento paso a paso:**
 
@@ -339,7 +339,7 @@ Este capítulo cubre:
 
 ## 1.1.6 Registro Operativo en Campo
 
-![Interpretación de constantes vitales (semáforo)](/assets/infografias/bloque-3-material-sanitario/interpretacion-constantes-semaforo.png)
+![interpretacion-constantes-semaforo]
 
 ### Qué registrar
 

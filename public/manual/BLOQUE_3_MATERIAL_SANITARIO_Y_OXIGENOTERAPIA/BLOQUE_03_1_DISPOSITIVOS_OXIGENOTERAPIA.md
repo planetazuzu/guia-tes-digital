@@ -95,7 +95,7 @@ Este capítulo cubre:
    - Verificar que caudalímetro funciona correctamente.
    - Verificar que presión es adecuada.
 
-![Guía de colocación de dispositivos de oxigenoterapia](/assets/infografias/bloque-0-fundamentos/guia-colocacion-dispositivos-oxigenoterapia.png)
+![guia-colocacion-oxigenoterapia]
 
 **2. Montar dispositivo y comprobar flujo**
    - Montar dispositivo según instrucciones.

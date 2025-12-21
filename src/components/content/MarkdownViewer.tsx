@@ -6,6 +6,7 @@ import rehypeRaw from 'rehype-raw';
 import rehypeSanitize from 'rehype-sanitize';
 import rehypeHighlight from 'rehype-highlight';
 import { Loader2, AlertCircle, FileText } from 'lucide-react';
+import { imageRegistry, hasImageId, findImageById } from '@/data/image-registry';
 import 'highlight.js/styles/github-dark.css';
 
 interface MarkdownViewerProps {
@@ -240,27 +241,70 @@ const MarkdownViewer = ({
           img: ({ node, src, alt, ...props }: any) => {
             // Normalizar rutas de imágenes
             let imageSrc = src || '';
+            let imageAlt = alt || '';
+            let imageCaption = '';
             
-            // Si es una ruta relativa que empieza con ./assets o ../assets
-            if (imageSrc.startsWith('./assets/') || imageSrc.startsWith('../assets/')) {
-              // Convertir a ruta absoluta desde public/
-              imageSrc = imageSrc.replace(/^\.\.?\/assets\//, '/assets/');
+            // 1. Intentar resolver desde registry (sistema de alias)
+            if (imageSrc && hasImageId(imageSrc)) {
+              const metadata = findImageById(imageSrc);
+              if (metadata) {
+                imageSrc = metadata.path;
+                imageAlt = metadata.alt;
+                imageCaption = metadata.caption || '';
+              }
             }
-            // Si es una ruta relativa que empieza con assets/
-            else if (imageSrc.startsWith('assets/') && !imageSrc.startsWith('/assets/')) {
-              // Convertir a ruta absoluta
-              imageSrc = `/${imageSrc}`;
-            }
-            // Si no empieza con /, asumir que es relativa desde public/
-            else if (imageSrc && !imageSrc.startsWith('/') && !imageSrc.startsWith('http')) {
-              imageSrc = `/${imageSrc}`;
+            // 2. Si no es alias, normalizar ruta directa (compatibilidad con sistema actual)
+            else {
+              // Si es una ruta relativa que empieza con ./assets o ../assets
+              if (imageSrc.startsWith('./assets/') || imageSrc.startsWith('../assets/')) {
+                // Convertir a ruta absoluta desde public/
+                imageSrc = imageSrc.replace(/^\.\.?\/assets\//, '/assets/');
+              }
+              // Si es una ruta relativa que empieza con assets/
+              else if (imageSrc.startsWith('assets/') && !imageSrc.startsWith('/assets/')) {
+                // Convertir a ruta absoluta
+                imageSrc = `/${imageSrc}`;
+              }
+              // Si no empieza con /, asumir que es relativa desde public/
+              else if (imageSrc && !imageSrc.startsWith('/') && !imageSrc.startsWith('http')) {
+                imageSrc = `/${imageSrc}`;
+              }
+              
+              // Si no hay alt, usar el src como fallback
+              if (!imageAlt && imageSrc) {
+                imageAlt = imageSrc.split('/').pop()?.replace(/\.[^/.]+$/, '') || 'Imagen';
+              }
             }
             
+            // Renderizar imagen con caption si está disponible
+            if (imageCaption) {
+              return (
+                <figure className="my-6">
+                  <img 
+                    className="rounded-lg max-w-full h-auto border border-border shadow-sm" 
+                    src={imageSrc}
+                    alt={imageAlt}
+                    loading="lazy"
+                    onError={(e) => {
+                      // Fallback si la imagen no se carga
+                      console.warn(`No se pudo cargar la imagen: ${imageSrc}`);
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }}
+                    {...props} 
+                  />
+                  <figcaption className="text-sm text-muted-foreground mt-2 text-center italic px-2">
+                    {imageCaption}
+                  </figcaption>
+                </figure>
+              );
+            }
+            
+            // Renderizar imagen sin caption
             return (
               <img 
                 className="rounded-lg my-4 max-w-full h-auto border border-border shadow-sm" 
                 src={imageSrc}
-                alt={alt || 'Imagen'}
+                alt={imageAlt || 'Imagen'}
                 loading="lazy"
                 onError={(e) => {
                   // Fallback si la imagen no se carga

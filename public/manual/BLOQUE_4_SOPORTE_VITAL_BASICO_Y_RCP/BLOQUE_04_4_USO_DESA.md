@@ -52,7 +52,7 @@ Este capítulo se centra en **uso operativo del DESA**, no en desfibrilador manu
 
 ## 4.4.3 Principios TES
 
-![Flujo de uso del DESA transtelefónico](/assets/infografias/bloque-0-fundamentos/flujo-desa-telefono.png)
+![flujo-desa-telefono]
 
 ### El DESA es un instrumento seguro
 

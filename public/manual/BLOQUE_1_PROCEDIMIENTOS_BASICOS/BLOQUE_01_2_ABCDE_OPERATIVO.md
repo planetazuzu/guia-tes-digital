@@ -93,7 +93,7 @@ Este capítulo cubre:
 
 ## 1.2.4 Procedimiento Paso a Paso: ABCDE
 
-![Algoritmo operativo del TES](/assets/infografias/bloque-0-fundamentos/ALGORITMO OPERATIVO DEL TES.svg)
+![abcde-algoritmo]
 
 ### A - Airway (Vía Aérea)
 

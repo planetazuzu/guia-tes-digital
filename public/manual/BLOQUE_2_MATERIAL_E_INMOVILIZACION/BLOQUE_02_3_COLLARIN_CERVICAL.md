@@ -276,7 +276,7 @@ No existen contraindicaciones absolutas cuando hay riesgo cervical.
 4. Medir distancia entre ambos puntos
 5. Seleccionar talla según medida
 
-![Medición anatómica para selección de talla de collarín](/assets/infografias/bloque-2-inmovilizacion/seleccion-talla-collarin-medicion-anatomica.png)
+![collarin-medicion]
 
 **Tallas Estándar:**
 - **Pediátrico:** <10 cm aproximadamente
@@ -284,7 +284,7 @@ No existen contraindicaciones absolutas cuando hay riesgo cervical.
 - **Mediano:** 12-14 cm aproximadamente
 - **Grande:** >14 cm aproximadamente
 
-![Tabla de tallas de collarín cervical](/assets/infografias/bloque-2-inmovilizacion/seleccion-talla-collarin-tabla-tallas.png)
+![collarin-tabla-tallas]
 
 *Nota: Las medidas exactas varían según fabricante. Consultar guía del fabricante.*
 
@@ -508,7 +508,7 @@ No existen contraindicaciones absolutas cuando hay riesgo cervical.
 
 ## 2.3.10 Problemas Frecuentes y Resolución Rápida
 
-![Errores frecuentes en la colocación del collarín cervical](/assets/infografias/bloque-2-inmovilizacion/errores-frecuentes-collarin-cervical.png)
+![collarin-errores]
 
 ### Errores Críticos
 

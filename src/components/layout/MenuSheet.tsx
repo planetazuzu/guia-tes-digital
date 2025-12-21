@@ -144,6 +144,8 @@ const MenuSheet = memo(({ isOpen, onClose }: MenuSheetProps) => {
       </div>
     </>
   );
-};
+});
+
+MenuSheet.displayName = 'MenuSheet';
 
 export default MenuSheet;
