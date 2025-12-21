@@ -44,3 +44,7 @@ __pycache__/
 *.bak
 *.backup
 backup_manual_pre_limpieza/
+
+# Docker
+.docker/
+docker-compose.override.yml
