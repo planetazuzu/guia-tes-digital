@@ -33,7 +33,7 @@ Activar **PCR transtelefónica** si se cumple:
 
 ## 3. SECUENCIA OPERATIVA (ALGORITMO)
 
-![Flujo de RCP transtelefónica](/assets/infografias/bloque-0-fundamentos/flujo-rcp-transtelefonica.png)
+![flujo-rcp-transtelefonica]
 
 ### 3.1 Control inicial de llamada (30–60 s)
 

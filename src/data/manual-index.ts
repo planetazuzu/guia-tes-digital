@@ -2434,12 +2434,170 @@ export const manualIndex: Parte[] = [
             tiempoLectura: 14,
             navegacion: {
               anterior: "7.1.1",
-              siguiente: "8.1.1",
-              relacionados: ["7.1.1"]
+              siguiente: "7.3.1",
+              relacionados: ["7.1.1", "7.3.1"]
             },
             metadata: {
               version: "1.0",
               fechaActualizacion: "2024-12-13",
+              autor: "Manual TES Digital"
+            }
+          },
+        ]
+      },
+      {
+        id: 15,
+        nombre: "Alteraciones Psiquiátricas y Contención",
+        descripcion: "Protocolos de actuación en crisis psiquiátricas, contención psiquiátrica (salvavidas) y alteraciones de salud mental",
+        icono: "AlertCircle",
+        capitulos: [
+          {
+            id: "7.3.1",
+            titulo: "Introducción a Alteraciones Psiquiátricas",
+            parte: 7,
+            parteNombre: "Situaciones Especiales y Trauma",
+            bloque: 15,
+            bloqueNombre: "Alteraciones Psiquiátricas y Contención",
+            rutaArchivo: "/manual/BLOQUE_15_ALTERACIONES_PSIQUIATRICAS/BLOQUE_15_0_INTRODUCCION_ALTERACIONES_PSIQUIATRICAS.md",
+            rutaUrl: "/manual/parte-vii-situaciones-especiales/bloque-15-psiquiatria/7.3.1",
+            nivelDificultad: "intermedio",
+            importancia: "alta",
+            palabrasClave: ["psiquiatria", "salud mental", "alteraciones", "introduccion"],
+            tipoContenido: "formativo",
+            tiempoLectura: 8,
+            navegacion: {
+              anterior: "7.2.1",
+              siguiente: "7.3.2",
+              relacionados: ["7.3.2", "7.3.3", "7.3.4"]
+            },
+            metadata: {
+              version: "1.0",
+              fechaActualizacion: "2024-12-19",
+              autor: "Manual TES Digital"
+            }
+          },
+          {
+            id: "7.3.2",
+            titulo: "Reconocimiento de Alteraciones Psiquiátricas",
+            parte: 7,
+            parteNombre: "Situaciones Especiales y Trauma",
+            bloque: 15,
+            bloqueNombre: "Alteraciones Psiquiátricas y Contención",
+            rutaArchivo: "/manual/BLOQUE_15_ALTERACIONES_PSIQUIATRICAS/BLOQUE_15_1_RECONOCIMIENTO_ALTERACIONES_PSIQUIATRICAS.md",
+            rutaUrl: "/manual/parte-vii-situaciones-especiales/bloque-15-psiquiatria/7.3.2",
+            nivelDificultad: "intermedio",
+            importancia: "alta",
+            palabrasClave: ["reconocimiento", "signos", "sintomas", "evaluacion"],
+            tipoContenido: "operativo",
+            tiempoLectura: 10,
+            navegacion: {
+              anterior: "7.3.1",
+              siguiente: "7.3.3",
+              relacionados: ["7.3.1", "7.3.3", "7.3.4"]
+            },
+            metadata: {
+              version: "1.0",
+              fechaActualizacion: "2024-12-19",
+              autor: "Manual TES Digital"
+            }
+          },
+          {
+            id: "7.3.3",
+            titulo: "Protocolo de Actuación en Crisis Psiquiátrica",
+            parte: 7,
+            parteNombre: "Situaciones Especiales y Trauma",
+            bloque: 15,
+            bloqueNombre: "Alteraciones Psiquiátricas y Contención",
+            rutaArchivo: "/manual/BLOQUE_15_ALTERACIONES_PSIQUIATRICAS/BLOQUE_15_2_PROTOCOLO_CRISIS_PSIQUIATRICA.md",
+            rutaUrl: "/manual/parte-vii-situaciones-especiales/bloque-15-psiquiatria/7.3.3",
+            nivelDificultad: "intermedio",
+            importancia: "alta",
+            palabrasClave: ["protocolo", "crisis", "actuacion", "desescalada"],
+            tipoContenido: "operativo",
+            tiempoLectura: 12,
+            navegacion: {
+              anterior: "7.3.2",
+              siguiente: "7.3.4",
+              relacionados: ["7.3.2", "7.3.4", "7.3.5"]
+            },
+            metadata: {
+              version: "1.0",
+              fechaActualizacion: "2024-12-19",
+              autor: "Manual TES Digital"
+            }
+          },
+          {
+            id: "7.3.4",
+            titulo: "Contención Psiquiátrica: Salvavidas y Sistemas de Sujeción",
+            parte: 7,
+            parteNombre: "Situaciones Especiales y Trauma",
+            bloque: 15,
+            bloqueNombre: "Alteraciones Psiquiátricas y Contención",
+            rutaArchivo: "/manual/BLOQUE_15_ALTERACIONES_PSIQUIATRICAS/BLOQUE_15_3_CONTENCION_PSIQUIATRICA_SALVAVIDAS.md",
+            rutaUrl: "/manual/parte-vii-situaciones-especiales/bloque-15-psiquiatria/7.3.4",
+            nivelDificultad: "avanzado",
+            importancia: "alta",
+            palabrasClave: ["contencion", "salvavidas", "sujeción", "inmovilizacion", "psiquiatria"],
+            tipoContenido: "operativo",
+            tiempoLectura: 15,
+            navegacion: {
+              anterior: "7.3.3",
+              siguiente: "7.3.5",
+              relacionados: ["7.3.3", "7.3.5", "7.3.6"]
+            },
+            metadata: {
+              version: "1.0",
+              fechaActualizacion: "2024-12-19",
+              autor: "Manual TES Digital"
+            }
+          },
+          {
+            id: "7.3.5",
+            titulo: "Agitación Psicomotriz",
+            parte: 7,
+            parteNombre: "Situaciones Especiales y Trauma",
+            bloque: 15,
+            bloqueNombre: "Alteraciones Psiquiátricas y Contención",
+            rutaArchivo: "/manual/BLOQUE_15_ALTERACIONES_PSIQUIATRICAS/BLOQUE_15_4_AGITACION_PSICOMOTRIZ.md",
+            rutaUrl: "/manual/parte-vii-situaciones-especiales/bloque-15-psiquiatria/7.3.5",
+            nivelDificultad: "intermedio",
+            importancia: "alta",
+            palabrasClave: ["agitacion", "psicomotriz", "grados", "evaluacion"],
+            tipoContenido: "operativo",
+            tiempoLectura: 10,
+            navegacion: {
+              anterior: "7.3.4",
+              siguiente: "7.3.6",
+              relacionados: ["7.3.3", "7.3.4", "7.3.6"]
+            },
+            metadata: {
+              version: "1.0",
+              fechaActualizacion: "2024-12-19",
+              autor: "Manual TES Digital"
+            }
+          },
+          {
+            id: "7.3.6",
+            titulo: "Crisis de Ansiedad y Riesgo Suicida",
+            parte: 7,
+            parteNombre: "Situaciones Especiales y Trauma",
+            bloque: 15,
+            bloqueNombre: "Alteraciones Psiquiátricas y Contención",
+            rutaArchivo: "/manual/BLOQUE_15_ALTERACIONES_PSIQUIATRICAS/BLOQUE_15_5_CRISIS_ANSIEDAD_RIESGO_SUICIDA.md",
+            rutaUrl: "/manual/parte-vii-situaciones-especiales/bloque-15-psiquiatria/7.3.6",
+            nivelDificultad: "intermedio",
+            importancia: "alta",
+            palabrasClave: ["ansiedad", "riesgo suicida", "crisis", "evaluacion"],
+            tipoContenido: "operativo",
+            tiempoLectura: 12,
+            navegacion: {
+              anterior: "7.3.5",
+              siguiente: "8.1.1",
+              relacionados: ["7.3.3", "7.3.4", "7.3.5"]
+            },
+            metadata: {
+              version: "1.0",
+              fechaActualizacion: "2024-12-19",
               autor: "Manual TES Digital"
             }
           },
