@@ -1,15 +1,23 @@
 import { X, Star, History, Settings, Info, Share2, ClipboardCheck, Phone, MessageSquare, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useMemo, useCallback, memo } from 'react';
+import { toast } from 'sonner';
 
 interface MenuSheetProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const MenuSheet = ({ isOpen, onClose }: MenuSheetProps) => {
+// Memoizar iconos para evitar re-creación
+const MenuIcon = memo(({ Icon, className }: { Icon: any; className?: string }) => (
+  <Icon className={className || "w-5 h-5"} />
+));
+MenuIcon.displayName = 'MenuIcon';
+
+const MenuSheet = memo(({ isOpen, onClose }: MenuSheetProps) => {
   if (!isOpen) return null;
 
-  const handleShare = () => {
+  const handleShare = useCallback(() => {
     // Usar setTimeout para no bloquear la UI
     setTimeout(async () => {
       const shareData = {
@@ -45,19 +53,20 @@ const MenuSheet = ({ isOpen, onClose }: MenuSheetProps) => {
         }
       }
     }, 0);
-  };
+  }, [onClose]);
 
-  const menuItems = [
-    { icon: <BookOpen className="w-5 h-5" />, label: 'Manual Completo', path: '/manual', onClick: onClose },
-    { icon: <Phone className="w-5 h-5" />, label: 'Protocolos Transtelefónicos', path: '/telefono', onClick: onClose },
-    { icon: <MessageSquare className="w-5 h-5" />, label: 'Guiones de Comunicación', path: '/comunicacion', onClick: onClose },
-    { icon: <ClipboardCheck className="w-5 h-5" />, label: 'Checklists Material', path: '/material', onClick: onClose },
-    { icon: <Star className="w-5 h-5" />, label: 'Favoritos', path: '/favoritos', onClick: onClose },
-    { icon: <History className="w-5 h-5" />, label: 'Historial', path: '/historial', onClick: onClose },
-    { icon: <Share2 className="w-5 h-5" />, label: 'Compartir App', onClick: handleShare },
-    { icon: <Settings className="w-5 h-5" />, label: 'Ajustes', path: '/ajustes', onClick: onClose },
-    { icon: <Info className="w-5 h-5" />, label: 'Acerca de', path: '/acerca', onClick: onClose },
-  ];
+  // Memoizar menuItems para evitar re-creación en cada render
+  const menuItems = useMemo(() => [
+    { icon: BookOpen, label: 'Manual Completo', path: '/manual', onClick: onClose },
+    { icon: Phone, label: 'Protocolos Transtelefónicos', path: '/telefono', onClick: onClose },
+    { icon: MessageSquare, label: 'Guiones de Comunicación', path: '/comunicacion', onClick: onClose },
+    { icon: ClipboardCheck, label: 'Checklists Material', path: '/material', onClick: onClose },
+    { icon: Star, label: 'Favoritos', path: '/favoritos', onClick: onClose },
+    { icon: History, label: 'Historial', path: '/historial', onClick: onClose },
+    { icon: Share2, label: 'Compartir App', onClick: handleShare },
+    { icon: Settings, label: 'Ajustes', path: '/ajustes', onClick: onClose },
+    { icon: Info, label: 'Acerca de', path: '/acerca', onClick: onClose },
+  ], [onClose, handleShare]);
 
   return (
     <>
@@ -91,7 +100,14 @@ const MenuSheet = ({ isOpen, onClose }: MenuSheetProps) => {
                 <Link
                   key={index}
                   to={item.path}
-                  onClick={item.onClick}
+                  onClick={(e) => {
+                    // Permitir navegación normal, pero ejecutar onClick de forma no bloqueante
+                    if (item.onClick) {
+                      requestAnimationFrame(() => {
+                        item.onClick?.();
+                      });
+                    }
+                  }}
                   className="w-full flex items-center gap-4 p-4 rounded-xl hover:bg-muted transition-colors text-left"
                 >
                   {content}
