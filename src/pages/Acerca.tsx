@@ -1,4 +1,4 @@
-import { Info, Heart, Code, ExternalLink, Shield } from 'lucide-react';
+import { Info, Heart, Code, ExternalLink, Shield, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Acerca = () => {
@@ -114,6 +114,43 @@ const Acerca = () => {
             </div>
             <ExternalLink className="w-4 h-4 text-muted-foreground" />
           </a>
+        </div>
+      </section>
+
+      {/* Información Legal */}
+      <section className="space-y-3">
+        <h2 className="font-semibold text-foreground">Información Legal</h2>
+        <div className="space-y-2">
+          <Link
+            to="/privacidad"
+            className="flex items-center gap-3 p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
+          >
+            <Shield className="w-5 h-5 text-primary" />
+            <div className="flex-1">
+              <p className="font-medium text-foreground">Política de Privacidad</p>
+              <p className="text-sm text-muted-foreground">Cómo protegemos tus datos</p>
+            </div>
+          </Link>
+          <Link
+            to="/descargo-responsabilidad"
+            className="flex items-center gap-3 p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
+          >
+            <Shield className="w-5 h-5 text-warning" />
+            <div className="flex-1">
+              <p className="font-medium text-foreground">Descargo de Responsabilidad</p>
+              <p className="text-sm text-muted-foreground">Aviso importante sobre el uso médico</p>
+            </div>
+          </Link>
+          <Link
+            to="/aviso-legal"
+            className="flex items-center gap-3 p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
+          >
+            <FileText className="w-5 h-5 text-primary" />
+            <div className="flex-1">
+              <p className="font-medium text-foreground">Aviso Legal</p>
+              <p className="text-sm text-muted-foreground">Términos y condiciones de uso</p>
+            </div>
+          </Link>
         </div>
       </section>
 

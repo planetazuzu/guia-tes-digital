@@ -24,7 +24,7 @@ const MenuSheet = ({ isOpen, onClose }: MenuSheetProps) => {
       } else {
         // Fallback: copiar URL al portapapeles
         await navigator.clipboard.writeText(shareData.url);
-        alert('URL copiada al portapapeles');
+        toast.success('URL copiada al portapapeles');
         onClose();
       }
     } catch (error) {
@@ -34,9 +34,10 @@ const MenuSheet = ({ isOpen, onClose }: MenuSheetProps) => {
         // Fallback: copiar URL
         try {
           await navigator.clipboard.writeText(shareData.url);
-          alert('URL copiada al portapapeles');
+          toast.success('URL copiada al portapapeles');
         } catch (clipboardError) {
           console.error('Error al copiar:', clipboardError);
+          toast.error('No se pudo copiar al portapapeles');
         }
       }
     }

@@ -41,6 +41,9 @@ const Historial = lazy(() => import("./pages/Historial"));
 const Ajustes = lazy(() => import("./pages/Ajustes"));
 const Acerca = lazy(() => import("./pages/Acerca"));
 const GaleriaImagenes = lazy(() => import("./pages/GaleriaImagenes"));
+const Privacidad = lazy(() => import("./pages/Privacidad"));
+const DescargoResponsabilidad = lazy(() => import("./pages/DescargoResponsabilidad"));
+const AvisoLegal = lazy(() => import("./pages/AvisoLegal"));
 
 const queryClient = new QueryClient();
 
@@ -89,6 +92,9 @@ const App = () => {
                         <Route path="/ajustes" element={<Ajustes />} />
                         <Route path="/acerca" element={<Acerca />} />
                         <Route path="/galeria" element={<GaleriaImagenes />} />
+                        <Route path="/privacidad" element={<Privacidad />} />
+                        <Route path="/descargo-responsabilidad" element={<DescargoResponsabilidad />} />
+                        <Route path="/aviso-legal" element={<AvisoLegal />} />
                         <Route path="*" element={<NotFound />} />
                       </Routes>
                     </Suspense>

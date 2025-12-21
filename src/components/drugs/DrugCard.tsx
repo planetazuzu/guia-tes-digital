@@ -81,6 +81,13 @@ const DrugCard = ({ drug, defaultExpanded = false }: DrugCardProps) => {
 
           <div className="flex items-center gap-2 flex-shrink-0">
             <button
+              onClick={handleShare}
+              className="w-10 h-10 flex items-center justify-center rounded-lg transition-colors text-muted-foreground hover:text-foreground"
+              aria-label="Compartir fármaco"
+            >
+              <Share2 className="w-5 h-5" />
+            </button>
+            <button
               onClick={toggleFavorite}
               className={cn(
                 'w-10 h-10 flex items-center justify-center rounded-lg transition-colors',
