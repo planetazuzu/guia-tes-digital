@@ -2,9 +2,254 @@
 
 Esta guía explica cómo desplegar EMERGES TES en tu servidor propio con auto-actualización desde GitHub.
 
+**Opciones de despliegue:**
+- 🐳 **Docker** (Recomendado) - Ver sección [Despliegue con Docker](#despliegue-con-docker)
+- 📦 **PM2 + Node.js** - Ver sección [Despliegue con PM2](#despliegue-con-pm2)
+
 ---
 
-## 📋 Requisitos Previos
+## 🐳 DESPLIEGUE CON DOCKER (Recomendado)
+
+### Ventajas de Docker
+
+- ✅ Aislamiento completo de dependencias
+- ✅ Reproducible en cualquier entorno
+- ✅ Fácil actualización y rollback
+- ✅ Gestión simplificada con docker-compose
+- ✅ Health checks automáticos
+- ✅ Recursos limitados (CPU/memoria)
+
+### Requisitos Previos Docker
+
+- **Docker** 20.10+ instalado
+- **Docker Compose** 2.0+ (o `docker compose` plugin)
+- **Git** instalado
+- **Puerto 8607** disponible
+
+### Instalación Inicial con Docker
+
+#### 1. Instalar Docker
+
+```bash
+# Ubuntu/Debian
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+
+# Verificar instalación
+docker --version
+docker compose version
+```
+
+#### 2. Clonar el repositorio
+
+```bash
+cd /ruta/donde/quieres/la/app
+git clone https://github.com/tu-usuario/guia-tes-digital.git
+cd guia-tes-digital
+```
+
+#### 3. Configurar Docker
+
+```bash
+# Hacer ejecutable el script de deploy
+chmod +x deploy-docker.sh
+
+# Verificar que los archivos Docker existen
+ls -la Dockerfile docker-compose.yml
+```
+
+#### 4. Primer despliegue
+
+```bash
+# Deploy completo (con git pull + build + start)
+./deploy-docker.sh
+
+# O sin actualizar git (útil para webhooks)
+./deploy-docker.sh --skip-git
+```
+
+### Comandos Docker Útiles
+
+```bash
+# Deploy completo
+./deploy-docker.sh
+
+# Reconstruir imagen desde cero
+./deploy-docker.sh --rebuild
+
+# Ver logs en tiempo real
+./deploy-docker.sh --logs
+# O directamente:
+docker-compose logs -f
+
+# Detener contenedor
+./deploy-docker.sh --stop
+# O directamente:
+docker-compose down
+
+# Ver estado
+docker ps | grep emerges-tes
+
+# Entrar al contenedor (debug)
+docker exec -it emerges-tes sh
+
+# Ver uso de recursos
+docker stats emerges-tes
+```
+
+### Auto-Deploy con Docker
+
+#### Opción 1: GitHub Actions + Docker
+
+El workflow `.github/workflows/deploy.yml` puede actualizarse para usar Docker:
+
+```yaml
+- name: Desplegar con Docker
+  uses: appleboy/ssh-action@v1.0.3
+  with:
+    host: ${{ secrets.SERVER_HOST }}
+    username: ${{ secrets.SERVER_USER }}
+    key: ${{ secrets.SERVER_SSH_KEY }}
+    script: |
+      cd ${{ secrets.APP_PATH }}
+      ./deploy-docker.sh --skip-git
+```
+
+#### Opción 2: Webhook + Docker
+
+Actualizar `webhook-deploy.sh` para usar Docker:
+
+```bash
+# En webhook-deploy.sh, cambiar:
+./deploy.sh --skip-git
+# Por:
+./deploy-docker.sh --skip-git
+```
+
+#### Opción 3: Cron + Docker
+
+```bash
+# Crear script
+nano /usr/local/bin/check-github-updates-docker.sh
+```
+
+```bash
+#!/bin/bash
+cd /ruta/a/tu/app
+git fetch origin
+if [ $(git rev-parse HEAD) != $(git rev-parse origin/main) ]; then
+  ./deploy-docker.sh
+fi
+```
+
+```bash
+chmod +x /usr/local/bin/check-github-updates-docker.sh
+
+# Añadir a crontab
+crontab -e
+# Añadir:
+*/5 * * * * /usr/local/bin/check-github-updates-docker.sh >> /var/log/docker-deploy.log 2>&1
+```
+
+### Verificación y Monitoreo Docker
+
+```bash
+# Verificar que el contenedor está corriendo
+docker ps | grep emerges-tes
+
+# Ver logs
+docker-compose logs -f emerges-tes
+
+# Ver health check
+docker inspect emerges-tes | grep -A 10 Health
+
+# Ver uso de recursos
+docker stats emerges-tes
+
+# Verificar puerto
+netstat -tlnp | grep 8607
+# O
+ss -tlnp | grep 8607
+```
+
+### Acceder a la aplicación
+
+- **Local:** `http://localhost:8607`
+- **Red:** `http://tu-servidor-ip:8607`
+- **Dominio:** `http://tu-dominio.com:8607`
+
+### Solución de Problemas Docker
+
+**Error: "Cannot connect to Docker daemon"**
+```bash
+# Añadir usuario al grupo docker
+sudo usermod -aG docker $USER
+# Reiniciar sesión o:
+newgrp docker
+```
+
+**Error: "Port 8607 already in use"**
+```bash
+# Ver qué usa el puerto
+sudo lsof -i :8607
+# Detener contenedor anterior
+docker-compose down
+```
+
+**Error: "Build failed"**
+```bash
+# Limpiar y reconstruir
+docker-compose down
+docker system prune -f
+./deploy-docker.sh --rebuild
+```
+
+**Contenedor se detiene inmediatamente**
+```bash
+# Ver logs
+docker-compose logs emerges-tes
+# Verificar Dockerfile
+cat Dockerfile
+```
+
+### Configuración Avanzada Docker
+
+#### Usar docker-compose.prod.yml para producción
+
+```bash
+# Usar archivo de producción
+docker-compose -f docker-compose.prod.yml up -d
+
+# O actualizar deploy-docker.sh para usar este archivo
+```
+
+#### Variables de entorno personalizadas
+
+Crear `.env`:
+```env
+NODE_ENV=production
+PORT=8607
+```
+
+Y usar en `docker-compose.yml`:
+```yaml
+env_file:
+  - .env
+```
+
+#### Límites de recursos
+
+Ya configurado en `docker-compose.prod.yml`:
+- CPU: 1.0 máximo, 0.5 reservado
+- Memoria: 512MB máximo, 256MB reservado
+
+---
+
+## 📦 DESPLIEGUE CON PM2 (Alternativa)
+
+---
+
+## 📋 Requisitos Previos (PM2)
 
 - **Servidor Linux** (Ubuntu/Debian recomendado)
 - **Node.js 18+** instalado

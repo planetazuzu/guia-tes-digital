@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  emerges-tes:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - NODE_ENV=production
+    container_name: emerges-tes-prod
+    ports:
+      - "8607:8607"
+    environment:
+      - NODE_ENV=production
+      - PORT=8607
+    restart: always
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:8607', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    labels:
+      - "com.emerges.app=emerges-tes"
+      - "com.emerges.version=1.0"
+      - "com.emerges.environment=production"
+    networks:
+      - emerges-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  emerges-network:
+    driver: bridge
