@@ -9,38 +9,42 @@ interface MenuSheetProps {
 const MenuSheet = ({ isOpen, onClose }: MenuSheetProps) => {
   if (!isOpen) return null;
 
-  const handleShare = async () => {
-    const shareData = {
-      title: 'EMERGES TES - Guía de Protocolos',
-      text: 'Guía rápida de protocolos médicos de emergencias para Técnicos de Emergencias Sanitarias',
-      url: window.location.origin,
-    };
+  const handleShare = () => {
+    // Usar setTimeout para no bloquear la UI
+    setTimeout(async () => {
+      const shareData = {
+        title: 'EMERGES TES - Guía de Protocolos',
+        text: 'Guía rápida de protocolos médicos de emergencias para Técnicos de Emergencias Sanitarias',
+        url: window.location.origin,
+      };
 
-    try {
-      // Intentar usar Web Share API nativa (móviles)
-      if (navigator.share) {
-        await navigator.share(shareData);
-        onClose();
-      } else {
-        // Fallback: copiar URL al portapapeles
-        await navigator.clipboard.writeText(shareData.url);
-        toast.success('URL copiada al portapapeles');
-        onClose();
-      }
-    } catch (error) {
-      // Usuario canceló o error
-      if ((error as Error).name !== 'AbortError') {
-        console.error('Error al compartir:', error);
-        // Fallback: copiar URL
-        try {
+      try {
+        // Intentar usar Web Share API nativa (móviles)
+        if (navigator.share) {
+          await navigator.share(shareData);
+          // Cerrar después de compartir exitosamente
+          setTimeout(() => onClose(), 0);
+        } else {
+          // Fallback: copiar URL al portapapeles
           await navigator.clipboard.writeText(shareData.url);
           toast.success('URL copiada al portapapeles');
-        } catch (clipboardError) {
-          console.error('Error al copiar:', clipboardError);
-          toast.error('No se pudo copiar al portapapeles');
+          setTimeout(() => onClose(), 0);
+        }
+      } catch (error) {
+        // Usuario canceló o error
+        if ((error as Error).name !== 'AbortError') {
+          console.error('Error al compartir:', error);
+          // Fallback: copiar URL
+          try {
+            await navigator.clipboard.writeText(shareData.url);
+            toast.success('URL copiada al portapapeles');
+          } catch (clipboardError) {
+            console.error('Error al copiar:', clipboardError);
+            toast.error('No se pudo copiar al portapapeles');
+          }
         }
       }
-    }
+    }, 0);
   };
 
   const menuItems = [
@@ -98,7 +102,13 @@ const MenuSheet = ({ isOpen, onClose }: MenuSheetProps) => {
             return (
               <button
                 key={index}
-                onClick={item.onClick}
+                onClick={(e) => {
+                  e.preventDefault();
+                  // Usar requestAnimationFrame para no bloquear la UI
+                  requestAnimationFrame(() => {
+                    item.onClick?.();
+                  });
+                }}
                 className="w-full flex items-center gap-4 p-4 rounded-xl hover:bg-muted transition-colors text-left"
               >
                 {content}
