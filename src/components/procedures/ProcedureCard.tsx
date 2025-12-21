@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { ChevronDown, ChevronUp, Star, AlertTriangle, User, Baby } from 'lucide-react';
+import { ChevronDown, ChevronUp, Star, AlertTriangle, User, Baby, Share2 } from 'lucide-react';
 import { Procedure, Priority } from '@/data/procedures';
 import Badge from '@/components/shared/Badge';
 import { cn } from '@/lib/utils';
 import { useFavorites } from '@/hooks/useFavorites';
+import { toast } from 'sonner';
 
 interface ProcedureCardProps {
   procedure: Procedure;
@@ -58,6 +59,13 @@ const ProcedureCard = ({ procedure, defaultExpanded = false }: ProcedureCardProp
           </div>
 
           <div className="flex items-center gap-2 flex-shrink-0">
+            <button
+              onClick={handleShare}
+              className="w-10 h-10 flex items-center justify-center rounded-lg transition-colors text-muted-foreground hover:text-foreground"
+              aria-label="Compartir protocolo"
+            >
+              <Share2 className="w-5 h-5" />
+            </button>
             <button
               onClick={toggleFavorite}
               className={cn(

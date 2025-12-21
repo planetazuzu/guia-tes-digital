@@ -103,6 +103,19 @@ const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
     setResults([...procedures, ...drugs].slice(0, 12));
   }, [query, typeFilter, categoryFilter]);
 
+  // Obtener categorías únicas para los filtros
+  const procedureCategories: Category[] = ['soporte_vital', 'patologias', 'escena'];
+  const drugCategories: DrugCategory[] = ['cardiovascular', 'respiratorio', 'neurologico', 'analgesia', 'oxigenoterapia', 'otros'];
+
+  // Resetear filtros cuando se cierra el modal
+  useEffect(() => {
+    if (!isOpen) {
+      setTypeFilter('all');
+      setCategoryFilter('all');
+      setQuery('');
+    }
+  }, [isOpen]);
+
   const handleResultClick = (result: SearchResult) => {
     // Añadir al historial
     addToHistory({
@@ -147,137 +160,6 @@ const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
           >
             <X className="w-5 h-5" />
           </button>
-        </div>
-
-        {/* Filtros */}
-        <div className="space-y-3 mb-4">
-          {/* Filtro por tipo */}
-          <div className="flex items-center gap-2">
-            <Filter className="w-4 h-4 text-muted-foreground" />
-            <span className="text-sm font-medium text-muted-foreground">Tipo:</span>
-            <div className="flex gap-2 flex-1">
-              <Button
-                variant={typeFilter === 'all' ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => {
-                  setTypeFilter('all');
-                  setCategoryFilter('all');
-                }}
-                className="text-xs"
-              >
-                Todos
-              </Button>
-              <Button
-                variant={typeFilter === 'procedure' ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => {
-                  setTypeFilter('procedure');
-                  setCategoryFilter('all');
-                }}
-                className="text-xs"
-              >
-                Protocolos
-              </Button>
-              <Button
-                variant={typeFilter === 'drug' ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => {
-                  setTypeFilter('drug');
-                  setCategoryFilter('all');
-                }}
-                className="text-xs"
-              >
-                Fármacos
-              </Button>
-            </div>
-          </div>
-
-          {/* Filtro por categoría - mostrar según tipo seleccionado */}
-          {typeFilter === 'all' && (
-            <div className="flex items-center gap-2 flex-wrap">
-              <span className="text-sm font-medium text-muted-foreground">Categoría:</span>
-              <Button
-                variant={categoryFilter === 'all' ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => setCategoryFilter('all')}
-                className="text-xs"
-              >
-                Todas
-              </Button>
-              {procedureCategories.map((cat) => (
-                <Button
-                  key={cat}
-                  variant={categoryFilter === cat ? 'default' : 'outline'}
-                  size="sm"
-                  onClick={() => setCategoryFilter(cat)}
-                  className="text-xs capitalize"
-                >
-                  {cat.replace('_', ' ')}
-                </Button>
-              ))}
-              {drugCategories.map((cat) => (
-                <Button
-                  key={cat}
-                  variant={categoryFilter === cat ? 'default' : 'outline'}
-                  size="sm"
-                  onClick={() => setCategoryFilter(cat)}
-                  className="text-xs capitalize"
-                >
-                  {cat}
-                </Button>
-              ))}
-            </div>
-          )}
-
-          {typeFilter === 'procedure' && (
-            <div className="flex items-center gap-2 flex-wrap">
-              <span className="text-sm font-medium text-muted-foreground">Categoría:</span>
-              <Button
-                variant={categoryFilter === 'all' ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => setCategoryFilter('all')}
-                className="text-xs"
-              >
-                Todas
-              </Button>
-              {procedureCategories.map((cat) => (
-                <Button
-                  key={cat}
-                  variant={categoryFilter === cat ? 'default' : 'outline'}
-                  size="sm"
-                  onClick={() => setCategoryFilter(cat)}
-                  className="text-xs capitalize"
-                >
-                  {cat.replace('_', ' ')}
-                </Button>
-              ))}
-            </div>
-          )}
-
-          {typeFilter === 'drug' && (
-            <div className="flex items-center gap-2 flex-wrap">
-              <span className="text-sm font-medium text-muted-foreground">Categoría:</span>
-              <Button
-                variant={categoryFilter === 'all' ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => setCategoryFilter('all')}
-                className="text-xs"
-              >
-                Todas
-              </Button>
-              {drugCategories.map((cat) => (
-                <Button
-                  key={cat}
-                  variant={categoryFilter === cat ? 'default' : 'outline'}
-                  size="sm"
-                  onClick={() => setCategoryFilter(cat)}
-                  className="text-xs capitalize"
-                >
-                  {cat}
-                </Button>
-              ))}
-            </div>
-          )}
         </div>
 
         <div className="flex-1 overflow-y-auto scroll-touch">

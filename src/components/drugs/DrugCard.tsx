@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { ChevronDown, ChevronUp, Star, Package, Syringe, User, Baby, AlertCircle } from 'lucide-react';
+import { ChevronDown, ChevronUp, Star, Package, Syringe, User, Baby, AlertCircle, Share2 } from 'lucide-react';
 import { Drug } from '@/data/drugs';
 import Badge from '@/components/shared/Badge';
 import { cn } from '@/lib/utils';
 import { useFavorites } from '@/hooks/useFavorites';
+import { toast } from 'sonner';
 
 interface DrugCardProps {
   drug: Drug;
@@ -22,6 +23,40 @@ const DrugCard = ({ drug, defaultExpanded = false }: DrugCardProps) => {
       title: drug.genericName,
       path: `/farmacos?id=${drug.id}`,
     });
+  };
+
+  const handleShare = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    
+    const url = `${window.location.origin}/farmacos?id=${drug.id}`;
+    const shareData = {
+      title: `${drug.genericName} - EMERGES TES`,
+      text: `Fármaco: ${drug.genericName} (${drug.tradeName})\n\nCategoría: ${drug.category}\nDosis adulto: ${drug.adultDose}`,
+      url: url,
+    };
+
+    try {
+      // Intentar usar Web Share API nativa (móviles)
+      if (navigator.share) {
+        await navigator.share(shareData);
+        toast.success('Fármaco compartido');
+      } else {
+        // Fallback: copiar al portapapeles
+        await navigator.clipboard.writeText(`${shareData.title}\n${shareData.text}\n${url}`);
+        toast.success('Enlace copiado al portapapeles');
+      }
+    } catch (error: any) {
+      // El usuario canceló el share o hubo un error
+      if (error.name !== 'AbortError') {
+        // Si no es cancelación, intentar copiar al portapapeles
+        try {
+          await navigator.clipboard.writeText(`${shareData.title}\n${shareData.text}\n${url}`);
+          toast.success('Enlace copiado al portapapeles');
+        } catch (clipboardError) {
+          toast.error('No se pudo compartir');
+        }
+      }
+    }
   };
 
   const isFav = isFavorite(drug.id);
