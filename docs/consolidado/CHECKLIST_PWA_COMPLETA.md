@@ -13,10 +13,11 @@
 - [x] **display** - `standalone` configurado
 - [x] **theme_color** - `#1a1f2e` configurado
 - [x] **background_color** - `#1a1f2e` configurado
-- [x] **icons** - Configurados (favicon.svg, favicon.ico)
+- [x] **icons** - Configurados (favicon.svg, favicon.ico, icon-192.png, icon-512.png)
 - [x] **scope** - `/` configurado
 - [x] **shortcuts** - Configurado (Manual Completo)
-- [ ] **Iconos 192x192 y 512x512** - ⚠️ Usando favicon.svg (funciona pero ideal tener PNGs específicos)
+- [x] **Iconos 192x192 y 512x512** - ✅ PNGs específicos generados
+- [x] **Iconos maskable** - ✅ Para Android generados
 
 ### 2. Service Worker ✅
 - [x] **Archivo presente** - `public/sw.js`
@@ -53,17 +54,25 @@
 
 ## ⚠️ MEJORAS OPCIONALES
 
-### Iconos Específicos
-- [ ] Crear iconos PNG 192x192 y 512x512 específicos
-- [ ] Añadir iconos maskable para Android
-- [ ] Optimizar iconos para diferentes dispositivos
+### Iconos Específicos ✅
+- [x] Crear iconos PNG 192x192 y 512x512 específicos
+- [x] Añadir iconos maskable para Android
+- [x] Optimizar iconos para diferentes dispositivos
+- **Estado:** ✅ Completado - Iconos generados con `scripts/generar_iconos_pwa.py`
+- **Archivos:** `public/icon-192.png`, `public/icon-512.png`, `public/icon-192-maskable.png`, `public/icon-512-maskable.png`
 
-### Screenshots
-- [ ] Añadir screenshots al manifest para mejor presentación en stores
+### Screenshots ⏳
+- [x] Añadir screenshots al manifest para mejor presentación en stores
+- [ ] Generar screenshots reales de la aplicación
+- **Estado:** ⏳ Manifest actualizado, pendiente generar screenshots
+- **Guía:** Ver `scripts/generar_screenshots.md` para instrucciones
+- **Nota:** Los screenshots se pueden generar manualmente usando DevTools del navegador o herramientas automatizadas
 
-### Notificaciones Push
+### Notificaciones Push ⏸️
 - [ ] Implementar notificaciones push (requiere backend)
 - [ ] Configurar permisos de notificaciones
+- **Estado:** ⏸️ Pendiente - Requiere backend y servicio de notificaciones
+- **Nota:** No es crítico para funcionalidad básica de PWA
 
 ---
 
@@ -109,12 +118,15 @@
 
 | Requisito | Estado | Notas |
 |-----------|--------|-------|
-| **Manifest** | ✅ Completo | Falta iconos PNG específicos (opcional) |
+| **Manifest** | ✅ Completo | Iconos PNG y maskable añadidos |
 | **Service Worker** | ✅ Completo | Funcionando correctamente |
 | **HTTPS** | ✅ Requerido | En producción |
 | **Meta Tags** | ✅ Completo | Todos configurados |
 | **Instalación** | ✅ Completo | Banner implementado |
 | **Offline** | ✅ Completo | Funciona correctamente |
+| **Iconos PNG** | ✅ Completo | 192x192, 512x512 generados |
+| **Iconos Maskable** | ✅ Completo | Para Android generados |
+| **Screenshots** | ⏳ Pendiente | Manifest configurado, pendiente imágenes |
 
 ---
 
@@ -130,9 +142,10 @@ La aplicación cumple con todos los requisitos esenciales para ser una PWA compl
 - ✅ Banner de instalación implementado
 
 **Mejoras opcionales:**
-- Iconos PNG específicos (192x192, 512x512)
-- Screenshots para manifest
-- Notificaciones push (requiere backend)
+- ✅ Iconos PNG específicos (192x192, 512x512) - **COMPLETADO**
+- ✅ Iconos maskable para Android - **COMPLETADO**
+- ⏳ Screenshots para manifest - **Manifest actualizado, pendiente generar imágenes**
+- ⏸️ Notificaciones push (requiere backend) - **Pendiente**
 
 ---
 

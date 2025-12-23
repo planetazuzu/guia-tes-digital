@@ -2,5 +2,5 @@
 echo "🚀 Iniciando servidor de desarrollo..."
 echo "📍 URL: http://localhost:8096"
 echo ""
-cd /home/planetazuzu/protocolo-r-pido
+cd /home/planetazuzu/guia-tes
 npm run dev

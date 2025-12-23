@@ -2,7 +2,7 @@
 
 **Proyecto:** EMERGES TES - Protocolo Rápido  
 **Fecha de Análisis:** 2025-12-23  
-**Ruta del Proyecto:** `/home/planetazuzu/protocolo-r-pido`
+**Ruta del Proyecto:** `/home/planetazuzu/guia-tes`
 
 ---
 

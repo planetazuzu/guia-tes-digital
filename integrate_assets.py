@@ -12,7 +12,7 @@ import json
 
 # Configuración
 EXCEL_PATH = "/home/planetazuzu/Imágenes/medios de app/Manual_TES_Assets_Tracker.xlsx"
-REPO_ROOT = Path("/home/planetazuzu/protocolo-r-pido")
+REPO_ROOT = Path("/home/planetazuzu/guia-tes")
 EXCEL_DEST = REPO_ROOT / "Manual_TES_Assets_Tracker.xlsx"
 ASSETS_PLAN = REPO_ROOT / "ASSETS_PLAN.md"
 MANIFEST_PATH = REPO_ROOT / "manifest.json"

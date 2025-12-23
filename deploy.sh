@@ -95,11 +95,11 @@ if command -v pm2 &> /dev/null; then
     echo -e "${YELLOW}   Reiniciando aplicación existente...${NC}"
     pm2 restart "$APP_NAME" || {
       echo -e "${YELLOW}   Error al reiniciar, intentando iniciar...${NC}"
-      pm2 start ecosystem.config.js
+      pm2 start ecosystem.config.cjs
     }
   else
     echo -e "${YELLOW}   Iniciando nueva instancia...${NC}"
-    pm2 start ecosystem.config.js
+      pm2 start ecosystem.config.cjs
   fi
   
   # Guardar configuración PM2

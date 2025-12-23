@@ -2,7 +2,7 @@
 # Script de reorganización del Manual TES Digital
 # FASE 5: Reorganización del Proyecto MD
 
-BASE_DIR="/home/planetazuzu/protocolo-r-pido/manual-tes/TES_Manual_Digital"
+BASE_DIR="/home/planetazuzu/guia-tes/manual-tes/TES_Manual_Digital"
 cd "$BASE_DIR" || exit 1
 
 echo "======================================================================"

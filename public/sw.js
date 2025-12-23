@@ -33,9 +33,25 @@ self.addEventListener('install', (event) => {
     caches.open(CACHE_NAME)
       .then((cache) => {
         console.log('[SW] Caching static assets');
-        return cache.addAll(STATIC_ASSETS);
+        // Cachear recursos uno por uno para manejar errores individualmente
+        return Promise.allSettled(
+          STATIC_ASSETS.map(url => 
+            cache.add(url).catch(err => {
+              console.warn(`[SW] Failed to cache ${url}:`, err);
+              return null; // Continuar aunque falle uno
+            })
+          )
+        );
       })
-      .then(() => self.skipWaiting()) // Activar inmediatamente
+      .then(() => {
+        console.log('[SW] Static assets cached');
+        self.skipWaiting(); // Activar inmediatamente
+      })
+      .catch((error) => {
+        console.error('[SW] Installation failed:', error);
+        // Continuar aunque falle la instalación
+        self.skipWaiting();
+      })
   );
 });
 

@@ -1,0 +1,139 @@
+═══════════════════════════════════════════════════════════
+  ESTRUCTURA DEL PROYECTO: guia-tes
+═══════════════════════════════════════════════════════════
+
+📁 CARPETAS PRINCIPALES:
+───────────────────────────────────────────────────────────
+  📂 assets/ (0 archivos, 136K)
+  📂 config_backup/ (5 archivos, 24K)
+  📂 dist/ (186 archivos, 12M)
+  📂 docs/ (17 archivos, 232K)
+  📂 node_modules/ (26629 archivos, 322M)
+  📂 public/ (149 archivos, 10M)
+  📂 scripts/ (12 archivos, 116K)
+  📂 src/ (137 archivos, 1,3M)
+
+📄 ARCHIVOS PRINCIPALES EN LA RAÍZ:
+───────────────────────────────────────────────────────────
+  📄 abrir-carpeta.sh (1,2K)
+  📄 cleanup_completo.sh (16K)
+  📄 cleanup_project.sh (8,5K)
+  📄 components.json (414)
+  📄 deploy-docker.sh (4,5K)
+  📄 deploy.sh (4,0K)
+  📄 docker-compose.prod.yml (995)
+  📄 docker-compose.yml (654)
+  📄 ecosystem.config.js (852)
+  📄 eslint.config.js (765)
+  📄 generar_documentos_word.py (13K)
+  📄 integrate_assets.py (15K)
+  📄 manifest.json (33K)
+  📄 mostrar-estructura.sh (2,9K)
+  📄 package.json (3,3K)
+  📄 package-lock.json (339K)
+  📄 postcss.config.js (81)
+  📄 README.md (1,3K)
+  📄 reorganizar_proyecto.sh (3,0K)
+  📄 servir-local.sh (149)
+  📄 tailwind.config.ts (3,9K)
+  📄 tailwind.config.ts (3,9K)
+  📄 tsconfig.app.json (652)
+  📄 tsconfig.json (369)
+  📄 tsconfig.node.json (481)
+  📄 vite.config.ts (6,2K)
+  📄 vite.config.ts (6,2K)
+  📄 vite-plugin-manifest.ts (2,1K)
+  📄 webhook-deploy.sh (1,4K)
+
+═══════════════════════════════════════════════════════════
+  ESTRUCTURA DETALLADA DE CARPETAS IMPORTANTES
+═══════════════════════════════════════════════════════════
+
+📁 src/ (código fuente):
+  src
+  src/components
+  src/components/communication-scripts
+  src/components/content
+  src/components/decision-trees
+  src/components/drugs
+  src/components/layout
+  src/components/manual
+  src/components/material-checklists
+  src/components/procedures
+  src/components/references
+  src/components/shared
+  src/components/telephone-protocols
+  src/components/tools
+  src/components/ui
+  src/data
+  src/hooks
+  src/lib
+  src/pages
+  src/utils
+
+📁 public/ (archivos públicos):
+  public
+  public/assets
+  public/assets/diagramas
+  public/assets/infografias
+  public/manual
+  public/manual/BLOQUE_0_FUNDAMENTOS
+  public/manual/BLOQUE_10_SITUACIONES_ESPECIALES
+  public/manual/BLOQUE_11_PROTOCOLOS_TRAUMA
+  public/manual/BLOQUE_12_MARCO_LEGAL_ETICO_PROFESIONAL
+  public/manual/BLOQUE_13_COMUNICACION_RELACION_PACIENTE
+  public/manual/BLOQUE_14_SEGURIDAD_PERSONAL_SALUD_TES
+  public/manual/BLOQUE_15_ALTERACIONES_PSIQUIATRICAS_Y_CONTENCION
+  public/manual/BLOQUE_1_PROCEDIMIENTOS_BASICOS
+  public/manual/BLOQUE_2_MATERIAL_E_INMOVILIZACION
+  public/manual/BLOQUE_3_MATERIAL_SANITARIO_Y_OXIGENOTERAPIA
+  public/manual/BLOQUE_4_SOPORTE_VITAL_BASICO_Y_RCP
+  public/manual/BLOQUE_5_PROTOCOLOS_TRANSTELEFONICOS
+  public/manual/BLOQUE_6_FARMACOLOGIA
+  public/manual/BLOQUE_7_CONDUCCION_Y_SEGURIDAD_VIAL
+  public/manual/BLOQUE_8_GESTION_OPERATIVA
+  public/manual/BLOQUE_8_GESTION_OPERATIVA_Y_DOCUMENTACION
+  public/manual/BLOQUE_9_MEDICINA_EMERGENCIAS_APLICADA
+
+📁 assets/ (recursos multimedia):
+  assets
+  assets/checklists_app
+  assets/consent_privacy
+  assets/images
+  assets/images/bloque_00
+  assets/images/bloque_01
+  assets/images/bloque_02
+  assets/images/bloque_03
+  assets/images/bloque_04
+  assets/images/bloque_05
+  assets/images/bloque_06
+  assets/images/bloque_07
+  assets/images/bloque_08
+  assets/slides
+  assets/slides/bloque_00
+  assets/slides/bloque_01
+  assets/slides/bloque_02
+  assets/slides/bloque_03
+  assets/slides/bloque_04
+  assets/slides/bloque_05
+  assets/slides/bloque_06
+  assets/slides/bloque_07
+  assets/slides/bloque_08
+  assets/templates
+  assets/videos
+  assets/videos/bloque_00
+  assets/videos/bloque_01
+  assets/videos/bloque_02
+  assets/videos/bloque_03
+  assets/videos/bloque_04
+  assets/videos/bloque_05
+  assets/videos/bloque_06
+  assets/videos/bloque_07
+  assets/videos/bloque_08
+
+═══════════════════════════════════════════════════════════
+  RESUMEN
+═══════════════════════════════════════════════════════════
+  Total archivos: 1233
+  Total carpetas: 229
+
