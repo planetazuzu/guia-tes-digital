@@ -1,6 +1,6 @@
 # 🔧 Configuración de SPA Routing (Single Page Application)
 
-**Fecha:** 2024-12-19
+**Fecha:** 2025-12-23
 
 ---
 
@@ -252,4 +252,4 @@ curl -I http://localhost/favoritos
 
 ---
 
-**Última actualización:** 2024-12-19
+**Última actualización:** 2025-12-23

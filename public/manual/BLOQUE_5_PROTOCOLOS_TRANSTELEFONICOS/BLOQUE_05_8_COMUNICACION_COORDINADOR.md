@@ -3,7 +3,7 @@
 **Bloque:** 5 – Protocolos Transtelefónicos y Comunicación  
 **Capítulo:** 5.8  
 **Versión:** 1.0  
-**Fecha:** 2024-12-15  
+**Fecha:** 2025-12-23  
 **Tipo:** Procedimiento Operativo / Comunicación  
 **Aplicable a:** TES / Teleoperador / Coordinación sanitaria  
 **Objetivo principal:** Estandarizar la comunicación clínica-operativa y el traspaso de información

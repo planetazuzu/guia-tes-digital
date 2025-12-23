@@ -1,7 +1,7 @@
 #!/bin/bash
 # cleanup_project.sh
 # Script de limpieza y optimización del proyecto EMERGES TES
-# Fecha: 2024-12-19
+# Fecha: 2025-12-23
 
 set -e  # Detenerse en errores
 

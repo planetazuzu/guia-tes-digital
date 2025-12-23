@@ -3,7 +3,7 @@
 **Bloque:** 11 – Protocolos de Trauma y Escenarios de Riesgo  
 **Capítulo:** 11.0  
 **Versión:** 1.0  
-**Fecha:** 2024-12-15  
+**Fecha:** 2025-12-23  
 **Tipo:** Bloque de Trauma - Intervenciones Críticas  
 **Aplicable a:** TES  
 **Objetivo principal:** Protocolos específicos y técnicas avanzadas para manejo de trauma grave, heridas complejas y escenarios de alto riesgo

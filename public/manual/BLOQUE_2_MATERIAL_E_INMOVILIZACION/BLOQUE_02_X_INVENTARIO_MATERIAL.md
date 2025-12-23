@@ -3,7 +3,7 @@
 ## Manual TES Digital – Listado operativo de material
 
 **Versión:** 1.0
-**Fecha:** 2024-12-13
+**Fecha:** 2025-12-23
 **Tipo:** Bloque Operativo - Inventario de Material
 
 ---
@@ -251,5 +251,5 @@ Este inventario es de **uso exclusivo como referencia operativa** y **NO sustitu
 ---
 
 **Versión:** 1.0
-**Última actualización:** 2024-12-13
+**Última actualización:** 2025-12-23
 **Tipo:** Bloque Operativo - Inventario de Material

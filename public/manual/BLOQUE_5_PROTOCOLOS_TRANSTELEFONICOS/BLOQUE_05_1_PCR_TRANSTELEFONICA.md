@@ -3,7 +3,7 @@
 **Bloque:** 5 – Protocolos Transtelefónicos y Comunicación  
 **Capítulo:** 5.1  
 **Versión:** 1.0  
-**Fecha:** 2024-12-15  
+**Fecha:** 2025-12-23  
 **Tipo:** Protocolo Operativo  
 **Aplicable a:** TES / Teleoperador / Coordinación sanitaria  
 **Objetivo principal:** Identificar PCR y guiar RCP inmediata hasta llegada de recursos

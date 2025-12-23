@@ -3,7 +3,7 @@
 ## Manual TES Digital – Marco Operativo y Conceptual
 
 **Versión:** 1.0
-**Fecha:** 2024-12-13
+**Fecha:** 2025-12-23
 **Tipo:** Bloque Fundacional
 
 ---
@@ -888,5 +888,5 @@ Este bloque es **fundacional y formativo**, no operativo. Establece el marco con
 ---
 
 **Versión:** 1.0
-**Última actualización:** 2024-12-13
+**Última actualización:** 2025-12-23
 **Tipo:** Bloque Fundacional

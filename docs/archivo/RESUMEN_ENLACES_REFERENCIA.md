@@ -1,6 +1,6 @@
 # 🔗 Resumen: Enlaces de Referencia Añadidos
 
-**Fecha:** 2024-12-19
+**Fecha:** 2025-12-23
 
 ---
 
@@ -109,4 +109,4 @@ Los enlaces añadidos:
 
 ---
 
-**Última actualización:** 2024-12-19
+**Última actualización:** 2025-12-23

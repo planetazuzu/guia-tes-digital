@@ -3,7 +3,7 @@
 **Bloque:** 8 – Gestión Operativa y Documentación  
 **Capítulo:** 8.1  
 **Versión:** 1.0  
-**Fecha:** 2024-12-15  
+**Fecha:** 2025-12-23  
 **Tipo:** Procedimiento Operativo / Cumplimiento y Calidad  
 **Aplicable a:** TES / Equipos asistenciales prehospitalarios / Coordinación  
 **Objetivo principal:** Estandarizar el registro clínico prehospitalario como parte del acto asistencial

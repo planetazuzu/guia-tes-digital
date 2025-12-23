@@ -3,7 +3,7 @@
 **Bloque:** 6 – Farmacología y Vademécum Operativo  
 **Capítulo:** 6.7  
 **Versión:** 1.0  
-**Fecha:** 2024-12-15  
+**Fecha:** 2025-12-23  
 **Tipo:** Glosario Operativo / Seguridad  
 **Aplicable a:** TES / SVB-SVA / Coordinación (según circuito)  
 **Objetivo principal:** Unificar abreviaturas y reducir errores de medicación por confusiones

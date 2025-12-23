@@ -1,6 +1,6 @@
 # 📱 Instrucciones: Ver el Banner de Instalación
 
-**Fecha:** 2024-12-20
+**Fecha:** 2025-12-23
 
 ---
 
@@ -105,4 +105,4 @@ localStorage.removeItem('pwa-install-dismissed')
 
 ---
 
-**Última actualización:** 2024-12-20
+**Última actualización:** 2025-12-23

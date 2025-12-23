@@ -1,13 +1,13 @@
 # Control del Proyecto – Manual TES Digital
 
-**Última actualización:** 2024-12-13  
+**Última actualización:** 2025-12-23  
 **Versión del documento:** 1.0
 
 ---
 
 ## 1) ESTADO ACTUAL
 
-**Fecha:** 2024-12-13  
+**Fecha:** 2025-12-23  
 **Versión del manual:** 1.0  
 **Estado general:** En construcción - Manual unificado creado, pendiente validación médica
 
@@ -287,7 +287,7 @@
 
 ## 7) REGISTRO DE CAMBIOS (Changelog)
 
-### 2024-12-13
+### 2025-12-23
 
 **Añadido:**
 - ✅ Manual unificado (`docs/MANUAL_TES_DIGITAL.md`) creado

@@ -3,7 +3,7 @@
 ## Manual TES Digital – Marco Legal, Ético y Profesional del TES
 
 **Versión:** 1.0  
-**Fecha:** 2024-12-15  
+**Fecha:** 2025-12-23  
 **Tipo:** Bloque Profesional - Deontología y Legislación
 
 ---
@@ -793,6 +793,6 @@ Este bloque define el contrato social del TES. La sociedad te confía un papel c
 ---
 
 **Versión:** 1.1 (Expandida)  
-**Última actualización:** 2024-12-15  
+**Última actualización:** 2025-12-23  
 **Tipo:** Bloque Profesional - Deontología y Legislación
 

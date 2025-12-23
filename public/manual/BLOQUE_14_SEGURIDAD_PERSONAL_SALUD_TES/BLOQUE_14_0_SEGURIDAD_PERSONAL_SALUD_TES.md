@@ -3,7 +3,7 @@
 **Bloque:** 14 – Seguridad Personal y Salud del TES  
 **Capítulo:** 14.0  
 **Versión:** 1.0  
-**Fecha:** 2024-12-15  
+**Fecha:** 2025-12-23  
 **Tipo:** Bloque Esencial - Bienestar y Protección del Profesional  
 **Aplicable a:** TES  
 **Objetivo principal:** Conocimiento y estrategias para proteger integridad física y mental, gestionar riesgos y mantener carrera sostenible

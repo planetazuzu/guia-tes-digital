@@ -78,7 +78,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -111,7 +111,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -136,7 +136,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -161,7 +161,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -186,7 +186,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -227,7 +227,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -252,7 +252,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -277,7 +277,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -302,7 +302,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -327,7 +327,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -352,7 +352,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -377,7 +377,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -402,7 +402,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -427,7 +427,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -452,7 +452,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -477,7 +477,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -510,7 +510,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -551,7 +551,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -576,7 +576,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -601,7 +601,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -626,7 +626,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -651,7 +651,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -676,7 +676,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -701,7 +701,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -726,7 +726,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -751,7 +751,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -776,7 +776,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -801,7 +801,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -826,7 +826,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -851,7 +851,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -876,7 +876,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -909,7 +909,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -934,7 +934,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -959,7 +959,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -984,7 +984,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1009,7 +1009,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1034,7 +1034,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1059,7 +1059,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1084,7 +1084,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1109,7 +1109,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1134,7 +1134,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1159,7 +1159,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1184,7 +1184,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1209,7 +1209,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1234,7 +1234,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1259,7 +1259,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1284,7 +1284,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1309,7 +1309,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1334,7 +1334,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1359,7 +1359,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1384,7 +1384,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1409,7 +1409,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1434,7 +1434,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1459,7 +1459,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1484,7 +1484,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1509,7 +1509,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1534,7 +1534,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1559,7 +1559,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1584,7 +1584,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1625,7 +1625,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1650,7 +1650,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1675,7 +1675,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1700,7 +1700,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1725,7 +1725,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1750,7 +1750,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1775,7 +1775,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1800,7 +1800,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1841,7 +1841,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1866,7 +1866,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1891,7 +1891,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1916,7 +1916,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1941,7 +1941,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1966,7 +1966,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -1991,7 +1991,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2016,7 +2016,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2041,7 +2041,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2066,7 +2066,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2099,7 +2099,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2124,7 +2124,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2149,7 +2149,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2174,7 +2174,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2199,7 +2199,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2240,7 +2240,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2265,7 +2265,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2290,7 +2290,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2315,7 +2315,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2340,7 +2340,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2365,7 +2365,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2406,7 +2406,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2439,7 +2439,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2472,7 +2472,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-19",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2497,7 +2497,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-19",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2522,7 +2522,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-19",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2547,7 +2547,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-19",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2572,7 +2572,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-19",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2597,7 +2597,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-19",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2638,7 +2638,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2671,7 +2671,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },
@@ -2704,7 +2704,7 @@ export const manualIndex: Parte[] = [
             },
             metadata: {
               version: "1.0",
-              fechaActualizacion: "2024-12-13",
+              fechaActualizacion: "2025-12-23",
               autor: "Manual TES Digital"
             }
           },

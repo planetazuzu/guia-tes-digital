@@ -3,7 +3,7 @@
 **Bloque:** 4 – Soporte Vital Básico y RCP  
 **Capítulo:** 4.0  
 **Versión:** 1.0  
-**Fecha:** 2024-12-15  
+**Fecha:** 2025-12-23  
 **Tipo:** Bloque Operativo - Procedimiento TES  
 **Aplicable a:** TES  
 **Objetivo principal:** Técnicas de acceso vascular periférico en emergencias

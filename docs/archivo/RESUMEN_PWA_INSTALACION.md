@@ -1,6 +1,6 @@
 # ✅ Resumen: Banner de Instalación PWA
 
-**Fecha:** 2024-12-20
+**Fecha:** 2025-12-23
 
 ---
 
@@ -161,4 +161,4 @@ En `src/components/layout/InstallBanner.tsx`:
 
 ---
 
-**Última actualización:** 2024-12-20
+**Última actualización:** 2025-12-23

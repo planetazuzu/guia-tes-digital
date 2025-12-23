@@ -3,7 +3,7 @@
 **Bloque:** 13 – Comunicación y Relación con el Paciente  
 **Capítulo:** 13.0  
 **Versión:** 1.0  
-**Fecha:** 2024-12-15  
+**Fecha:** 2025-12-23  
 **Tipo:** Bloque Profesional - Habilidades Psicosociales  
 **Aplicable a:** TES  
 **Objetivo principal:** Habilidades de comunicación y herramientas relacionales para establecer rapport, gestionar expectativas y facilitar cooperación en crisis

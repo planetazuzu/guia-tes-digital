@@ -2,7 +2,7 @@
 ## Guía de Referencia para Técnicos de Emergencias Sanitarias
 
 **Versión:** 1.0  
-**Fecha:** 2024  
+**Fecha:** 2025  
 **Proyecto:** EMERGES TES - Protocolo Rápido
 
 ---

@@ -1,6 +1,6 @@
 # 📸 Sistema de Medios Visuales - Documentación Técnica
 
-**Fecha:** 2024-12-19  
+**Fecha:** 2025-12-23  
 **Objetivo:** Explicar cómo funciona el sistema actual y proponer mejoras
 
 ---
@@ -406,4 +406,4 @@ Ir actualizando los `.md` para usar alias en lugar de rutas completas.
 
 ---
 
-**Última actualización:** 2024-12-19
+**Última actualización:** 2025-12-23

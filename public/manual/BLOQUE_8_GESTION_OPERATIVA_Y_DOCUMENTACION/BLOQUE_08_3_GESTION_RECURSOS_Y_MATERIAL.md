@@ -3,7 +3,7 @@
 **Bloque:** 8 – Gestión Operativa y Documentación  
 **Capítulo:** 8.3  
 **Versión:** 1.0  
-**Fecha:** 2024-12-15  
+**Fecha:** 2025-12-23  
 **Tipo:** Bloque Operativo - Habilidades y Gestión  
 **Aplicable a:** TES  
 **Objetivo principal:** Organización y gestión eficiente de recursos y material sanitario

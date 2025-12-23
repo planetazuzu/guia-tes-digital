@@ -3,7 +3,7 @@
 ## Manual TES Digital – Logística y verificación de material de monitorización
 
 **Versión:** 1.0
-**Fecha:** 2024-12-13
+**Fecha:** 2025-12-23
 **Tipo:** Bloque Operativo - Procedimiento TES
 
 ---
@@ -369,5 +369,5 @@ Este procedimiento es de **uso exclusivo como apoyo** y **NO sustituye**:
 ---
 
 **Versión:** 1.0
-**Última actualización:** 2024-12-13
+**Última actualización:** 2025-12-23
 **Tipo:** Bloque Operativo - Procedimiento TES

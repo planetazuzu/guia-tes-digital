@@ -3,7 +3,7 @@
 ## Manual TES Digital – Mapa único del material sanitario y oxigenoterapia
 
 **Versión:** 1.0
-**Fecha:** 2024-12-13
+**Fecha:** 2025-12-23
 **Tipo:** Inventario Operativo - Referencia Rápida
 
 ---
@@ -257,5 +257,5 @@ Este inventario proporciona un **mapa único del Bloque 3** con material y enlac
 ---
 
 **Versión:** 1.0
-**Última actualización:** 2024-12-13
+**Última actualización:** 2025-12-23
 **Tipo:** Inventario Operativo - Referencia Rápida

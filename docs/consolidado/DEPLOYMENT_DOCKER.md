@@ -1,7 +1,7 @@
 # 🐳 Guía de Despliegue con Docker
 
 **Proyecto:** EMERGES TES - Protocolo Rápido  
-**Fecha:** 2024-12-19  
+**Fecha:** 2025-12-23  
 **Puerto:** 8607
 
 ---
@@ -395,4 +395,4 @@ Si tienes problemas:
 
 ---
 
-**Última actualización:** 2024-12-19
+**Última actualización:** 2025-12-23

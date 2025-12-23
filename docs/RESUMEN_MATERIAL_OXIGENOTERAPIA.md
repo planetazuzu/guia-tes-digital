@@ -1,6 +1,6 @@
 # Resumen: Añadida Sección Material y Oxigenoterapia
 
-**Fecha:** 2024-12-13  
+**Fecha:** 2025-12-23  
 **Archivo Modificado:** `docs/MANUAL_TES_DIGITAL.md`  
 **Sección Añadida:** 3.8 Procedimientos Básicos TES – Material y Oxigenoterapia
 

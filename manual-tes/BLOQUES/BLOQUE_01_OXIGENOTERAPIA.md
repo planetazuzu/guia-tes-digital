@@ -3,7 +3,7 @@
 ## Manual TES Digital – Uso formativo y procedimental
 
 **Versión:** 1.0  
-**Fecha:** 2024-12-13  
+**Fecha:** 2025-12-23  
 **Fuente:** Manual TES Digital - Sección 3.8.2
 
 ---
@@ -696,6 +696,6 @@ El profesional que utiliza este contenido mantiene la **responsabilidad completa
 ---
 
 **Versión:** 1.0  
-**Última actualización:** 2024-12-13  
+**Última actualización:** 2025-12-23  
 **Fuente:** Manual TES Digital - Sección 3.8.2
 

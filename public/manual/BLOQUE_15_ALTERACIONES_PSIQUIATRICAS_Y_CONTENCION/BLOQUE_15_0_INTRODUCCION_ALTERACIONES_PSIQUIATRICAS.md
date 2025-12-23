@@ -3,7 +3,7 @@
 ## Manual TES Digital – Salud Mental en Emergencias Prehospitalarias
 
 **Versión:** 1.0  
-**Fecha:** 2024-12-19  
+**Fecha:** 2025-12-23  
 **Tipo:** Bloque Operativo - Situaciones Especiales
 
 ---

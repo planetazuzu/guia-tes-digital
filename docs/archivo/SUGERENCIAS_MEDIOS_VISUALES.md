@@ -1,6 +1,6 @@
 # 📸 Sugerencias de Medios Visuales por Tema
 
-**Fecha:** 2024-12-19  
+**Fecha:** 2025-12-23  
 **Objetivo:** Sugerir al menos 1 medio visual para cada tema crítico sin imágenes
 
 ---

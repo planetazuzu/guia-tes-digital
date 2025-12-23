@@ -3,7 +3,7 @@
 **Bloque:** 6 – Farmacología y Vademécum Operativo  
 **Capítulo:** 6.4  
 **Versión:** 1.0  
-**Fecha:** 2024-12-15  
+**Fecha:** 2025-12-23  
 **Tipo:** Protocolo Farmacológico / Soporte a SCA  
 **Aplicable a:** TES / SVB-SVA (según competencias y protocolo local)  
 **Objetivo principal:** Uso seguro de AAS en sospecha de SCA sin aumentar riesgos evitables

@@ -1,6 +1,6 @@
 # 📸 Guía: Rutas de Imágenes en Markdown
 
-**Fecha:** 2024-12-19  
+**Fecha:** 2025-12-23  
 **Objetivo:** Cómo referenciar imágenes en archivos Markdown del manual
 
 ---
@@ -229,4 +229,4 @@ Antes de añadir una imagen en Markdown:
 
 ---
 
-**Última actualización:** 2024-12-19
+**Última actualización:** 2025-12-23

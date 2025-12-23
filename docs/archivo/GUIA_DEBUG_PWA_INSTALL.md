@@ -1,6 +1,6 @@
 # 🔍 Guía de Debug: Banner de Instalación PWA
 
-**Fecha:** 2024-12-20
+**Fecha:** 2025-12-23
 
 ---
 
@@ -254,4 +254,4 @@ setTimeout(() => {
 
 ---
 
-**Última actualización:** 2024-12-20
+**Última actualización:** 2025-12-23

@@ -1,6 +1,6 @@
 # 📸 Estado de Infografías y Medios Visuales - EMERGES TES
 
-**Fecha:** 2024-12-19
+**Fecha:** 2025-12-23
 
 ---
 

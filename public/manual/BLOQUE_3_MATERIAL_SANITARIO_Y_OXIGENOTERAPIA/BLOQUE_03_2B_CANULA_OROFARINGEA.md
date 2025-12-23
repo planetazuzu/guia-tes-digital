@@ -3,7 +3,7 @@
 **Bloque:** 3 – Material Sanitario y Oxigenoterapia  
 **Capítulo:** 3.2  
 **Versión:** 1.0  
-**Fecha:** 2024-12-15  
+**Fecha:** 2025-12-23  
 **Tipo:** Bloque Operativo - Procedimiento TES  
 **Aplicable a:** TES  
 **Objetivo principal:** Inserción segura de cánula orofaríngea en emergencias

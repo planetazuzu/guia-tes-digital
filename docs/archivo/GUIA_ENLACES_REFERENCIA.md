@@ -1,6 +1,6 @@
 # 🔗 Guía: Enlaces de Referencia entre Capítulos
 
-**Fecha:** 2024-12-19  
+**Fecha:** 2025-12-23  
 **Objetivo:** Añadir enlaces cruzados entre capítulos relacionados del manual
 
 ---
@@ -250,4 +250,4 @@ Añadir al final:
 
 ---
 
-**Última actualización:** 2024-12-19
+**Última actualización:** 2025-12-23

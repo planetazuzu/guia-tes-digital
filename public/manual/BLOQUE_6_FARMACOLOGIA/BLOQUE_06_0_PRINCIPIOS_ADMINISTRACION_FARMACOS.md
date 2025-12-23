@@ -3,7 +3,7 @@
 **Bloque:** 6 – Farmacología y Vademécum Operativo  
 **Capítulo:** 6.0  
 **Versión:** 1.0  
-**Fecha:** 2024-12-15  
+**Fecha:** 2025-12-23  
 **Tipo:** Fundacional – Seguridad Farmacológica  
 **Aplicable a:** TES / Equipos SVB-SVA (según competencias) / Coordinación  
 **Objetivo principal:** Establecer reglas de seguridad, vías, cálculo básico y prevención de errores

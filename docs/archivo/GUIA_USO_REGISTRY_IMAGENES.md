@@ -1,6 +1,6 @@
 # 📸 Guía de Uso: Sistema de Registry de Imágenes
 
-**Fecha:** 2024-12-19  
+**Fecha:** 2025-12-23  
 **Sistema:** Híbrido con Registry (Opción 4)
 
 ---
@@ -243,4 +243,4 @@ Para seleccionar la talla correcta del collarín:
 
 ---
 
-**Última actualización:** 2024-12-19
+**Última actualización:** 2025-12-23

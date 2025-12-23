@@ -1,6 +1,6 @@
 # 🚀 Guía de Despliegue en Vercel
 
-**Fecha:** 2024-12-19
+**Fecha:** 2025-12-23
 
 ---
 
@@ -207,4 +207,4 @@ En Vercel Dashboard → Settings → General:
 
 ---
 
-**Última actualización:** 2024-12-19
+**Última actualización:** 2025-12-23

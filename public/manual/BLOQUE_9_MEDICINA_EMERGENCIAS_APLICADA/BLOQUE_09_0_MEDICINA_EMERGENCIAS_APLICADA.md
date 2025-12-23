@@ -3,7 +3,7 @@
 **Bloque:** 9 – Medicina de Emergencias Aplicada  
 **Capítulo:** 9.0  
 **Versión:** 1.0  
-**Fecha:** 2024-12-15  
+**Fecha:** 2025-12-23  
 **Tipo:** Bloque Clínico - Aplicación Práctica  
 **Aplicable a:** TES  
 **Objetivo principal:** Enfoque sistemático, práctico y basado en evidencia para valoración y manejo inicial de emergencias médicas críticas

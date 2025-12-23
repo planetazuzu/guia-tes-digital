@@ -1,7 +1,7 @@
 # 2.9 – Errores Críticos en Inmovilización y Movilización: Identificación, Prevención y Corrección (Tes)
 
 **Versión:** 1.0  
-**Fecha:** 2024-12-15  
+**Fecha:** 2025-12-23  
 **Tipo:** Bloque Operativo - Procedimiento TES
 
 ---

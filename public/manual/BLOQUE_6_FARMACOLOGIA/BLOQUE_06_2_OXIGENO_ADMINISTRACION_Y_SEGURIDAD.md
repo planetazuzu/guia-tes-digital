@@ -3,7 +3,7 @@
 **Bloque:** 6 – Farmacología y Vademécum Operativo  
 **Capítulo:** 6.2  
 **Versión:** 1.0  
-**Fecha:** 2024-12-15  
+**Fecha:** 2025-12-23  
 **Tipo:** Farmacología Operativa  
 **Aplicable a:** TES / SVB-SVA (según competencias y protocolos locales)  
 **Objetivo principal:** Tratar el oxígeno como fármaco: indicaciones, dosis (concentraciones), objetivos, seguridad y efectos adversos

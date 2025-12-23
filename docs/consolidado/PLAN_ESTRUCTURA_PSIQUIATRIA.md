@@ -1,6 +1,6 @@
 # 📋 Plan de Estructura: Contención Psiquiátrica y Alteraciones Psiquiátricas
 
-**Fecha:** 2024-12-19  
+**Fecha:** 2025-12-23  
 **Objetivo:** Añadir contenido sobre contención psiquiátrica (salvavidas) y alteraciones psiquiátricas al manual
 
 ---
@@ -505,4 +505,4 @@ Dispositivo de contención psiquiátrica diseñado para inmovilizar de forma seg
 
 ---
 
-**Última actualización:** 2024-12-19
+**Última actualización:** 2025-12-23

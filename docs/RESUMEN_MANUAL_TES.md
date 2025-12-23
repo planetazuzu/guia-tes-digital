@@ -1,6 +1,6 @@
 # Resumen de Creación del Manual TES Digital
 
-**Fecha:** 2024  
+**Fecha:** 2025  
 **Archivo Creado:** `docs/MANUAL_TES_DIGITAL.md`  
 **Estado:** ✅ Completado
 

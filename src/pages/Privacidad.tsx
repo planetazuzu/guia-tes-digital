@@ -174,7 +174,7 @@ const Privacidad = () => {
       {/* Fecha de actualización */}
       <div className="p-3 bg-muted rounded-lg">
         <p className="text-xs text-muted-foreground text-center">
-          Última actualización: 19 de diciembre de 2024
+          Última actualización: 23 de diciembre de 2025
         </p>
       </div>
     </div>

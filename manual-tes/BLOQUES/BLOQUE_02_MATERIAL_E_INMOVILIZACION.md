@@ -3,7 +3,7 @@
 ## Manual TES Digital – Procedimientos seguros y estandarizados
 
 **Versión:** 1.0  
-**Fecha:** 2024-12-13  
+**Fecha:** 2025-12-23  
 **Estado:** Estructura base - Preparado para ampliar
 
 ---
@@ -1097,6 +1097,6 @@ Este contenido es de **uso exclusivo como apoyo** y **NO sustituye**:
 ---
 
 **Versión:** 1.0  
-**Última actualización:** 2024-12-13  
+**Última actualización:** 2025-12-23  
 **Estado:** Estructura base - Preparado para ampliar
 

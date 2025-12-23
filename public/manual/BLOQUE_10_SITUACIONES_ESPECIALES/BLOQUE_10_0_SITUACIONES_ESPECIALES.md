@@ -3,7 +3,7 @@
 **Bloque:** 10 – Situaciones Especiales y Protocolos Avanzados  
 **Capítulo:** 10.0  
 **Versión:** 1.0  
-**Fecha:** 2024-12-15  
+**Fecha:** 2025-12-23  
 **Tipo:** Bloque Especializado - Protocolos Avanzados  
 **Aplicable a:** TES  
 **Objetivo principal:** Protocolos específicos y consideraciones especiales para poblaciones vulnerables, escenarios de masas y situaciones clínicas complejas
