@@ -52,9 +52,9 @@ const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-        <ErrorBoundary>
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <TooltipProvider>
             <Toaster />
             <Sonner />
@@ -120,9 +120,9 @@ const App = () => {
               </div>
             </BrowserRouter>
           </TooltipProvider>
-        </ErrorBoundary>
-      </ThemeProvider>
-    </QueryClientProvider>
+        </ThemeProvider>
+      </QueryClientProvider>
+    </ErrorBoundary>
   );
 };
 

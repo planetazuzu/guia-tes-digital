@@ -85,12 +85,16 @@ class ErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Intentar de nuevo
               </Button>
-              <Link to="/">
-                <Button variant="outline" className="w-full">
-                  <Home className="w-4 h-4 mr-2" />
-                  Ir al inicio
-                </Button>
-              </Link>
+              <Button 
+                variant="outline" 
+                className="w-full"
+                onClick={() => {
+                  window.location.href = '/';
+                }}
+              >
+                <Home className="w-4 h-4 mr-2" />
+                Ir al inicio
+              </Button>
             </div>
           </div>
         </div>

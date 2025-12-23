@@ -88,9 +88,10 @@ const MenuSheet = memo(({ isOpen, onClose }: MenuSheetProps) => {
 
         <div className="p-4 space-y-2">
           {menuItems.map((item, index) => {
+            const Icon = item.icon;
             const content = (
               <>
-                <span className="text-muted-foreground">{item.icon}</span>
+                <span className="text-muted-foreground"><Icon className="w-5 h-5" /></span>
                 <span className="font-medium text-foreground">{item.label}</span>
               </>
             );
