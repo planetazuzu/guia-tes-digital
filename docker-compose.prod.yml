@@ -43,3 +43,4 @@ services:
 networks:
   emerges-network:
     driver: bridge
+

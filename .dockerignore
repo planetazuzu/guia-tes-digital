@@ -1,27 +1,21 @@
-# Dependencias
+# Dependencies
 node_modules
-npm-debug.log
-yarn-error.log
-package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Build outputs
+# Build output
 dist
+dist-ssr
 build
-.next
-out
 
-# Desarrollo
+# Environment files
+.env
 .env.local
+.env.production
 .env.development
-.env.test
-
-# Testing
-coverage
-.nyc_output
-
-# Logs
-logs
-*.log
+.env*.local
 
 # IDE
 .vscode
@@ -33,37 +27,46 @@ logs
 # OS
 .DS_Store
 Thumbs.db
-.localized
 
 # Git
 .git
 .gitignore
 
-# Backups y temporales
+# Documentation (opcional - descomentar si no quieres incluirlos)
+# *.md
+# !README.md
+
+# Backups
 _BACKUP_MD
 backup_*
-deleted_*
-imagenes-pendientes
-MANUAL_TES_DIGITAL
 
-# Documentación temporal
-docs/backup
-docs/archive
-*.md.bak
+# Temporary files
+*.bak
+*.backup
+*.tmp
+*.log
 
-# Scripts de desarrollo
+# Scripts de desarrollo (no necesarios en producción)
+scripts/*.py
 *.py
-*.sh
-!deploy-docker.sh
+__pycache__/
+*.pyc
 
-# Configuraciones no necesarias en Docker
-ecosystem.config.js
-webhook-deploy.sh
-.github
-vercel.json
-netlify.toml
-nginx.conf.example
+# Imágenes pendientes (no necesarias en producción)
+imagenes-pendientes/
 
-# Documentación (opcional, comentar si quieres incluirla)
-# docs/
-# *.md
+# Archivos de configuración de desarrollo
+.eslintrc*
+.prettierrc*
+.editorconfig
+
+# Testing
+coverage
+.nyc_output
+
+# Misc
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
