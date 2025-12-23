@@ -249,14 +249,6 @@ export const imageRegistry: Record<string, ImageMetadata> = {
     block: 'bloque-3-material-sanitario',
     tags: ['oxigenoterapia', 'colocacion', 'dispositivos', 'guia']
   },
-  'uso-tensiometro': {
-    id: 'uso-tensiometro',
-    path: '/assets/infografias/bloque-3-material-sanitario/uso-correcto-tensiometro.png',
-    alt: 'Uso correcto del tensiómetro',
-    caption: 'Guía de colocación y uso correcto del tensiómetro',
-    block: 'bloque-1-procedimientos',
-    tags: ['tensiometro', 'presion', 'ta', 'monitorizacion']
-  },
 };
 
 /**
