@@ -3,70 +3,82 @@ node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
 
-# Build output
+# Build outputs
 dist
-dist-ssr
 build
+.next
+out
+dist-ssr
+
+# Development files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
 
 # Environment files
 .env
 .env.local
 .env.production
 .env.development
-.env*.local
-
-# IDE
-.vscode
-.idea
-*.swp
-*.swo
-*~
-
-# OS
-.DS_Store
-Thumbs.db
 
 # Git
 .git
 .gitignore
 
-# Documentation (opcional - descomentar si no quieres incluirlos)
-# *.md
-# !README.md
-
-# Backups
-_BACKUP_MD
-backup_*
-
-# Temporary files
-*.bak
-*.backup
-*.tmp
-*.log
-
-# Scripts de desarrollo (no necesarios en producción)
-scripts/*.py
-*.py
-__pycache__/
-*.pyc
-
-# Imágenes pendientes (no necesarias en producción)
+# Documentation (no necesario en imagen Docker)
+*.md
+!README.md
+docs/
+_BACKUP_MD/
+MANUAL_TES_DIGITAL/
 imagenes-pendientes/
 
-# Archivos de configuración de desarrollo
+# Scripts (no necesario en producción)
+scripts/
+*.py
+*.sh
+!deploy-docker.sh
+
+# Configuraciones de desarrollo
 .eslintrc*
 .prettierrc*
 .editorconfig
 
+# Backups y temporales
+*.bak
+*.backup
+backup_*/
+*_backup_*
+
+# Logs
+logs/
+*.log
+
 # Testing
-coverage
-.nyc_output
+coverage/
+.nyc_output/
 
-# Misc
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
+# Docker files (no copiar dentro de la imagen)
+Dockerfile
+docker-compose*.yml
+.dockerignore
 
+# CI/CD
+.github/
+
+# Configuraciones de despliegue no Docker
+vercel.json
+netlify.toml
+nginx.conf.example
+ecosystem.config.js
+deploy.sh
+webhook-deploy.sh
+
+# Archivos de configuración de IDE
+*.iml
+*.sublime-*
