@@ -1,4 +1,4 @@
-# 3.11 – Glucómetro y Control de Glucemia: Uso Operativo (Tes)
+# 3.11 – Glucómetro y Control de Glucemia: Uso Operativo
 
 ## Manual TES Digital – Medición de glucemia capilar en campo
 

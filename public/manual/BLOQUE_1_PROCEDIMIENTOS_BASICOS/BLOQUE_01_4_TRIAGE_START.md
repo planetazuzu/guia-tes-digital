@@ -1,4 +1,9 @@
-# 1.4 – Triage Básico: Start y Categorización Operativa
+---
+tipoContenido: "operativo"
+capaApp: "operativa"
+---
+
+# 1.4 – Triage Básico: START y Categorización Operativa
 
 ## Manual TES Digital – Aplicación del triage START en escena
 

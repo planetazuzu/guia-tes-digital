@@ -1,6 +1,42 @@
 // Service Worker para PWA
 // Cache First Strategy para funcionamiento offline
 
+// Detectar si estamos en desarrollo
+const isDevelopment = self.location.hostname === 'localhost' || 
+                      self.location.hostname === '127.0.0.1' ||
+                      self.location.hostname === '[::1]';
+
+// En desarrollo, desactivar el SW inmediatamente
+if (isDevelopment) {
+  self.addEventListener('install', (event) => {
+    console.log('[SW] Development mode detected, skipping installation');
+    self.skipWaiting();
+  });
+  
+  self.addEventListener('activate', (event) => {
+    console.log('[SW] Development mode detected, unregistering...');
+    event.waitUntil(
+      self.clients.matchAll().then((clients) => {
+        clients.forEach((client) => {
+          client.postMessage({ type: 'SW_UNREGISTER' });
+        });
+      }).then(() => {
+        // Desregistrar este SW
+        return self.registration.unregister();
+      })
+    );
+  });
+  
+  // No interceptar peticiones en desarrollo
+  self.addEventListener('fetch', (event) => {
+    // Dejar que todas las peticiones pasen directamente sin interceptar
+    return;
+  });
+  
+  // Salir temprano - no ejecutar el resto del código
+  // (El código de abajo solo se ejecuta en producción)
+}
+
 // Versión del cache - Incrementar cuando hay cambios importantes
 const CACHE_VERSION = 'v1.0.1';
 const CACHE_NAME = `emerges-tes-${CACHE_VERSION}`;
@@ -90,6 +126,30 @@ self.addEventListener('fetch', (event) => {
   // Ignorar peticiones a APIs externas (si las hay)
   if (url.origin !== location.origin) {
     return;
+  }
+
+  // En desarrollo (localhost), ignorar peticiones de Vite HMR y módulos
+  // Esto evita conflictos con el servidor de desarrollo
+  if (
+    url.hostname === 'localhost' || 
+    url.hostname === '127.0.0.1' ||
+    url.hostname === '[::1]'
+  ) {
+    // Ignorar peticiones de Vite (HMR, módulos ES, WebSocket, etc.)
+    if (
+      url.pathname.startsWith('/src/') ||
+      url.pathname.startsWith('/@') ||
+      url.pathname.startsWith('/node_modules/') ||
+      url.pathname.includes('?t=') || // Vite añade timestamps
+      url.pathname.endsWith('.tsx') ||
+      url.pathname.endsWith('.ts') ||
+      url.pathname.includes('node_modules') ||
+      url.searchParams.has('import') || // Vite import queries
+      url.protocol === 'ws:' || // WebSocket para HMR
+      url.protocol === 'wss:' // WebSocket seguro
+    ) {
+      return; // Dejar que Vite maneje estas peticiones directamente
+    }
   }
 
   // Estrategia: Cache First para assets estáticos

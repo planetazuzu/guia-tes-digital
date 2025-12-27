@@ -9,6 +9,7 @@ import {
   Clock,
   ChevronRight,
   AlertTriangle,
+  GraduationCap,
 } from 'lucide-react';
 import EmergencyButton from '@/components/shared/EmergencyButton';
 import { useSearchHistory } from '@/hooks/useSearchHistory';
@@ -77,6 +78,27 @@ const Home = ({ onSearchClick }: HomeProps) => {
             variant="critical"
           />
         </div>
+      </section>
+
+      {/* Guías de Refuerzo */}
+      <section>
+        <Link
+          to="/guia-refuerzo"
+          className="block p-4 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-500/20 rounded-xl hover:border-blue-500/40 transition-colors"
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+              <GraduationCap className="w-6 h-6 text-blue-500" />
+            </div>
+            <div className="flex-1">
+              <h3 className="font-semibold text-foreground mb-1">Guías de Refuerzo</h3>
+              <p className="text-sm text-muted-foreground">
+                Contenido formativo para comprensión profunda de protocolos
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-muted-foreground flex-shrink-0" />
+          </div>
+        </Link>
       </section>
 
       {/* Quick Access Chips */}

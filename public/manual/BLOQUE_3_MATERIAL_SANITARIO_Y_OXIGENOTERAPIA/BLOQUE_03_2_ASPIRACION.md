@@ -1,4 +1,4 @@
-# 3.2 – Aspiración: Material y Uso Seguro (Operativo Tes)
+# 3.2 – Aspiración: Material y Uso Seguro
 
 ## Manual TES Digital – Técnica de aspiración de secreciones
 

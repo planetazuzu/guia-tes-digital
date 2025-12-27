@@ -32,6 +32,40 @@ const ProcedureCard = ({ procedure, defaultExpanded = false }: ProcedureCardProp
     });
   };
 
+  const handleShare = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    
+    const url = `${window.location.origin}/soporte-vital?id=${procedure.id}`;
+    const shareData = {
+      title: `${procedure.shortTitle} - EMERGES TES`,
+      text: `Protocolo: ${procedure.shortTitle}\n\nPrioridad: ${procedure.priority}\nGrupo de edad: ${procedure.ageGroup}`,
+      url: url,
+    };
+
+    try {
+      // Intentar usar Web Share API nativa (móviles)
+      if (navigator.share) {
+        await navigator.share(shareData);
+        toast.success('Protocolo compartido');
+      } else {
+        // Fallback: copiar al portapapeles
+        await navigator.clipboard.writeText(`${shareData.title}\n${shareData.text}\n${url}`);
+        toast.success('Enlace copiado al portapapeles');
+      }
+    } catch (error: any) {
+      // El usuario canceló el share o hubo un error
+      if (error.name !== 'AbortError') {
+        // Si no es cancelación, intentar copiar al portapapeles
+        try {
+          await navigator.clipboard.writeText(`${shareData.title}\n${shareData.text}\n${url}`);
+          toast.success('Enlace copiado al portapapeles');
+        } catch (clipboardError) {
+          toast.error('No se pudo compartir');
+        }
+      }
+    }
+  };
+
   const isFav = isFavorite(procedure.id);
 
   return (

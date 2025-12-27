@@ -1,4 +1,4 @@
-import { X, Star, History, Settings, Info, Share2, ClipboardCheck, Phone, MessageSquare, BookOpen } from 'lucide-react';
+import { X, Star, History, Settings, Info, Share2, ClipboardCheck, Phone, MessageSquare, BookOpen, GraduationCap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useMemo, useCallback, memo } from 'react';
 import { toast } from 'sonner';
@@ -58,6 +58,7 @@ const MenuSheet = memo(({ isOpen, onClose }: MenuSheetProps) => {
   // Memoizar menuItems para evitar re-creación en cada render
   const menuItems = useMemo(() => [
     { icon: BookOpen, label: 'Manual Completo', path: '/manual', onClick: onClose },
+    { icon: GraduationCap, label: 'Guías de Refuerzo', path: '/guia-refuerzo', onClick: onClose },
     { icon: Phone, label: 'Protocolos Transtelefónicos', path: '/telefono', onClick: onClose },
     { icon: MessageSquare, label: 'Guiones de Comunicación', path: '/comunicacion', onClick: onClose },
     { icon: ClipboardCheck, label: 'Checklists Material', path: '/material', onClick: onClose },

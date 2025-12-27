@@ -45,6 +45,12 @@ const Privacidad = lazy(() => import("./pages/Privacidad"));
 const DescargoResponsabilidad = lazy(() => import("./pages/DescargoResponsabilidad"));
 const AvisoLegal = lazy(() => import("./pages/AvisoLegal"));
 
+// Lazy loading de Guías de Refuerzo (Modo Formativo)
+const GuideIndex = lazy(() => import("./views/formativo/GuideIndex"));
+const GuideViewer = lazy(() => import("./views/formativo/GuideViewer"));
+const GuideSectionViewer = lazy(() => import("./views/formativo/GuideSectionViewer"));
+import { GuideLayout } from "./layouts/GuideLayout";
+
 const queryClient = new QueryClient();
 
 const App = () => {
@@ -95,6 +101,42 @@ const App = () => {
                         <Route path="/privacidad" element={<Privacidad />} />
                         <Route path="/descargo-responsabilidad" element={<DescargoResponsabilidad />} />
                         <Route path="/aviso-legal" element={<AvisoLegal />} />
+                        
+                        {/* Rutas de Guías de Refuerzo (Modo Formativo) */}
+                        <Route
+                          path="/guia-refuerzo"
+                          element={
+                            <GuideLayout
+                              onSearchClick={() => setIsSearchOpen(true)}
+                              onMenuClick={() => setIsMenuOpen(true)}
+                            >
+                              <GuideIndex />
+                            </GuideLayout>
+                          }
+                        />
+                        <Route
+                          path="/guia-refuerzo/:guia"
+                          element={
+                            <GuideLayout
+                              onSearchClick={() => setIsSearchOpen(true)}
+                              onMenuClick={() => setIsMenuOpen(true)}
+                            >
+                              <GuideViewer />
+                            </GuideLayout>
+                          }
+                        />
+                        <Route
+                          path="/guia-refuerzo/:guia/seccion/:numero"
+                          element={
+                            <GuideLayout
+                              onSearchClick={() => setIsSearchOpen(true)}
+                              onMenuClick={() => setIsMenuOpen(true)}
+                            >
+                              <GuideSectionViewer />
+                            </GuideLayout>
+                          }
+                        />
+                        
                         <Route path="*" element={<NotFound />} />
                       </Routes>
                     </Suspense>

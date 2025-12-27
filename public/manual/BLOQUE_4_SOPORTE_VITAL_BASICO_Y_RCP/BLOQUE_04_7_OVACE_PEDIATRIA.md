@@ -1,4 +1,9 @@
-# 4.7 – Ovace en Pediatría
+---
+tipoContenido: "operativo"
+capaApp: "operativa"
+---
+
+# 4.7 – OVACE en Pediatría
 
 ## Manual TES Digital – Identificación y resolución de obstrucción de vía aérea por cuerpo extraño en pediatría
 

@@ -1,6 +1,9 @@
-# 0.0 – Fundamentos de la Atención en Emergencias Prehospitalarias
+---
+tipoContenido: "formativo"
+capaApp: "refuerzo"
+---
 
-## Manual TES Digital – Marco Operativo y Conceptual
+# 0.0 – Fundamentos de la Atención en Emergencias Prehospitalarias
 
 **Versión:** 1.0
 **Fecha:** 2025-12-23

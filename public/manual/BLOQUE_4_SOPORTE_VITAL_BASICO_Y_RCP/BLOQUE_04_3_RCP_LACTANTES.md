@@ -1,4 +1,9 @@
-# 4.3 – Rcp Básica en Lactantes: Técnicas Específicas
+---
+tipoContenido: "operativo"
+capaApp: "operativa"
+---
+
+# 4.3 – RCP Básica en Lactantes: Técnicas Específicas
 
 ## Manual TES Digital – Reanimación Cardiopulmonar básica de alta calidad en lactantes
 

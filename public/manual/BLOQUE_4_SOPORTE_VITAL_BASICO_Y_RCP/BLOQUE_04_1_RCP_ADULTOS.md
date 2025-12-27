@@ -1,6 +1,9 @@
-# 4.1 – Rcp Básica en Adultos: Secuencia C-a-B Operativa
+---
+tipoContenido: "operativo"
+capaApp: "operativa"
+---
 
-## Manual TES Digital – Reanimación Cardiopulmonar básica de alta calidad en adultos
+# 4.1 – RCP Básica en Adultos: Secuencia C-A-B Operativa
 
 **Versión:** 1.0
 **Fecha:** 2025-12-23

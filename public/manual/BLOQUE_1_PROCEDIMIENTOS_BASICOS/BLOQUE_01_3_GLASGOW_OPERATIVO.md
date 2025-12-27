@@ -1,3 +1,8 @@
+---
+tipoContenido: "operativo"
+capaApp: "operativa"
+---
+
 # 1.3 – Escala de Glasgow: Uso Operativo en Campo
 
 ## Manual TES Digital – Técnica de aplicación de la escala de Glasgow en emergencias prehospitalarias

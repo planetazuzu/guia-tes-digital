@@ -1,6 +1,9 @@
-# 1.1 – Constantes Vitales: Toma y Registro Operativo
+---
+tipoContenido: "operativo"
+capaApp: "operativa"
+---
 
-## Manual TES Digital – Técnica operativa de toma de constantes vitales en campo
+# 1.1 – Constantes Vitales: Toma y Registro Operativo
 
 **Versión:** 1.0
 **Fecha:** 2025-12-23

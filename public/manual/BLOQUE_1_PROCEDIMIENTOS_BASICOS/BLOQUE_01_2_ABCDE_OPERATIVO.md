@@ -1,4 +1,9 @@
-# 1.2 – Evaluación Primaria del Paciente: Abcde Operativo
+---
+tipoContenido: "operativo"
+capaApp: "operativa"
+---
+
+# 1.2 – Evaluación Primaria del Paciente: ABCDE Operativo
 
 ## Manual TES Digital – Aplicación práctica del ABCDE en escena
 

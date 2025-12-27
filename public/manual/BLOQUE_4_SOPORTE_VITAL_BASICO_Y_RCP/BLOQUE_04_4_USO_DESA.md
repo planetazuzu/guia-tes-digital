@@ -1,4 +1,9 @@
-# 4.4 – Uso del Desa: Procedimiento Operativo Paso a Paso
+---
+tipoContenido: "operativo"
+capaApp: "operativa"
+---
+
+# 4.4 – Uso del DESA: Procedimiento Operativo Paso a Paso
 
 ## Manual TES Digital – Uso seguro y eficaz del Desfibrilador Externo Semiautomático
 

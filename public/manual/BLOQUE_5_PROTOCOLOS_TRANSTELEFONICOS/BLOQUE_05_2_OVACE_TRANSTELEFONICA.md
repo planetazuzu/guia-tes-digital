@@ -1,4 +1,4 @@
-# 5.2 – Ovace Transtelefónica (Obstrucción de Vía Aérea por Cuerpo Extraño)
+# 5.2 – OVACE Transtelefónica (Obstrucción de Vía Aérea por Cuerpo Extraño)
 
 **Bloque:** 5 – Protocolos Transtelefónicos y Comunicación  
 **Capítulo:** 5.2  

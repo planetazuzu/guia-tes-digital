@@ -1,6 +1,9 @@
-# 4.2 – Rcp Básica en Pediatría
+---
+tipoContenido: "operativo"
+capaApp: "operativa"
+---
 
-## Manual TES Digital – Reanimación Cardiopulmonar básica de alta calidad en pediatría
+# 4.2 – RCP Básica en Pediatría
 
 **Versión:** 1.0
 **Fecha:** 2025-12-23

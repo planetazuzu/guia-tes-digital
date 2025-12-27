@@ -1,4 +1,4 @@
-# 3.9 – Exposición, Aislamiento Térmico y Prevención de Hipotermia (Operativo Tes)
+# 3.9 – Exposición, Aislamiento Térmico y Prevención de Hipotermia
 
 ## Manual TES Digital – Control térmico en emergencias prehospitalarias
 

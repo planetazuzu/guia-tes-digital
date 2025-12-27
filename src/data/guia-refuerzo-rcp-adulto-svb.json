@@ -1,0 +1,220 @@
+{
+  "id": "refuerzo-rcp-adulto-svb",
+  "titulo": "Guía de Refuerzo: RCP Adulto SVB",
+  "subtitulo": "Comprensión Profunda de la Reanimación Cardiopulmonar Básica",
+  "relacionadoCon": {
+    "tipo": "protocolo",
+    "idOperativo": "rcp-adulto-svb",
+    "enlaceOperativo": "/rcp",
+    "tituloOperativo": "RCP Adulto SVB"
+  },
+  "metadatos": {
+    "nivelDificultad": "intermedio",
+    "tiempoEstimado": 15,
+    "palabrasClave": ["rcp", "reanimacion", "compresiones", "ventilacion", "svb"],
+    "version": "1.0",
+    "fechaCreacion": "2025-12-23"
+  },
+  "secciones": [
+    {
+      "id": "introduccion",
+      "tipo": "introduccion",
+      "titulo": "Introducción",
+      "orden": 1,
+      "bloques": [
+        {
+          "tipo": "texto_explicativo",
+          "contenido": {
+            "texto": "La reanimación cardiopulmonar (RCP) es el conjunto de maniobras destinadas a sustituir temporalmente la función del corazón y los pulmones cuando estos han dejado de funcionar. Esta guía te ayudará a comprender **por qué** cada paso del protocolo es crítico y **cómo** ejecutarlo correctamente.\n\n**Objetivos de aprendizaje:**\n- Entender la fisiopatología de la parada cardiorrespiratoria\n- Comprender por qué las compresiones de calidad son esenciales\n- Visualizar la técnica correcta de compresiones y ventilaciones\n- Identificar y evitar errores frecuentes\n\n**Tiempo estimado:** 15 minutos\n\n**Prerrequisitos:** Conocimiento básico del protocolo operativo de RCP"
+          }
+        },
+        {
+          "tipo": "caja_advertencia",
+          "contenido": {
+            "tipo": "importante",
+            "texto": "Esta guía es para **comprensión y formación**. Para acción inmediata en emergencia, consulta el [Protocolo Operativo RCP](/rcp)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "algoritmo_comentado",
+      "tipo": "algoritmo_comentado",
+      "titulo": "Algoritmo Comentado",
+      "orden": 2,
+      "bloques": [
+        {
+          "tipo": "infografia",
+          "contenido": {
+            "ruta": "/assets/infografias/bloque-4-rcp/algoritmo-rcp-comentado.svg",
+            "tipo": "algoritmo",
+            "descripcion": "Algoritmo visual del protocolo RCP con comentarios explicativos en cada paso"
+          }
+        },
+        {
+          "tipo": "texto_explicativo",
+          "contenido": {
+            "texto": "**Comentarios del algoritmo:**\n\n**Paso 1: Garantizar seguridad**\nAntes de cualquier intervención, asegúrate de que la escena es segura. Un TES lesionado no puede ayudar a nadie. Evalúa riesgos visibles: tráfico, electricidad, fuego, violencia.\n\n**Paso 2: Comprobar consciencia**\nLa respuesta a estímulos verbales y táctiles nos indica si el paciente tiene función neurológica. Si no responde, el siguiente paso es evaluar la respiración.\n\n**Paso 3: Activar sistema de emergencias**\nEl tiempo es crítico. Cada minuto sin RCP reduce la supervivencia en un 7-10%. Activar el 112 y solicitar DESA debe hacerse inmediatamente.\n\n**Paso 4: Abrir vía aérea**\nLa maniobra frente-mentón desplaza la lengua y permite que el aire entre. Es fundamental para que las ventilaciones sean efectivas.\n\n**Paso 5: Evaluar respiración**\nLas boqueadas agónicas NO son respiración normal. Si hay duda, trata como PCR e inicia compresiones.\n\n**Paso 6: Iniciar compresiones**\nLas compresiones crean presión en el tórax que mueve sangre. La profundidad (5-6 cm) y frecuencia (100-120/min) son críticas para mantener flujo sanguíneo.\n\n**Paso 7: Ventilaciones de rescate**\nLas ventilaciones proporcionan oxígeno. El ratio 30:2 equilibra compresiones (más importantes) con oxigenación.\n\n**Paso 8: Continuar ciclos**\nLa continuidad es esencial. Cada interrupción detiene el flujo sanguíneo. Minimiza interrupciones a menos de 10 segundos.\n\n**Paso 9: DESA cuando disponible**\nLa desfibrilación precoz aumenta significativamente la supervivencia. El DESA analiza el ritmo y guía la descarga si es necesario."
+          }
+        },
+        {
+          "tipo": "caja_advertencia",
+          "contenido": {
+            "tipo": "importante",
+            "texto": "Para ver los pasos operativos completos y valores exactos, consulta el [Protocolo Operativo RCP](/rcp)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "errores_frecuentes",
+      "tipo": "errores_frecuentes",
+      "titulo": "Errores Frecuentes",
+      "orden": 3,
+      "bloques": [
+        {
+          "tipo": "comparacion_visual",
+          "contenido": {
+            "elementos": [
+              {
+                "etiqueta": "Incorrecto",
+                "esCorrecto": false,
+                "contenido": {
+                  "tipo": "imagen",
+                  "ruta": "/assets/infografias/bloque-4-rcp/compresiones-incorrectas.png",
+                  "alt": "Compresiones incorrectas: manos en posición incorrecta, profundidad insuficiente",
+                    "caption": "❌ ERROR: Posición incorrecta de manos, profundidad insuficiente (<5 cm)"
+                }
+              },
+              {
+                "etiqueta": "Correcto",
+                "esCorrecto": true,
+                "contenido": {
+                  "tipo": "imagen",
+                  "ruta": "/assets/infografias/bloque-4-rcp/compresiones-correctas.png",
+                  "alt": "Compresiones correctas: talón de mano en centro del pecho, brazos rectos",
+                  "caption": "✅ CORRECTO: Talón de mano en centro del pecho, brazos rectos, profundidad 5-6 cm"
+                }
+              }
+            ],
+            "descripcion": "Comparación visual de técnica de compresiones: incorrecta vs correcta"
+          }
+        },
+        {
+          "tipo": "texto_explicativo",
+          "contenido": {
+            "texto": "**Error 1: Compresiones superficiales**\n\n**Problema:** Compresiones de menos de 5 cm de profundidad\n\n**Consecuencia:** No se genera suficiente presión para mover sangre efectivamente. El corazón no se comprime lo suficiente.\n\n**Cómo evitarlo:**\n- Coloca talón de la mano en el centro del pecho (mitad inferior del esternón)\n- Usa el peso de tu cuerpo, no solo fuerza de brazos\n- Permite descompresión completa entre compresiones\n- Verifica profundidad: debe ser visible el movimiento del pecho"
+          }
+        },
+        {
+          "tipo": "comparacion_visual",
+          "contenido": {
+            "elementos": [
+              {
+                "etiqueta": "Incorrecto",
+                "esCorrecto": false,
+                "contenido": {
+                  "tipo": "imagen",
+                  "ruta": "/assets/infografias/bloque-4-rcp/descompresion-incompleta.png",
+                  "alt": "Descompresión incompleta: manos no se separan del pecho",
+                  "caption": "❌ ERROR: Descompresión incompleta - manos no se separan del pecho"
+                }
+              },
+              {
+                "etiqueta": "Correcto",
+                "esCorrecto": true,
+                "contenido": {
+                  "tipo": "imagen",
+                  "ruta": "/assets/infografias/bloque-4-rcp/descompresion-completa.png",
+                  "alt": "Descompresión completa: manos se separan completamente del pecho",
+                  "caption": "✅ CORRECTO: Descompresión completa - pecho vuelve a su posición natural"
+                }
+              }
+            ],
+            "descripcion": "Comparación visual de descompresión: incompleta vs completa"
+          }
+        },
+        {
+          "tipo": "texto_explicativo",
+          "contenido": {
+            "texto": "**Error 2: Descompresión incompleta**\n\n**Problema:** No permitir que el pecho vuelva completamente a su posición natural entre compresiones\n\n**Consecuencia:** El corazón no se llena de sangre entre compresiones. La eficacia de la siguiente compresión se reduce significativamente.\n\n**Cómo evitarlo:**\n- Retira completamente las manos del pecho después de cada compresión\n- Permite que el pecho vuelva a su posición natural\n- No apoyes las manos sobre el pecho entre compresiones\n- El ritmo debe ser: comprimir → liberar completamente → comprimir"
+          }
+        },
+        {
+          "tipo": "caja_advertencia",
+          "contenido": {
+            "tipo": "advertencia",
+            "texto": "**Error crítico: Interrupciones prolongadas**\n\nLas interrupciones de más de 10 segundos detienen completamente el flujo sanguíneo. Cada segundo cuenta. Minimiza interrupciones cambiando reanimador durante pausas naturales (verificación de ritmo, llegada de DESA)."
+          }
+        },
+        {
+          "tipo": "texto_explicativo",
+          "contenido": {
+            "texto": "**Error 3: Frecuencia incorrecta**\n\n**Problema:** Compresiones demasiado lentas (<100/min) o demasiado rápidas (>120/min)\n\n**Consecuencia:**\n- Muy lentas: Flujo sanguíneo insuficiente\n- Muy rápidas: No hay tiempo para llenado cardíaco, fatiga prematura\n\n**Cómo evitarlo:**\n- Cuenta en voz alta: \"uno, dos, tres...\" hasta \"treinta\"\n- Usa metrónomo mental o canción (ej: \"Stayin' Alive\" tiene ~100 bpm)\n- El ritmo debe ser constante y rítmico\n- Si tienes dudas, mejor un poco más rápido que más lento"
+          }
+        }
+      ]
+    },
+    {
+      "id": "resumen_visual",
+      "tipo": "resumen_visual",
+      "titulo": "Resumen Visual",
+      "orden": 4,
+      "bloques": [
+        {
+          "tipo": "resumen_visual",
+          "contenido": {
+            "ruta": "/assets/infografias/bloque-4-rcp/resumen-rcp-adulto-svb.png",
+            "tipo": "resumen",
+            "descripcion": "Infografía resumen de una página con algoritmo RCP completo, puntos clave y técnica de compresiones"
+          }
+        },
+        {
+          "tipo": "texto_explicativo",
+          "contenido": {
+            "texto": "**Puntos clave recordar:**\n\n1. **Seguridad primero:** Un TES lesionado no puede ayudar\n2. **Tiempo es crítico:** Cada minuto sin RCP reduce supervivencia 7-10%\n3. **Compresiones de calidad:** Profundidad 5-6 cm, frecuencia 100-120/min\n4. **Descompresión completa:** Permite llenado cardíaco\n5. **Minimizar interrupciones:** Menos de 10 segundos\n6. **DESA precoz:** Aumenta significativamente supervivencia"
+          }
+        },
+        {
+          "tipo": "caja_advertencia",
+          "contenido": {
+            "tipo": "importante",
+            "texto": "Para consultar el protocolo operativo completo con pasos exactos y valores precisos, ve a [Protocolo Operativo RCP Adulto SVB](/rcp)."
+          }
+        }
+      ]
+    }
+  ],
+  "referencias": {
+    "guiasOficiales": [
+      {
+        "nombre": "ERC Guidelines 2021",
+        "enlace": "https://www.erc.edu/",
+        "tipo": "guia_oficial"
+      },
+      {
+        "nombre": "AHA Guidelines 2020",
+        "enlace": "https://www.heart.org/",
+        "tipo": "guia_oficial"
+      }
+    ],
+    "enlacesRelacionados": [
+      {
+        "titulo": "Protocolo Operativo RCP Adulto SVB",
+        "url": "/rcp",
+        "tipo": "protocolo_operativo"
+      },
+      {
+        "titulo": "Uso del DESA",
+        "url": "/manual/parte-ii-soporte-vital/bloque-4-rcp/2.1.6",
+        "tipo": "capitulo_manual"
+      },
+      {
+        "titulo": "Ventilación con Bolsa-Mascarilla",
+        "url": "/manual/parte-iii-material/bloque-3-material-sanitario/3.2.2.3",
+        "tipo": "capitulo_manual"
+      }
+    ]
+  }
+}
+

@@ -1,4 +1,9 @@
-# 4.8 – Ovace en Lactantes
+---
+tipoContenido: "operativo"
+capaApp: "operativa"
+---
+
+# 4.8 – OVACE en Lactantes
 
 ## Manual TES Digital – Identificación y resolución de obstrucción de vía aérea por cuerpo extraño en lactantes
 

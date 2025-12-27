@@ -1,6 +1,9 @@
-# 4.6 – Ovace en Adultos
+---
+tipoContenido: "operativo"
+capaApp: "operativa"
+---
 
-## Manual TES Digital – Identificación y resolución de obstrucción de vía aérea por cuerpo extraño en adultos
+# 4.6 – OVACE en Adultos
 
 **Versión:** 1.0
 **Fecha:** 2025-12-23

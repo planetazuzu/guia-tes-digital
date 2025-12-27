@@ -1,4 +1,4 @@
-# 4.5 – Rcp con Dos Intervinientes
+# 4.5 – RCP con Dos Intervinientes
 
 ## Manual TES Digital – RCP básica coordinada y eficiente entre dos TES
 

@@ -21,6 +21,25 @@ export const useServiceWorker = () => {
       return;
     }
 
+    // No registrar SW en desarrollo para evitar conflictos con Vite HMR
+    const isDevelopment = import.meta.env.DEV || 
+      window.location.hostname === 'localhost' || 
+      window.location.hostname === '127.0.0.1';
+    
+    if (isDevelopment) {
+      // En desarrollo, solo manejar estado online/offline
+      const handleOnline = () => setState((prev) => ({ ...prev, offline: false }));
+      const handleOffline = () => setState((prev) => ({ ...prev, offline: true }));
+
+      window.addEventListener('online', handleOnline);
+      window.addEventListener('offline', handleOffline);
+
+      return () => {
+        window.removeEventListener('online', handleOnline);
+        window.removeEventListener('offline', handleOffline);
+      };
+    }
+
     // Detectar cambios en conexión
     const handleOnline = () => setState((prev) => ({ ...prev, offline: false }));
     const handleOffline = () => setState((prev) => ({ ...prev, offline: true }));
@@ -28,7 +47,7 @@ export const useServiceWorker = () => {
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
 
-    // Registrar Service Worker
+    // Registrar Service Worker (solo en producción)
     const base = import.meta.env.BASE_URL || '/';
     navigator.serviceWorker
       .register(`${base}sw.js`)

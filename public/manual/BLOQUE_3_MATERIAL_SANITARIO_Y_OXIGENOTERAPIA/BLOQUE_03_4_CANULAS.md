@@ -1,6 +1,9 @@
-# 3.4 – Cánulas (Opa/Npa): Uso Seguro Operativo (Tes)
+---
+tipoContenido: "operativo"
+capaApp: "operativa"
+---
 
-## Manual TES Digital – Mantenimiento de vía aérea básica
+# 3.4 – Cánulas (OPA/NPA): Uso Seguro Operativo
 
 **Versión:** 1.0
 **Fecha:** 2025-12-23
