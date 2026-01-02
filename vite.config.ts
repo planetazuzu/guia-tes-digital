@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { manifestPlugin } from "./vite-plugin-manifest";
+import { fixHtmlReferencesPlugin } from "./vite-plugin-fix-html-references";
 
 // Detectar si estamos en GitHub Pages
 // GitHub Pages usa el formato: https://username.github.io/repository-name/
@@ -32,6 +33,7 @@ export default defineConfig({
   plugins: [
     react(),
     manifestPlugin(),
+    fixHtmlReferencesPlugin(), // Corregir referencias en index.html después del build
   ],
   resolve: {
     alias: {
