@@ -56,6 +56,7 @@ export default defineConfig({
           if (id.includes('node_modules')) {
             // SOLUCIÓN DRÁSTICA: Poner TODO lo relacionado con React en un solo chunk
             // Esto garantiza que React esté disponible antes de cualquier otro código
+            // IMPORTANTE: Añadir TODAS las dependencias que usan React aquí
             if (
               id.includes('react') || 
               id.includes('react-dom') || 
@@ -75,7 +76,12 @@ export default defineConfig({
               id.includes('input-otp') ||
               id.includes('cmdk') ||
               id.includes('vaul') ||
-              id.includes('react-markdown')
+              id.includes('react-markdown') ||
+              id.includes('@floating-ui') ||
+              id.includes('@remix-run/router') ||
+              id.includes('use-callback-ref') ||
+              id.includes('use-sidecar') ||
+              id.includes('aria-hidden')
             ) {
               return 'vendor-react';
             }
@@ -84,13 +90,67 @@ export default defineConfig({
               return 'vendor-markdown';
             }
             // Utilidades que NO usan React
-            if (id.includes('zod') || id.includes('date-fns') || id.includes('clsx') || id.includes('tailwind-merge') || id.includes('class-variance-authority')) {
+            if (
+              id.includes('zod') || 
+              id.includes('date-fns') || 
+              id.includes('clsx') || 
+              id.includes('tailwind-merge') || 
+              id.includes('class-variance-authority') ||
+              id.includes('highlight.js') ||
+              id.includes('hast-util') ||
+              id.includes('unist-util') ||
+              id.includes('vfile') ||
+              id.includes('parse5') ||
+              id.includes('entities') ||
+              id.includes('property-information') ||
+              id.includes('style-to-js') ||
+              id.includes('style-to-object') ||
+              id.includes('trough') ||
+              id.includes('bail') ||
+              id.includes('extend') ||
+              id.includes('is-plain-obj') ||
+              id.includes('zwitch') ||
+              id.includes('web-namespaces') ||
+              id.includes('html-void-elements') ||
+              id.includes('html-url-attributes') ||
+              id.includes('comma-separated-tokens') ||
+              id.includes('space-separated-tokens') ||
+              id.includes('estree-util') ||
+              id.includes('decode-named-character-reference') ||
+              id.includes('ccount') ||
+              id.includes('markdown-table') ||
+              id.includes('format') ||
+              id.includes('hastscript') ||
+              id.includes('vfile-location') ||
+              id.includes('vfile-message') ||
+              id.includes('unist-util-stringify-position') ||
+              id.includes('unist-util-is') ||
+              id.includes('unist-util-find-after') ||
+              id.includes('unist-util-visit-parents') ||
+              id.includes('trim-lines') ||
+              id.includes('longest-streak') ||
+              id.includes('hast-util-parse-selector') ||
+              id.includes('detect-node-es') ||
+              id.includes('get-nonce') ||
+              id.includes('@ungap/structured-clone') ||
+              id.includes('devlop') ||
+              id.includes('fault') ||
+              id.includes('hast-util-from-parse5') ||
+              id.includes('hast-util-to-parse5') ||
+              id.includes('inline-style-parser') ||
+              id.includes('tslib')
+            ) {
               return 'vendor-utils';
             }
             // CRÍTICO: Si llegamos aquí, algo se nos escapó
             // Por seguridad, mover TODO a vendor-utils en lugar de vendor-other
             // Esto previene que cualquier código desconocido use React antes de tiempo
-            console.warn('[Vite] Unclassified dependency:', id);
+            // En producción, esto NO debería ocurrir - todos los módulos deberían estar clasificados
+            if (process.env.NODE_ENV === 'production') {
+              console.error('[Vite] ERROR: Unclassified dependency in production:', id);
+            } else {
+              console.warn('[Vite] Unclassified dependency:', id);
+            }
             return 'vendor-utils';
           }
           

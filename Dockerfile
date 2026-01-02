@@ -20,6 +20,20 @@ RUN npm run build
 RUN test -d dist || (echo "Error: dist directory not found" && exit 1)
 RUN test "$(ls -A dist)" || (echo "Error: dist directory is empty" && exit 1)
 
+# CRÍTICO: Verificar que NO se generó vendor-other (causa errores useLayoutEffect)
+RUN if ls dist/assets/vendor-other* 2>/dev/null; then \
+      echo "❌ ERROR CRÍTICO: vendor-other fue generado en el build"; \
+      echo "Esto causará errores useLayoutEffect en producción"; \
+      ls -la dist/assets/vendor-other*; \
+      exit 1; \
+    else \
+      echo "✅ Verificación: vendor-other NO existe (correcto)"; \
+    fi
+
+# Verificar chunks esperados
+RUN echo "📦 Chunks vendor generados:" && \
+    ls -lh dist/assets/vendor-*.js 2>/dev/null | awk '{print "   "$9" ("$5")"}' || true
+
 # Stage 2: Production
 FROM node:18-alpine AS production
 

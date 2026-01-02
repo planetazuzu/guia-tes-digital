@@ -49,29 +49,6 @@
       "purpose": "any"
     }
   ],
-  "screenshots": [
-    {
-      "src": "/screenshots/home.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Página principal de EMERGES TES"
-    },
-    {
-      "src": "/screenshots/manual.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Manual completo navegable"
-    },
-    {
-      "src": "/screenshots/mobile-home.png",
-      "sizes": "750x1334",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Vista móvil - Página principal"
-    }
-  ],
   "shortcuts": [
     {
       "name": "Manual Completo",
