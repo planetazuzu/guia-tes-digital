@@ -36,10 +36,15 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      // CRÍTICO: Forzar alias de React para asegurar una sola instancia
+      // Esto previene múltiples instancias de React en el bundle
+      "react": path.resolve(__dirname, "./node_modules/react"),
+      "react-dom": path.resolve(__dirname, "./node_modules/react-dom"),
+      "react/jsx-runtime": path.resolve(__dirname, "./node_modules/react/jsx-runtime.js"),
     },
     // CRÍTICO: Forzar deduplicación de React para evitar errores useLayoutEffect
     // Esto asegura que solo hay una instancia de React en el bundle
-    dedupe: ["react", "react-dom"],
+    dedupe: ["react", "react-dom", "react/jsx-runtime"],
     // Asegurar que React se resuelve correctamente
     conditions: ["import", "module", "browser", "default"],
   },
@@ -51,6 +56,23 @@ export default defineConfig({
     rollupOptions: {
       // Code splitting: dividir el bundle en chunks más pequeños
       output: {
+        // CRÍTICO: Asegurar que vendor-react se carga PRIMERO
+        // Esto garantiza que React está disponible antes que cualquier otro código
+        entryFileNames: (chunkInfo) => {
+          // El entry principal debe cargarse primero
+          if (chunkInfo.name === 'index') {
+            return 'assets/[name]-[hash].js';
+          }
+          return 'assets/[name]-[hash].js';
+        },
+        // Ordenar chunks para que vendor-react se cargue primero
+        chunkFileNames: (chunkInfo) => {
+          // vendor-react debe tener prioridad en el nombre para cargarse primero
+          if (chunkInfo.name === 'vendor-react') {
+            return 'assets/vendor-react-[hash].js';
+          }
+          return 'assets/[name]-[hash].js';
+        },
         manualChunks: (id) => {
           // Separar node_modules en chunks por librería
           if (id.includes('node_modules')) {
@@ -83,6 +105,10 @@ export default defineConfig({
               id.includes('use-sidecar') ||
               id.includes('aria-hidden')
             ) {
+              return 'vendor-react';
+            }
+            // CRÍTICO: hast-util-to-jsx-runtime USA React - debe estar en vendor-react
+            if (id.includes('hast-util-to-jsx-runtime')) {
               return 'vendor-react';
             }
             // Markdown y procesamiento de texto (NO usa React directamente)
@@ -216,11 +242,26 @@ export default defineConfig({
   // import content from './file.md?raw'
   // Esto importará el contenido del archivo como string
   optimizeDeps: {
-    include: ["react", "react-dom"],
+    // CRÍTICO: Incluir TODAS las dependencias que usan React
+    // Esto asegura que React está disponible cuando se necesitan
+    include: [
+      "react",
+      "react-dom",
+      "react/jsx-runtime",
+      "react-markdown",
+      "hast-util-to-jsx-runtime",
+      "use-sidecar",
+      "use-callback-ref",
+      "@radix-ui/react-use-callback-ref",
+      "react-router-dom",
+      "@tanstack/react-query",
+    ],
     exclude: [],
     // Forzar pre-bundling de React para evitar problemas de resolución
     esbuildOptions: {
       target: "es2020",
+      // Asegurar que React se resuelve correctamente
+      jsx: "automatic",
     },
   },
 });
