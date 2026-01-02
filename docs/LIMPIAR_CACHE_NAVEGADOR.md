@@ -1,73 +1,137 @@
-# 🧹 Cómo Limpiar el Caché del Navegador
+# 🧹 Cómo Limpiar el Caché del Navegador y Service Worker
 
 ## ❌ Problema
-El navegador está usando una versión antigua en caché (`vendor-other-RJb9Jc5z.js`), aunque el servidor tiene el build nuevo correcto.
+El navegador está cargando `vendor-other-RJb9Jc5z.js` (versión antigua) desde el caché, aunque el servidor ya tiene el build nuevo sin `vendor-other`.
 
 ## ✅ Solución: Limpiar Caché Completamente
 
-### Método 1: Limpieza Completa (Recomendado)
+### Método 1: Chrome/Edge (Recomendado)
 
-#### Chrome/Edge:
-1. Abre DevTools (`F12`)
-2. Click derecho en el botón de recargar (🔄)
-3. Selecciona **"Vaciar caché y volver a cargar de forma forzada"** (Empty Cache and Hard Reload)
+1. **Abrir DevTools:**
+   - `F12` o `Ctrl+Shift+I` (Windows/Linux)
+   - `Cmd+Option+I` (Mac)
 
-#### Firefox:
-1. Abre DevTools (`F12`)
-2. Click derecho en el botón de recargar (🔄)
-3. Selecciona **"Vaciar caché y recargar"** (Empty Cache and Hard Reload)
+2. **Ir a la pestaña "Application" (Aplicación):**
+   - En el menú lateral izquierdo, expandir "Storage" (Almacenamiento)
 
-### Método 2: Limpieza Manual
+3. **Limpiar Service Workers:**
+   - Click en "Service Workers"
+   - Click en "Unregister" para cada Service Worker activo
+   - O click en "Update" para forzar actualización
 
-#### Chrome/Edge:
-1. `Ctrl+Shift+Delete` (o `Cmd+Shift+Delete` en Mac)
-2. Selecciona:
-   - ✅ **"Imágenes y archivos en caché"** (Cached images and files)
-   - ✅ **"Archivos alojados en caché"** (Hosted app data)
-3. Período: **"Todo el tiempo"** (All time)
-4. Click **"Borrar datos"** (Clear data)
+4. **Limpiar Caché:**
+   - Click en "Cache Storage"
+   - Click derecho en cada caché → "Delete"
+   - O seleccionar todos y click en "Delete All"
 
-#### Firefox:
-1. `Ctrl+Shift+Delete` (o `Cmd+Shift+Delete` en Mac)
-2. Selecciona:
-   - ✅ **"Caché"** (Cache)
-3. Período: **"Todo"** (Everything)
-4. Click **"Limpiar ahora"** (Clear Now)
+5. **Limpiar Almacenamiento Local:**
+   - Click en "Local Storage"
+   - Click derecho → "Clear"
+   - Repetir para "Session Storage"
 
-### Método 3: Desregistrar Service Worker
+6. **Cerrar DevTools y recargar:**
+   - `Ctrl+Shift+R` (Windows/Linux)
+   - `Cmd+Shift+R` (Mac)
 
-1. Abre DevTools (`F12`)
-2. Ve a la pestaña **"Application"** (o **"Aplicación"**)
-3. En el menú lateral, expande **"Service Workers"**
-4. Click en **"Unregister"** (Desregistrar) para cada Service Worker activo
-5. Ve a **"Storage"** (Almacenamiento) > **"Clear site data"** (Limpiar datos del sitio)
-6. Recarga la página con `Ctrl+Shift+R`
+### Método 2: Limpieza Rápida (Chrome/Edge)
 
-### Método 4: Modo Incógnito (Prueba Rápida)
+1. **Abrir la página:**
+   - `http://207.180.226.141:8607`
 
-1. Abre una ventana de incógnito (`Ctrl+Shift+N` o `Cmd+Shift+N`)
-2. Navega a: `http://207.180.226.141:8607`
-3. Verifica que NO aparece `vendor-other` en DevTools > Network
+2. **Abrir DevTools:**
+   - `F12`
+
+3. **Ir a Console (Consola):**
+   - Pegar y ejecutar este código:
+
+```javascript
+// Limpiar Service Workers
+navigator.serviceWorker.getRegistrations().then(function(registrations) {
+  for(let registration of registrations) {
+    registration.unregister();
+    console.log('Service Worker desregistrado');
+  }
+});
+
+// Limpiar todos los cachés
+caches.keys().then(function(names) {
+  for (let name of names) {
+    caches.delete(name);
+    console.log('Caché eliminado:', name);
+  }
+});
+
+// Limpiar localStorage y sessionStorage
+localStorage.clear();
+sessionStorage.clear();
+console.log('Storage limpiado');
+
+// Recargar página
+setTimeout(() => {
+  window.location.reload(true);
+}, 1000);
+```
+
+4. **Presionar Enter** y esperar a que se recargue la página
+
+### Método 3: Modo Incógnito (Más Simple)
+
+1. **Abrir ventana incógnita:**
+   - `Ctrl+Shift+N` (Windows/Linux)
+   - `Cmd+Shift+N` (Mac)
+
+2. **Ir a:**
+   - `http://207.180.226.141:8607`
+
+3. **Verificar en DevTools > Network:**
+   - NO debería aparecer `vendor-other`
+   - Solo `vendor-react`, `vendor-utils`, `vendor-markdown`
+
+### Método 4: Limpieza Completa del Navegador
+
+1. **Abrir Configuración del Navegador:**
+   - Chrome: `chrome://settings/clearBrowserData`
+   - Edge: `edge://settings/clearBrowserData`
+
+2. **Seleccionar:**
+   - ✅ "Cached images and files" (Imágenes y archivos en caché)
+   - ✅ "Cookies and other site data" (Opcional)
+   - Período: "All time" (Todo el tiempo)
+
+3. **Click en "Clear data" (Borrar datos)**
+
+4. **Cerrar y reabrir el navegador**
+
+5. **Ir a:**
+   - `http://207.180.226.141:8607`
 
 ## 🔍 Verificación
 
-Después de limpiar el caché:
+Después de limpiar el caché, verifica:
 
-1. Abre DevTools (`F12`)
-2. Ve a la pestaña **"Network"** (Red)
-3. Recarga la página (`Ctrl+Shift+R`)
-4. Busca `vendor-other` en la lista de archivos
-5. **NO debería aparecer** `vendor-other`
-6. Solo deberías ver:
-   - `vendor-react-XXXXX.js`
-   - `vendor-utils-XXXXX.js`
-   - `vendor-markdown-XXXXX.js`
+1. **Abrir DevTools > Network:**
+   - Recargar la página (`Ctrl+Shift+R`)
+   - Buscar "vendor-other" en la lista
+   - **NO debería aparecer**
+
+2. **Verificar chunks cargados:**
+   - Deberías ver:
+     - `vendor-react-XXXXX.js`
+     - `vendor-utils-XXXXX.js`
+     - `vendor-markdown-XXXXX.js`
+   - **NO** `vendor-other-XXXXX.js`
+
+3. **Verificar en Console:**
+   - NO debería aparecer el error:
+     ```
+     TypeError: Cannot read properties of undefined (reading 'useLayoutEffect')
+     ```
 
 ## ⚠️ Si el Problema Persiste
 
 Si después de limpiar el caché todavía ves `vendor-other`:
 
-1. **Verifica que el servidor tiene el build nuevo:**
+1. **Verificar que el servidor tiene el build nuevo:**
    ```bash
    ssh root@207.180.226.141
    cd /var/www/emerges-tes
@@ -75,27 +139,22 @@ Si después de limpiar el caché todavía ves `vendor-other`:
    # NO debería aparecer nada
    ```
 
-2. **Verifica que el Service Worker se actualizó:**
+2. **Verificar Service Worker:**
    - DevTools > Application > Service Workers
-   - Debería mostrar `v1.0.3` (o superior)
+   - Debería mostrar versión `v1.0.3`
+   - Si muestra versión antigua, hacer "Unregister" y recargar
 
-3. **Fuerza la actualización del Service Worker:**
+3. **Forzar actualización del Service Worker:**
    - DevTools > Application > Service Workers
-   - Click en **"Update"** (Actualizar)
-   - Espera a que se actualice
-   - Click en **"Unregister"** y luego recarga
+   - Click en "Update"
+   - Esperar a que se actualice
+   - Click en "Unregister" si es necesario
+   - Recargar página
 
-4. **Limpia el caché del Service Worker:**
-   - DevTools > Application > Storage
-   - Click en **"Clear site data"**
-   - Marca todas las opciones
-   - Click en **"Clear site data"**
+## 📝 Notas
 
-## 🎯 Resultado Esperado
-
-Después de limpiar el caché correctamente:
-- ✅ NO aparece `vendor-other` en Network
-- ✅ Solo aparecen `vendor-react`, `vendor-utils`, `vendor-markdown`
-- ✅ El error `useLayoutEffect` desaparece
-- ✅ La aplicación carga correctamente
+- El Service Worker ahora está en versión `v1.0.3`
+- Esta versión elimina automáticamente los cachés antiguos
+- El build nuevo NO genera `vendor-other`
+- El error `useLayoutEffect` se resuelve cuando se carga el build correcto
 

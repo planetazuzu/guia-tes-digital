@@ -38,7 +38,7 @@ if (isDevelopment) {
 }
 
 // Versión del cache - Incrementar cuando hay cambios importantes
-// v1.0.3: Forzar actualización - eliminar vendor-other del caché
+// v1.0.3: Eliminación definitiva de vendor-other - forzar actualización completa
 const CACHE_VERSION = 'v1.0.3';
 const CACHE_NAME = `emerges-tes-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `emerges-tes-runtime-${CACHE_VERSION}`;
@@ -101,7 +101,7 @@ self.addEventListener('activate', (event) => {
       return Promise.all(
         cacheNames
           .filter((cacheName) => {
-            // Eliminar TODOS los caches antiguos (forzar limpieza completa)
+            // Eliminar caches antiguos
             return cacheName !== CACHE_NAME && cacheName !== RUNTIME_CACHE;
           })
           .map((cacheName) => {
@@ -109,31 +109,6 @@ self.addEventListener('activate', (event) => {
             return caches.delete(cacheName);
           })
       );
-    })
-    .then(() => {
-      // Limpiar también archivos específicos de vendor-other en todos los caches
-      return caches.keys().then((cacheNames) => {
-        return Promise.all(
-          cacheNames.map((cacheName) => {
-            return caches.open(cacheName).then((cache) => {
-              return cache.keys().then((keys) => {
-                return Promise.all(
-                  keys
-                    .filter((request) => {
-                      const url = request.url;
-                      // Eliminar cualquier referencia a vendor-other (build antiguo)
-                      return url.includes('vendor-other');
-                    })
-                    .map((request) => {
-                      console.log('[SW] Deleting old vendor-other file:', request.url);
-                      return cache.delete(request);
-                    })
-                );
-              });
-            });
-          })
-        );
-      });
     })
     .then(() => self.clients.claim()) // Tomar control de todas las páginas
   );
