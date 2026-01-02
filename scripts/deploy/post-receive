@@ -1,0 +1,124 @@
+#!/bin/bash
+# Hook post-receive para despliegue automático
+# Ubicación: /var/repos/emerges-tes.git/hooks/post-receive
+
+set -e  # Salir si hay error
+
+# Configuración
+APP_DIR="/var/www/emerges-tes"
+GIT_DIR="/var/repos/emerges-tes.git"
+BRANCH="main"
+LOG_FILE="/var/log/emerges-tes-deploy.log"
+
+# Función de logging
+log() {
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$LOG_FILE"
+}
+
+log "=========================================="
+log "🚀 Iniciando despliegue automático"
+log "=========================================="
+
+# Leer la rama que se está actualizando
+while read oldrev newrev refname; do
+    # Usar GIT_DIR para obtener el nombre de la rama desde el repositorio bare
+    branch=$(git --git-dir="$GIT_DIR" rev-parse --symbolic --abbrev-ref $refname 2>/dev/null || echo "$refname" | sed 's|refs/heads/||')
+    
+    if [ "$branch" = "$BRANCH" ]; then
+        log "📦 Actualizando rama: $branch"
+        log "   Commit anterior: $oldrev"
+        log "   Commit nuevo: $newrev"
+        
+        # Verificar que el directorio de trabajo existe
+        if [ ! -d "$APP_DIR" ]; then
+            log "❌ ERROR: Directorio $APP_DIR no existe"
+            exit 1
+        fi
+        
+        # Ir al directorio de trabajo
+        cd "$APP_DIR" || {
+            log "❌ ERROR: No se puede acceder a $APP_DIR"
+            exit 1
+        }
+        
+        # Usar git directamente con --work-tree y --git-dir para evitar problemas de work tree
+        # Esto funciona tanto si APP_DIR es un repositorio git como si no lo es
+        
+        # Si no existe .git, inicializar o clonar
+        if [ ! -d "$APP_DIR/.git" ]; then
+            log "⚠️  $APP_DIR no es un repositorio git, clonando..."
+            # Si el directorio tiene contenido, hacer backup o limpiar
+            if [ "$(ls -A $APP_DIR 2>/dev/null)" ]; then
+                log "⚠️  Directorio no vacío, haciendo backup..."
+                mv "$APP_DIR" "${APP_DIR}.backup.$(date +%s)" 2>/dev/null || true
+            fi
+            # Clonar desde el repositorio bare
+            git clone "$GIT_DIR" "$APP_DIR" || {
+                log "❌ ERROR: No se pudo clonar repositorio"
+                exit 1
+            }
+            cd "$APP_DIR" || exit 1
+            git checkout "$BRANCH" || {
+                log "❌ ERROR: No se pudo hacer checkout de $BRANCH"
+                exit 1
+            }
+        else
+            # Si ya es un repositorio, usar git normal
+            cd "$APP_DIR" || exit 1
+            
+            # Obtener los últimos cambios
+            log "📥 Obteniendo cambios del repositorio..."
+            git fetch "$GIT_DIR" "$BRANCH" || {
+                log "❌ ERROR: Fallo al hacer fetch"
+                exit 1
+            }
+            
+            # Resetear a la versión más reciente (checkout limpio)
+            log "🔄 Haciendo checkout limpio..."
+            git reset --hard "FETCH_HEAD" || {
+                log "❌ ERROR: Fallo al hacer reset"
+                exit 1
+            }
+        fi
+        
+        # Limpiar archivos no rastreados (opcional, pero recomendado)
+        log "🧹 Limpiando archivos no rastreados..."
+        git clean -fd || {
+            log "⚠️  ADVERTENCIA: Fallo al limpiar archivos"
+        }
+        
+        # Instalar dependencias
+        log "📦 Instalando dependencias (npm install)..."
+        if ! npm install --production=false 2>&1 | tee -a "$LOG_FILE"; then
+            log "❌ ERROR: Fallo al instalar dependencias"
+            exit 1
+        fi
+        log "✅ Dependencias instaladas correctamente"
+        
+        # Build de producción
+        log "🔨 Construyendo aplicación (npm run build)..."
+        if ! npm run build 2>&1 | tee -a "$LOG_FILE"; then
+            log "❌ ERROR: Fallo al construir la aplicación"
+            exit 1
+        fi
+        log "✅ Build completado correctamente"
+        
+        # Verificar que el build se creó
+        if [ ! -d "$APP_DIR/dist" ]; then
+            log "❌ ERROR: El directorio dist/ no existe después del build"
+            exit 1
+        fi
+        
+        log "✅ Despliegue completado exitosamente"
+        log "   Aplicación disponible en: $APP_DIR/dist"
+        log "=========================================="
+        
+        exit 0
+    else
+        log "⏭️  Ignorando push en rama: $branch (solo se despliega $BRANCH)"
+    fi
+done
+
+log "⚠️  No se procesó ningún cambio"
+exit 0
+
