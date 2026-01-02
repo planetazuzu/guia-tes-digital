@@ -43,11 +43,6 @@ export default defineConfig({
     // Asegurar que React se resuelve correctamente
     conditions: ["import", "module", "browser", "default"],
   },
-  // Optimización: Asegurar que React se carga primero
-  optimizeDeps: {
-    include: ["react", "react-dom"],
-    exclude: [],
-  },
   // Configuración para procesar archivos .md e imágenes
   assetsInclude: ["**/*.md", "**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.svg", "**/*.gif"],
   
