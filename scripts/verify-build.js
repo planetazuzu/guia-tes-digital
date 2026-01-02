@@ -31,7 +31,11 @@ if (!fs.existsSync(ASSETS_DIR)) {
 
 // Listar todos los archivos en assets
 const files = fs.readdirSync(ASSETS_DIR);
-const vendorFiles = files.filter(f => f.startsWith('vendor-'));
+// Buscar chunks vendor con o sin prefijos numéricos (0-, 1-, 2-)
+const vendorFiles = files.filter(f => 
+  f.includes('vendor-') || 
+  f.match(/^\d+-vendor-/) // Prefijos numéricos: 0-vendor-react, 1-vendor-utils, etc.
+);
 
 console.log('📦 Chunks vendor encontrados:');
 vendorFiles.forEach(file => {
@@ -54,14 +58,21 @@ if (vendorOtherFiles.length > 0) {
 }
 
 // Verificar que existen los chunks esperados
+// Los chunks pueden tener prefijos numéricos (0-, 1-, 2-) para garantizar orden de carga
 const expectedChunks = ['vendor-react', 'vendor-utils', 'vendor-markdown'];
 const foundChunks = expectedChunks.filter(chunk => 
-  vendorFiles.some(file => file.includes(chunk))
+  vendorFiles.some(file => {
+    // Buscar con o sin prefijo numérico
+    return file.includes(chunk) || file.match(new RegExp(`\\d+-${chunk}`));
+  })
 );
 
 console.log('\n✅ Chunks esperados encontrados:');
 foundChunks.forEach(chunk => {
-  const matchingFiles = vendorFiles.filter(f => f.includes(chunk));
+  // Buscar archivos que contengan el nombre del chunk (con o sin prefijo numérico)
+  const matchingFiles = vendorFiles.filter(f => 
+    f.includes(chunk) || f.match(new RegExp(`\\d+-${chunk}`))
+  );
   matchingFiles.forEach(file => {
     const size = fs.statSync(path.join(ASSETS_DIR, file)).size;
     const sizeKB = (size / 1024).toFixed(2);
