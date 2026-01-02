@@ -114,31 +114,11 @@ export default defineConfig({
             if (id.includes('vaul')) {
               return 'vendor-ui'; // Agrupar con UI
             }
-            // Resto de node_modules pequeños (SOLO cosas que NO usan React)
-            // Excluir explícitamente cualquier cosa que pueda usar React
-            if (
-              id.includes('react') || 
-              id.includes('@radix') || 
-              id.includes('@tanstack') ||
-              id.includes('lucide') ||
-              id.includes('recharts') ||
-              id.includes('embla') ||
-              id.includes('next-themes') ||
-              id.includes('sonner') ||
-              id.includes('react-hook-form') ||
-              id.includes('react-day-picker') ||
-              id.includes('react-markdown') ||
-              id.includes('react-router') ||
-              id.includes('react-resizable') ||
-              id.includes('input-otp') ||
-              id.includes('cmdk') ||
-              id.includes('vaul')
-            ) {
-              // Si contiene algo relacionado con React, no debe estar aquí
-              // Forzar a un chunk específico (vendor-ui como fallback)
-              return 'vendor-ui';
-            }
-            return 'vendor-other';
+            // Resto de node_modules
+            // ESTRATEGIA: En lugar de vendor-other, mover TODO a vendor-ui como fallback seguro
+            // Esto asegura que cualquier dependencia no categorizada se carga después de vendor-react
+            // y no intenta usar React antes de que esté disponible
+            return 'vendor-ui';
           }
           
           // Separar páginas en chunks individuales
