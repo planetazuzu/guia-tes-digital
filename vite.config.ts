@@ -40,6 +40,13 @@ export default defineConfig({
     // CRÍTICO: Forzar deduplicación de React para evitar errores useLayoutEffect
     // Esto asegura que solo hay una instancia de React en el bundle
     dedupe: ["react", "react-dom"],
+    // Asegurar que React se resuelve correctamente
+    conditions: ["import", "module", "browser", "default"],
+  },
+  // Optimización: Asegurar que React se carga primero
+  optimizeDeps: {
+    include: ["react", "react-dom"],
+    exclude: [],
   },
   // Configuración para procesar archivos .md e imágenes
   assetsInclude: ["**/*.md", "**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.svg", "**/*.gif"],
@@ -154,6 +161,11 @@ export default defineConfig({
   // import content from './file.md?raw'
   // Esto importará el contenido del archivo como string
   optimizeDeps: {
+    include: ["react", "react-dom"],
     exclude: [],
+    // Forzar pre-bundling de React para evitar problemas de resolución
+    esbuildOptions: {
+      target: "es2020",
+    },
   },
 });
