@@ -116,7 +116,14 @@ export default defineConfig({
               return 'vendor-react';
             }
             // Markdown y procesamiento de texto (NO usa React directamente)
-            if (id.includes('remark') || id.includes('rehype') || id.includes('unified') || id.includes('micromark') || id.includes('mdast')) {
+            if (
+              id.includes('remark') || 
+              id.includes('rehype') || 
+              id.includes('unified') || 
+              id.includes('micromark') || 
+              id.includes('mdast') ||
+              id.includes('lowlight') // Syntax highlighting para markdown
+            ) {
               return 'vendor-markdown';
             }
             // Utilidades que NO usan React
