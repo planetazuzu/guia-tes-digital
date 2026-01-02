@@ -38,7 +38,8 @@ if (isDevelopment) {
 }
 
 // Versión del cache - Incrementar cuando hay cambios importantes
-const CACHE_VERSION = 'v1.0.1';
+// v1.0.2: Fix code splitting - consolidar React en un solo chunk
+const CACHE_VERSION = 'v1.0.2';
 const CACHE_NAME = `emerges-tes-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `emerges-tes-runtime-${CACHE_VERSION}`;
 
