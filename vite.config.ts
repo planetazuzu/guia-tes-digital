@@ -49,76 +49,41 @@ export default defineConfig({
         manualChunks: (id) => {
           // Separar node_modules en chunks por librería
           if (id.includes('node_modules')) {
-            // React y React DOM juntos (crítico, cargar primero)
-            // IMPORTANTE: Debe ser el primer chunk para evitar errores de useLayoutEffect
-            if (id.includes('react') || id.includes('react-dom') || id.includes('scheduler')) {
+            // SOLUCIÓN DRÁSTICA: Poner TODO lo relacionado con React en un solo chunk
+            // Esto garantiza que React esté disponible antes de cualquier otro código
+            if (
+              id.includes('react') || 
+              id.includes('react-dom') || 
+              id.includes('scheduler') ||
+              id.includes('react-router') ||
+              id.includes('@radix-ui') ||
+              id.includes('@tanstack') ||
+              id.includes('lucide-react') ||
+              id.includes('recharts') ||
+              id.includes('react-hook-form') ||
+              id.includes('@hookform') ||
+              id.includes('react-day-picker') ||
+              id.includes('embla-carousel-react') ||
+              id.includes('next-themes') ||
+              id.includes('sonner') ||
+              id.includes('react-resizable-panels') ||
+              id.includes('input-otp') ||
+              id.includes('cmdk') ||
+              id.includes('vaul') ||
+              id.includes('react-markdown')
+            ) {
               return 'vendor-react';
             }
-            // React Router (crítico para navegación, depende de React)
-            if (id.includes('react-router')) {
-              return 'vendor-router';
-            }
-            // Markdown y procesamiento de texto (grande, separar)
-            if (id.includes('react-markdown') || id.includes('remark') || id.includes('rehype') || id.includes('unified') || id.includes('micromark') || id.includes('mdast')) {
+            // Markdown y procesamiento de texto (NO usa React directamente)
+            if (id.includes('remark') || id.includes('rehype') || id.includes('unified') || id.includes('micromark') || id.includes('mdast')) {
               return 'vendor-markdown';
             }
-            // Radix UI (componentes UI, agrupar, depende de React)
-            if (id.includes('@radix-ui')) {
-              return 'vendor-ui';
+            // Utilidades que NO usan React
+            if (id.includes('zod') || id.includes('date-fns') || id.includes('clsx') || id.includes('tailwind-merge') || id.includes('class-variance-authority')) {
+              return 'vendor-utils';
             }
-            // TanStack Query (depende de React)
-            if (id.includes('@tanstack')) {
-              return 'vendor-query';
-            }
-            // Icons (lucide-react, depende de React)
-            if (id.includes('lucide-react')) {
-              return 'vendor-icons';
-            }
-            // Charts (recharts, si se usa, depende de React)
-            if (id.includes('recharts')) {
-              return 'vendor-charts';
-            }
-            // Formularios (react-hook-form, zod, depende de React)
-            if (id.includes('react-hook-form') || id.includes('zod') || id.includes('@hookform')) {
-              return 'vendor-forms';
-            }
-            // Date/time (date-fns, react-day-picker, depende de React)
-            if (id.includes('date-fns') || id.includes('react-day-picker')) {
-              return 'vendor-dates';
-            }
-            // Carousel (embla, puede depender de React)
-            if (id.includes('embla')) {
-              return 'vendor-carousel';
-            }
-            // Themes (next-themes, depende de React)
-            if (id.includes('next-themes')) {
-              return 'vendor-themes';
-            }
-            // Sonner (toasts, depende de React)
-            if (id.includes('sonner')) {
-              return 'vendor-toasts';
-            }
-            // React Resizable Panels (depende de React)
-            if (id.includes('react-resizable-panels')) {
-              return 'vendor-panels';
-            }
-            // Input OTP (puede usar React)
-            if (id.includes('input-otp')) {
-              return 'vendor-forms'; // Agrupar con otros formularios
-            }
-            // CMDK (Command Menu, puede usar React)
-            if (id.includes('cmdk')) {
-              return 'vendor-ui'; // Agrupar con UI
-            }
-            // Vaul (Drawer, usa React)
-            if (id.includes('vaul')) {
-              return 'vendor-ui'; // Agrupar con UI
-            }
-            // Resto de node_modules
-            // ESTRATEGIA: En lugar de vendor-other, mover TODO a vendor-ui como fallback seguro
-            // Esto asegura que cualquier dependencia no categorizada se carga después de vendor-react
-            // y no intenta usar React antes de que esté disponible
-            return 'vendor-ui';
+            // Resto (nada relacionado con React)
+            return 'vendor-other';
           }
           
           // Separar páginas en chunks individuales
