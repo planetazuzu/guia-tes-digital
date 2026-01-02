@@ -38,8 +38,8 @@ if (isDevelopment) {
 }
 
 // Versión del cache - Incrementar cuando hay cambios importantes
-// v1.0.3: Eliminación definitiva de vendor-other - forzar actualización completa
-const CACHE_VERSION = 'v1.0.3';
+// v1.0.4: Orden de carga garantizado con prefijos numéricos - forzar actualización completa
+const CACHE_VERSION = 'v1.0.4';
 const CACHE_NAME = `emerges-tes-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `emerges-tes-runtime-${CACHE_VERSION}`;
 
