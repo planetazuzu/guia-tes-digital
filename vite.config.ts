@@ -82,8 +82,11 @@ export default defineConfig({
             if (id.includes('zod') || id.includes('date-fns') || id.includes('clsx') || id.includes('tailwind-merge') || id.includes('class-variance-authority')) {
               return 'vendor-utils';
             }
-            // Resto (nada relacionado con React)
-            return 'vendor-other';
+            // CRÍTICO: Si llegamos aquí, algo se nos escapó
+            // Por seguridad, mover TODO a vendor-utils en lugar de vendor-other
+            // Esto previene que cualquier código desconocido use React antes de tiempo
+            console.warn('[Vite] Unclassified dependency:', id);
+            return 'vendor-utils';
           }
           
           // Separar páginas en chunks individuales
