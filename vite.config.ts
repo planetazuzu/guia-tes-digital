@@ -58,20 +58,22 @@ export default defineConfig({
     rollupOptions: {
       // Code splitting: dividir el bundle en chunks más pequeños
       output: {
-        // CRÍTICO: Asegurar que vendor-react se carga PRIMERO
-        // Esto garantiza que React está disponible antes que cualquier otro código
-        entryFileNames: (chunkInfo) => {
-          // El entry principal debe cargarse primero
-          if (chunkInfo.name === 'index') {
-            return 'assets/[name]-[hash].js';
-          }
-          return 'assets/[name]-[hash].js';
-        },
-        // Ordenar chunks para que vendor-react se cargue primero
+        // CRÍTICO: Asegurar orden de carga correcto usando prefijos numéricos
+        // El navegador carga los scripts en orden alfabético, así que usamos números
+        entryFileNames: 'assets/[name]-[hash].js',
         chunkFileNames: (chunkInfo) => {
-          // vendor-react debe tener prioridad en el nombre para cargarse primero
+          // CRÍTICO: Numerar chunks para garantizar orden de carga alfabético
+          // 0 = vendor-react (debe cargarse PRIMERO - orden alfabético)
+          // 1 = vendor-utils (carga DESPUÉS de vendor-react)
+          // 2 = vendor-markdown (carga después)
           if (chunkInfo.name === 'vendor-react') {
-            return 'assets/vendor-react-[hash].js';
+            return 'assets/0-vendor-react-[hash].js';
+          }
+          if (chunkInfo.name === 'vendor-utils') {
+            return 'assets/1-vendor-utils-[hash].js';
+          }
+          if (chunkInfo.name === 'vendor-markdown') {
+            return 'assets/2-vendor-markdown-[hash].js';
           }
           return 'assets/[name]-[hash].js';
         },
@@ -160,7 +162,6 @@ export default defineConfig({
               id.includes('hast-util-parse-selector') ||
               id.includes('detect-node-es') ||
               id.includes('get-nonce') ||
-              id.includes('@ungap/structured-clone') ||
               id.includes('devlop') ||
               id.includes('fault') ||
               id.includes('hast-util-from-parse5') ||
@@ -169,6 +170,11 @@ export default defineConfig({
               id.includes('tslib')
             ) {
               return 'vendor-utils';
+            }
+            // CRÍTICO: @ungap/structured-clone puede ser usado por librerías React
+            // Moverlo a vendor-react para asegurar que React está disponible
+            if (id.includes('@ungap/structured-clone')) {
+              return 'vendor-react';
             }
             // CRÍTICO: Si llegamos aquí, algo se nos escapó
             // Por seguridad, mover TODO a vendor-utils en lugar de vendor-other
