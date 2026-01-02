@@ -53,6 +53,8 @@ export default defineConfig({
   
   // Configuración de build para incluir archivos .md e imágenes
   build: {
+    // Ajustar límite de warning para chunks grandes (vendor-react es grande pero necesario)
+    chunkSizeWarningLimit: 1000, // 1MB - vendor-react puede ser grande pero es necesario
     rollupOptions: {
       // Code splitting: dividir el bundle en chunks más pequeños
       output: {
