@@ -98,8 +98,46 @@ export default defineConfig({
             if (id.includes('sonner')) {
               return 'vendor-toasts';
             }
-            // Resto de node_modules pequeños (NO incluir nada que dependa de React)
-            // Si algo aquí usa React, moverlo arriba
+            // React Resizable Panels (depende de React)
+            if (id.includes('react-resizable-panels')) {
+              return 'vendor-panels';
+            }
+            // Input OTP (puede usar React)
+            if (id.includes('input-otp')) {
+              return 'vendor-forms'; // Agrupar con otros formularios
+            }
+            // CMDK (Command Menu, puede usar React)
+            if (id.includes('cmdk')) {
+              return 'vendor-ui'; // Agrupar con UI
+            }
+            // Vaul (Drawer, usa React)
+            if (id.includes('vaul')) {
+              return 'vendor-ui'; // Agrupar con UI
+            }
+            // Resto de node_modules pequeños (SOLO cosas que NO usan React)
+            // Excluir explícitamente cualquier cosa que pueda usar React
+            if (
+              id.includes('react') || 
+              id.includes('@radix') || 
+              id.includes('@tanstack') ||
+              id.includes('lucide') ||
+              id.includes('recharts') ||
+              id.includes('embla') ||
+              id.includes('next-themes') ||
+              id.includes('sonner') ||
+              id.includes('react-hook-form') ||
+              id.includes('react-day-picker') ||
+              id.includes('react-markdown') ||
+              id.includes('react-router') ||
+              id.includes('react-resizable') ||
+              id.includes('input-otp') ||
+              id.includes('cmdk') ||
+              id.includes('vaul')
+            ) {
+              // Si contiene algo relacionado con React, no debe estar aquí
+              // Forzar a un chunk específico (vendor-ui como fallback)
+              return 'vendor-ui';
+            }
             return 'vendor-other';
           }
           
