@@ -2,6 +2,24 @@ import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 
+// Suprimir errores de extensiones del navegador (no críticos)
+if (typeof window !== 'undefined') {
+  const originalError = console.error;
+  console.error = (...args: any[]) => {
+    // Filtrar errores de extensiones del navegador
+    const message = args[0]?.toString() || '';
+    if (
+      message.includes('message channel closed') ||
+      message.includes('runtime.lastError') ||
+      message.includes('Extension context invalidated')
+    ) {
+      // Silenciar estos errores (son de extensiones del navegador, no de nuestra app)
+      return;
+    }
+    originalError.apply(console, args);
+  };
+}
+
 // CRÍTICO: Desregistrar Service Worker en desarrollo ANTES de cualquier otra cosa
 // Esto evita que el SW intercepte peticiones de Vite HMR
 if ('serviceWorker' in navigator) {
@@ -102,4 +120,26 @@ if ('serviceWorker' in navigator) {
   }
 }
 
-createRoot(document.getElementById("root")!).render(<App />);
+// Asegurar que React está disponible antes de renderizar
+const rootElement = document.getElementById("root");
+if (!rootElement) {
+  throw new Error("Root element not found");
+}
+
+// Renderizar la app
+// Nota: Si ves errores de "useLayoutEffect", puede ser un problema de code splitting.
+// Asegúrate de que vendor-react se carga antes que otros chunks.
+try {
+  createRoot(rootElement).render(<App />);
+} catch (error) {
+  console.error('[React] Error rendering app:', error);
+  // Mostrar mensaje de error amigable
+  rootElement.innerHTML = `
+    <div style="padding: 2rem; text-align: center; font-family: sans-serif;">
+      <h1>Error al cargar la aplicación</h1>
+      <p>Por favor, recarga la página. Si el problema persiste, limpia la caché del navegador.</p>
+      <p style="color: #666; font-size: 0.9rem;">Error: ${error instanceof Error ? error.message : String(error)}</p>
+    </div>
+  `;
+  throw error;
+}

@@ -50,10 +50,11 @@ export default defineConfig({
           // Separar node_modules en chunks por librería
           if (id.includes('node_modules')) {
             // React y React DOM juntos (crítico, cargar primero)
-            if (id.includes('react') || id.includes('react-dom')) {
+            // IMPORTANTE: Debe ser el primer chunk para evitar errores de useLayoutEffect
+            if (id.includes('react') || id.includes('react-dom') || id.includes('scheduler')) {
               return 'vendor-react';
             }
-            // React Router (crítico para navegación)
+            // React Router (crítico para navegación, depende de React)
             if (id.includes('react-router')) {
               return 'vendor-router';
             }
@@ -61,43 +62,44 @@ export default defineConfig({
             if (id.includes('react-markdown') || id.includes('remark') || id.includes('rehype') || id.includes('unified') || id.includes('micromark') || id.includes('mdast')) {
               return 'vendor-markdown';
             }
-            // Radix UI (componentes UI, agrupar)
+            // Radix UI (componentes UI, agrupar, depende de React)
             if (id.includes('@radix-ui')) {
               return 'vendor-ui';
             }
-            // TanStack Query
+            // TanStack Query (depende de React)
             if (id.includes('@tanstack')) {
               return 'vendor-query';
             }
-            // Icons (lucide-react)
+            // Icons (lucide-react, depende de React)
             if (id.includes('lucide-react')) {
               return 'vendor-icons';
             }
-            // Charts (recharts, si se usa)
+            // Charts (recharts, si se usa, depende de React)
             if (id.includes('recharts')) {
               return 'vendor-charts';
             }
-            // Formularios (react-hook-form, zod)
+            // Formularios (react-hook-form, zod, depende de React)
             if (id.includes('react-hook-form') || id.includes('zod') || id.includes('@hookform')) {
               return 'vendor-forms';
             }
-            // Date/time (date-fns, react-day-picker)
+            // Date/time (date-fns, react-day-picker, depende de React)
             if (id.includes('date-fns') || id.includes('react-day-picker')) {
               return 'vendor-dates';
             }
-            // Carousel (embla)
+            // Carousel (embla, puede depender de React)
             if (id.includes('embla')) {
               return 'vendor-carousel';
             }
-            // Themes (next-themes)
+            // Themes (next-themes, depende de React)
             if (id.includes('next-themes')) {
               return 'vendor-themes';
             }
-            // Sonner (toasts)
+            // Sonner (toasts, depende de React)
             if (id.includes('sonner')) {
               return 'vendor-toasts';
             }
-            // Resto de node_modules pequeños
+            // Resto de node_modules pequeños (NO incluir nada que dependa de React)
+            // Si algo aquí usa React, moverlo arriba
             return 'vendor-other';
           }
           
