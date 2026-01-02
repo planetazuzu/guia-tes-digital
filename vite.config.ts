@@ -250,8 +250,6 @@ export default defineConfig({
         },
       },
     },
-    // Incluir archivos .md e imágenes en el build
-    assetsInclude: ['**/*.md', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.svg', '**/*.gif'],
     // Copiar todo el directorio public/ a dist/ (incluye imágenes)
     copyPublicDir: true,
   },
