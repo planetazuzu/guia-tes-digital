@@ -48,3 +48,4 @@ Ver `docs/consolidado/` para documentación completa:
 ---
 
 **Desarrollado para Técnicos de Emergencias Sanitarias**
+
