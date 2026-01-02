@@ -177,15 +177,19 @@ export default defineConfig({
               return 'vendor-react';
             }
             // CRÍTICO: Si llegamos aquí, algo se nos escapó
-            // Por seguridad, mover TODO a vendor-utils en lugar de vendor-other
+            // Por seguridad, mover TODO a vendor-react si podría usar React
             // Esto previene que cualquier código desconocido use React antes de tiempo
             // En producción, esto NO debería ocurrir - todos los módulos deberían estar clasificados
             if (process.env.NODE_ENV === 'production') {
               console.error('[Vite] ERROR: Unclassified dependency in production:', id);
+              // En producción, si no está clasificado, moverlo a vendor-react por seguridad
+              // Es mejor tener código extra en vendor-react que tener errores useLayoutEffect
+              return 'vendor-react';
             } else {
               console.warn('[Vite] Unclassified dependency:', id);
+              // En desarrollo, mover a vendor-utils para debugging
+              return 'vendor-utils';
             }
-            return 'vendor-utils';
           }
           
           // Separar páginas en chunks individuales
