@@ -37,6 +37,9 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+    // CRÍTICO: Forzar deduplicación de React para evitar errores useLayoutEffect
+    // Esto asegura que solo hay una instancia de React en el bundle
+    dedupe: ["react", "react-dom"],
   },
   // Configuración para procesar archivos .md e imágenes
   assetsInclude: ["**/*.md", "**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.svg", "**/*.gif"],
